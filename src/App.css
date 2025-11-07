@@ -273,7 +273,8 @@
 .footer-contact a:hover span:first-child { transform: scale(1.12); }
 .footer-contact span:first-child { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; background: rgba(255,214,107,.3); border-radius: 50%; transition: transform .2s ease; }
 .footer-animals { display: flex; justify-content: center; align-items: flex-end; width: 100vw; }
+.footer-animal-link { display: block; text-decoration: none; color: inherit; }
+.footer-animal-link:not(:first-child) .footer-animal { margin-left: -4rem; }
 .footer-animal { margin: 0; position: relative; transition: transform .2s ease, filter .2s ease; }
-.footer-animal:not(:first-child) { margin-left: -4rem; }
 .footer-animal img { width: 160px; height: auto; object-fit: cover; display: block; }
-.footer-animal:hover { transform: translateY(-6px); z-index: 2; filter: saturate(1.1); }
+.footer-animal-link:hover .footer-animal { transform: translateY(-6px); z-index: 2; filter: saturate(1.1); }
