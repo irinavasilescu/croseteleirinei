@@ -258,6 +258,7 @@ function App() {
               {featuredAnimals.map((item, idx) => (
                 <NavLink to={`${ROUTES.animals}#${item.id}`} key={`${item.img}-${idx}`} className="footer-animal-link">
                   <figure className="footer-animal">
+                    <span class="footer-animal-name">{item.name}</span>
                     <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                   </figure>
                 </NavLink>
