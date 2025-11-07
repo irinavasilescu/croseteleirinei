@@ -11,6 +11,8 @@ import { abstract } from './abstract';
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
 
+  const BASE_URL = '/croseteleirinei';
+
   const ROUTES = {
     animals: '/animals',
     food: '/food',
@@ -211,8 +213,8 @@ function App() {
             <div className="landing-content">
               <h1 className="landing-title">Croșetele Irinei</h1>
               <div className="landing-actions">
-                <a href={ROUTES.animals} className="landing-btn landing-btn-primary">Explore</a>
-                <a href={ROUTES.contact} className="landing-btn landing-btn-secondary">Contact</a>
+                <a href={`${BASE_URL}${ROUTES.animals}`} className="landing-btn landing-btn-primary">Explore</a>
+                <a href={`${BASE_URL}${ROUTES.contact}`} className="landing-btn landing-btn-secondary">Contact</a>
               </div>
               <div className="landing-social">
                 <div className="landing-social-item">
