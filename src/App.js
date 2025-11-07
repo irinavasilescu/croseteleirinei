@@ -11,16 +11,6 @@ import { abstract } from './abstract';
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
 
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const subject = encodeURIComponent(`New inquiry from ${name || 'Crochet site'}`);
-    const body = encodeURIComponent(`${message}`);
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-  }
-
   function Page({children }) {
     return (
       <section className="section">
@@ -219,32 +209,37 @@ function App() {
                 <a href="/contact" className="landing-btn landing-btn-secondary">Contact</a>
               </div>
               <div className="landing-social">
-                <a
-                  href="https://instagram.com/crosetele_irinei"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="landing-social-link"
-                  aria-label="Open Croșetele Irinei on Instagram"
-                >
-                  {homeAssets.instagram ? (
-                    <img src={homeAssets.instagram} alt="Instagram" />
-                  ) : (
-                    <span>📸</span>
-                  )}
-                </a>
-                <a
-                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="landing-social-link"
-                  aria-label={`Compose an email to ${CONTACT_EMAIL} in Gmail`}
-                >
-                  {homeAssets.mail ? (
-                    <img src={homeAssets.mail} alt="Email" />
-                  ) : (
-                    <span>@</span>
-                  )}
-                </a>
+                <div className="landing-social-item">
+                  <a
+                    href="https://instagram.com/crosetele_irinei"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="landing-social-link"
+                    aria-label="Open Croșetele Irinei on Instagram"
+                  >
+                    {homeAssets.instagram ? (
+                      <img src={homeAssets.instagram} alt="Instagram" />
+                    ) : (
+                      <span>📸</span>
+                    )}
+                  </a>
+                  <span className="landing-social-hover-text">@crosetele_irinei</span>
+                </div>
+                <div className="landing-social-item">
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="landing-social-link"
+                  >
+                    {homeAssets.mail ? (
+                      <img src={homeAssets.mail} alt="Email" />
+                    ) : (
+                      <span>@</span>
+                    )}
+                  </a>
+                  <span className="landing-social-hover-text">croseteleirinei@gmail.com</span>
+                </div>
               </div>
             </div>
           </div>
@@ -267,39 +262,54 @@ function App() {
   }
 
   function ContactPage() {
+    const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
+    const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const subject = encodeURIComponent(`New inquiry from ${name || 'Crochet site'}`);
+      const body = encodeURIComponent(`${message}`);
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+      window.location.target = '_blank';
+    }
+
     return (
-      <>
-        <div className="contact">
-          <p>Have a custom idea or want to say hello? Drop us a message and we’ll get back to you soon.</p>
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-row">
-              <label htmlFor="contact-name">Name</label>
-              <input
-                id="contact-name"
-                name="name"
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Your name"
-                required
-              />
-            </div>
-            <div className="form-row">
-              <label htmlFor="contact-message">Message</label>
-              <textarea
-                id="contact-message"
-                name="message"
-                rows="5"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Tell us about your dream crochet piece..."
-                required
-              />
-            </div>
-            <button type="submit" className="btn btn-primary">Send message</button>
-          </form>
+      <section className="landing-hero">
+        <div className="landing-container">
+          <div className="landing-content">
+            <h1 className="landing-title">Get in touch</h1>
+            <p className="landing-subtitle">Have a custom idea or want to say hello? Drop a message and I'll get back to you soon.</p>
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-row">
+                <label htmlFor="contact-name">Name</label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div className="form-row">
+                <label htmlFor="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Tell me about your dream crochet piece..."
+                  required
+                />
+              </div>
+              <button type="submit" className="landing-btn landing-btn-primary">Send message</button>
+            </form>
+          </div>
         </div>
-      </>
+      </section>
     );
   }
 
