@@ -12,14 +12,14 @@ function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
 
   const ROUTES = {
-    animals: '/croseteleirinei/animals',
-    food: '/croseteleirinei/food',
-    homeware: '/croseteleirinei/homeware',
-    accessories: '/croseteleirinei/accessories',
-    clothes: '/croseteleirinei/clothes',
-    abstract: '/croseteleirinei/abstract',
-    contact: '/croseteleirinei/contact',
-    home: '/croseteleirinei',
+    animals: '/animals',
+    food: '/food',
+    homeware: '/homeware',
+    accessories: '/accessories',
+    clothes: '/clothes',
+    abstract: '/abstract',
+    contact: '/contact',
+    home: '/',
   };
 
   function Page({children }) {
