@@ -8,18 +8,21 @@ export const clothes = [
         name: 'Top',
         price: null,
         description: null,
+        id: 'a_top',
     },
     {
         img: b_top,
         name: 'Top',
         price: null,
         description: null,
+        id: 'b_top',
     },
     {
         img: c_top,
         name: 'Top',
         price: null,
         description: null,
+        id: 'c_top',
     },
 ];
 

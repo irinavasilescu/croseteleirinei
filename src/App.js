@@ -1,6 +1,6 @@
 import './App.css';
-import { useState, useMemo } from 'react';
-import { NavLink, Routes, Route } from 'react-router-dom';
+import { useState, useMemo, useEffect } from 'react';
+import { NavLink, Routes, Route, useLocation } from 'react-router-dom';
 import { animals } from './animals';
 import { clothes } from './clothes';
 import { food } from './food';
@@ -70,6 +70,21 @@ function App() {
   // Clothes, food, accessories, homeware, and abstract arrays are now imported from hardcoded files
 
   function AnimalsPage() {
+    const location = useLocation();
+
+    useEffect(() => {
+      if (location.hash) {
+        const id = location.hash.substring(1); // Remove the '#'
+        const element = document.getElementById(id);
+        if (element) {
+          // Small delay to ensure the page has rendered
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        }
+      }
+    }, [location.hash]);
+
     return (
       <section className="section">
         <div className="container">
@@ -79,7 +94,7 @@ function App() {
             <div className="animals-grid">
               {animals.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={item.img} alt={item.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
             </div>
@@ -99,7 +114,7 @@ function App() {
             <div className="animals-grid">
               {clothes.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={item.img} alt={item.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
             </div>
@@ -119,7 +134,7 @@ function App() {
             <div className="animals-grid">
               {abstract.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={item.img} alt={item.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
             </div>
@@ -139,7 +154,7 @@ function App() {
             <div className="animals-grid">
               {food.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={item.img} alt={item.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
             </div>
@@ -159,7 +174,7 @@ function App() {
             <div className="animals-grid">
               {accessories.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={item.img} alt={item.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
             </div>
@@ -248,9 +263,9 @@ function App() {
           <footer className="home-footer" id="gallery" aria-label="Featured animals">
             <div className="footer-animals">
               {featuredAnimals.map((item, idx) => (
-                <NavLink to="/animals" key={`${item.img}-${idx}`} className="footer-animal-link">
+                <NavLink to={`/animals#${item.id}`} key={`${item.img}-${idx}`} className="footer-animal-link">
                   <figure className="footer-animal">
-                    <img src={item.img} alt={item.name} loading="lazy" />
+                    <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                   </figure>
                 </NavLink>
               ))}
@@ -324,7 +339,7 @@ function App() {
             <div className="animals-grid">
               {homeware.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={item.img} alt={item.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
             </div>

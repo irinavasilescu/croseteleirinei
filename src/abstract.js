@@ -8,18 +8,21 @@ export const abstract = [
         name: 'Heart',
         price: null,
         description: null,
+        id: 'a_heart',
     },
     {
         img: b_moon,
         name: 'Moon',
         price: null,
         description: null,
+        id: 'b_moon',
     },
     {
         img: c_pikachu,
         name: 'Pikachu',
         price: null,
         description: null,
+        id: 'c_pikachu',
     },
 ];
 
