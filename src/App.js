@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -70,7 +70,10 @@ function App() {
     }
   }
 
-  const animalImages = importAll(require.context('./animals', true, /\.(png|jpe?g|webp|gif)$/i));
+  const animalImages = useMemo(
+    () => importAll(require.context('./animals', true, /\.(png|jpe?g|webp|gif)$/i)),
+    []
+  );
 
   function AnimalsPage() {
     return (
@@ -93,7 +96,10 @@ function App() {
   }
 
   // Clothes page - loads all images in src/clothes
-  const clothesImages = importAll(require.context('./clothes', true, /\.(png|jpe?g|webp|gif)$/i));
+  const clothesImages = useMemo(
+    () => importAll(require.context('./clothes', true, /\.(png|jpe?g|webp|gif)$/i)),
+    []
+  );
 
   // Abstract page - loads all images in src/abstract
   const abstractImages = importAll(require.context('./abstract', true, /\.(png|jpe?g|webp|gif)$/i));
@@ -139,7 +145,10 @@ function App() {
   }
 
   // Food page - loads all images in src/food
-  const foodImages = importAll(require.context('./food', true, /\.(png|jpe?g|webp|gif)$/i));
+  const foodImages = useMemo(
+    () => importAll(require.context('./food', true, /\.(png|jpe?g|webp|gif)$/i)),
+    []
+  );
 
   function FoodPage() {
     return (
@@ -162,7 +171,10 @@ function App() {
   }
 
   // Accessories page - loads all images in src/accessories
-  const accessoriesImages = importAll(require.context('./accessories', true, /\.(png|jpe?g|webp|gif)$/i));
+  const accessoriesImages = useMemo(
+    () => importAll(require.context('./accessories', true, /\.(png|jpe?g|webp|gif)$/i)),
+    []
+  );
 
   function AccessoriesPage() {
     return (
@@ -185,7 +197,149 @@ function App() {
   }
 
   // Homeware page - loads all images in src/homeware
-  const homewareImages = importAll(require.context('./homeware', true, /\.(png|jpe?g|webp|gif)$/i));
+  const homewareImages = useMemo(
+    () => importAll(require.context('./homeware', true, /\.(png|jpe?g|webp|gif)$/i)),
+    []
+  );
+  // Home assets
+  const homeAssets = useMemo(() => {
+    try {
+      const ctx = require.context('./home', false, /\.(png|jpe?g|webp|gif)$/i);
+      const map = {};
+      ctx.keys().forEach((k) => {
+        const key = k
+          .replace(/^\.\//, '')
+          .replace(/\.(png|jpe?g|webp|gif)$/i, '')
+          .toLowerCase();
+        map[key] = ctx(k);
+      });
+      return map;
+    } catch (e) {
+      return {};
+    }
+  }, []);
+
+  function HomePage() {
+    const FEATURED_ANIMALS_COUNT = 15;
+    const featuredAnimals = useMemo(() => {
+      if (animalImages.length === 0) return [];
+      const pool = [...animalImages];
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      return pool.slice(0, Math.min(FEATURED_ANIMALS_COUNT, pool.length));
+    }, [animalImages]);
+
+    return (
+      <>
+        <section className="landing-hero">
+          <div className="landing-container">
+            <div className="landing-content">
+              <h1 className="landing-title">Croșetele Irinei</h1>
+              <div className="landing-actions">
+                <a href="/animals" className="landing-btn landing-btn-primary">Explore</a>
+                <a href="/contact" className="landing-btn landing-btn-secondary">Contact</a>
+              </div>
+              <div className="landing-social">
+                <a
+                  href="https://instagram.com/crosetele_irinei"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="landing-social-link"
+                  aria-label="Open Croșetele Irinei on Instagram"
+                >
+                  {homeAssets.instagram ? (
+                    <img src={homeAssets.instagram} alt="Instagram" />
+                  ) : (
+                    <span>📸</span>
+                  )}
+                </a>
+                <a
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="landing-social-link"
+                  aria-label={`Compose an email to ${CONTACT_EMAIL} in Gmail`}
+                >
+                  {homeAssets.mail ? (
+                    <img src={homeAssets.mail} alt="Email" />
+                  ) : (
+                    <span>@</span>
+                  )}
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        {featuredAnimals.length > 0 && (
+          <footer className="home-footer" id="gallery" aria-label="Featured animals">
+            <div className="footer-animals">
+              {featuredAnimals.map((img, idx) => (
+                <figure className="footer-animal" key={`${img.src}-${idx}`}>
+                  <img src={img.src} alt={img.name} loading="lazy" />
+                </figure>
+              ))}
+            </div>
+          </footer>
+        )}
+      </>
+    );
+  }
+
+  function ContactPage() {
+    return (
+      <Page title="Contact">
+        <div className="contact">
+          <p>Have a custom idea or want to say hello? Drop us a message and we’ll get back to you soon.</p>
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="form-row">
+              <label htmlFor="contact-name">Name</label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div className="form-row">
+              <label htmlFor="contact-email">Email</label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div className="form-row">
+              <label htmlFor="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="5"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Tell us about your dream crochet piece..."
+                required
+              />
+            </div>
+            <button type="submit" className="btn btn-primary">Send message</button>
+          </form>
+          <p className="direct-email">
+            Prefer email? Write us at{' '}
+            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+          </p>
+        </div>
+      </Page>
+    );
+  }
+
 
   function HomewarePage() {
     return (
@@ -214,12 +368,13 @@ function App() {
           <nav className="nav nav-tabs">
             {[
               { to: '/', key: 'home', label: 'Home', end: true },
-              { to: '/accessories', key: 'accessories', label: 'Accessories' },
               { to: '/animals', key: 'animals', label: 'Animals' },
-              { to: '/clothes', key: 'clothes', label: 'Clothes' },
-                { to: '/abstract', key: 'abstract', label: 'Abstract' },
               { to: '/food', key: 'food', label: 'Food' },
-              { to: '/homeware', key: 'homeware', label: 'Homeware' }
+              { to: '/homeware', key: 'homeware', label: 'Homeware' },
+              { to: '/accessories', key: 'accessories', label: 'Accessories' },
+              { to: '/clothes', key: 'clothes', label: 'Clothes' },
+              { to: '/abstract', key: 'abstract', label: 'Abstract' },
+                { to: '/contact', key: 'contact', label: 'Contact' },
             ].map((link) => {
               const icon = findIcon(link.key);
               return (
@@ -240,15 +395,14 @@ function App() {
       </header>
 
       <Routes>
-        <Route path="/" element={<Page title="Home"> 
-          <p>Welcome to Croșetele Irinei. Explore our handcrafted crochet collections.</p>
-        </Page>} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/animals" element={<AnimalsPage />} />
         <Route path="/food" element={<FoodPage />} />
         <Route path="/homeware" element={<HomewarePage />} />
         <Route path="/accessories" element={<AccessoriesPage />} />
         <Route path="/clothes" element={<ClothesPage />} />
         <Route path="/abstract" element={<AbstractPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<Page title="Not found"><p>The page you are looking for does not exist.</p></Page>} />
       </Routes>
     </div>
