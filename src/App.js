@@ -11,6 +11,17 @@ import { abstract } from './abstract';
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
 
+  const ROUTES = {
+    animals: '/croseteleirinei/animals',
+    food: '/croseteleirinei/food',
+    homeware: '/croseteleirinei/homeware',
+    accessories: '/croseteleirinei/accessories',
+    clothes: '/croseteleirinei/clothes',
+    abstract: '/croseteleirinei/abstract',
+    contact: '/croseteleirinei/contact',
+    home: '/croseteleirinei',
+  };
+
   function Page({children }) {
     return (
       <section className="section">
@@ -220,8 +231,8 @@ function App() {
             <div className="landing-content">
               <h1 className="landing-title">Croșetele Irinei</h1>
               <div className="landing-actions">
-                <a href="/animals" className="landing-btn landing-btn-primary">Explore</a>
-                <a href="/contact" className="landing-btn landing-btn-secondary">Contact</a>
+                <a href={ROUTES.animals} className="landing-btn landing-btn-primary">Explore</a>
+                <a href={ROUTES.contact} className="landing-btn landing-btn-secondary">Contact</a>
               </div>
               <div className="landing-social">
                 <div className="landing-social-item">
@@ -263,7 +274,7 @@ function App() {
           <footer className="home-footer" id="gallery" aria-label="Featured animals">
             <div className="footer-animals">
               {featuredAnimals.map((item, idx) => (
-                <NavLink to={`/animals#${item.id}`} key={`${item.img}-${idx}`} className="footer-animal-link">
+                <NavLink to={`${ROUTES.animals}#${item.id}`} key={`${item.img}-${idx}`} className="footer-animal-link">
                   <figure className="footer-animal">
                     <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                   </figure>
@@ -355,14 +366,14 @@ function App() {
         <div className="container header-inner">
           <nav className="nav nav-tabs">
             {[
-              { to: '/', key: 'home', label: 'Home', end: true },
-              { to: '/animals', key: 'animals', label: 'Animals' },
-              { to: '/food', key: 'food', label: 'Food' },
-              { to: '/homeware', key: 'homeware', label: 'Homeware' },
-              { to: '/accessories', key: 'accessories', label: 'Accessories' },
-              { to: '/clothes', key: 'clothes', label: 'Clothes' },
-              { to: '/abstract', key: 'abstract', label: 'Abstract' },
-                { to: '/contact', key: 'contact', label: 'Contact' },
+              { to: ROUTES.home, key: 'home', label: 'Home', end: true },
+              { to: ROUTES.animals, key: 'animals', label: 'Animals' },
+              { to: ROUTES.food, key: 'food', label: 'Food' },
+              { to: ROUTES.homeware, key: 'homeware', label: 'Homeware' },
+              { to: ROUTES.accessories, key: 'accessories', label: 'Accessories' },
+              { to: ROUTES.clothes, key: 'clothes', label: 'Clothes' },
+              { to: ROUTES.abstract, key: 'abstract', label: 'Abstract' },
+              { to: ROUTES.contact, key: 'contact', label: 'Contact' },
             ].map((link) => {
               const icon = findIcon(link.key);
               return (
@@ -383,14 +394,14 @@ function App() {
       </header>
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/animals" element={<AnimalsPage />} />
-        <Route path="/food" element={<FoodPage />} />
-        <Route path="/homeware" element={<HomewarePage />} />
-        <Route path="/accessories" element={<AccessoriesPage />} />
-        <Route path="/clothes" element={<ClothesPage />} />
-        <Route path="/abstract" element={<AbstractPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path={ROUTES.home} element={<HomePage />} />
+        <Route path={ROUTES.animals} element={<AnimalsPage />} />
+        <Route path={ROUTES.food} element={<FoodPage />} />
+        <Route path={ROUTES.homeware} element={<HomewarePage />} />
+        <Route path={ROUTES.accessories} element={<AccessoriesPage />} />
+        <Route path={ROUTES.clothes} element={<ClothesPage />} />
+        <Route path={ROUTES.abstract} element={<AbstractPage />} />
+        <Route path={ROUTES.contact} element={<ContactPage />} />
         <Route path="*" element={<Page title="Not found"><p>The page you are looking for does not exist.</p></Page>} />
       </Routes>
     </div>
