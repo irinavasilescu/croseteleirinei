@@ -1,12 +1,17 @@
 import './App.css';
 import { useState, useMemo } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
+import { animals } from './animals';
+import { clothes } from './clothes';
+import { food } from './food';
+import { accessories } from './accessories';
+import { homeware } from './homeware';
+import { abstract } from './abstract';
 
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
 
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   function handleSubmit(e) {
@@ -54,37 +59,37 @@ function App() {
     return fuzzy ? navIcons[fuzzy] : null;
   }
 
-  // Animals page - loads all images in src/animals
-  function importAll(r) {
+  // Helper function to create items array from images
+  function createItemsArray(r) {
     try {
-      return r.keys().map((key) => ({
-        src: r(key),
-        name: key
-          .replace(/^\.\//, '')
-          .replace(/\.(png|jpe?g|webp|gif)$/i, '')
-          .replace(/[_-]+/g, ' '),
-      }));
+      return r.keys().map((key) => {
+        const fileName = key.replace(/^\.\//, '').replace(/\.(png|jpe?g|webp|gif)$/i, '');
+        const displayName = fileName.replace(/[_-]+/g, ' ');
+        return {
+          img: r(key),
+          name: displayName,
+          price: null,
+          description: '',
+        };
+      });
     } catch (e) {
       return [];
     }
   }
 
-  const animalImages = useMemo(
-    () => importAll(require.context('./animals', true, /\.(png|jpe?g|webp|gif)$/i)),
-    []
-  );
+  // Clothes, food, accessories, homeware, and abstract arrays are now imported from hardcoded files
 
   function AnimalsPage() {
     return (
       <section className="section">
         <div className="container">
-          {animalImages.length === 0 ? (
-            <p>No animal photos found in <code>src/animals</code>.</p>
+          {animals.length === 0 ? (
+            <p>No animals found.</p>
           ) : (
             <div className="animals-grid">
-              {animalImages.map((img, idx) => (
+              {animals.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={img.src} alt={img.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" />
                 </figure>
               ))}
             </div>
@@ -94,26 +99,17 @@ function App() {
     );
   }
 
-  // Clothes page - loads all images in src/clothes
-  const clothesImages = useMemo(
-    () => importAll(require.context('./clothes', true, /\.(png|jpe?g|webp|gif)$/i)),
-    []
-  );
-
-  // Abstract page - loads all images in src/abstract
-  const abstractImages = importAll(require.context('./abstract', true, /\.(png|jpe?g|webp|gif)$/i));
-
   function ClothesPage() {
     return (
       <section className="section">
         <div className="container">
-          {clothesImages.length === 0 ? (
-            <p>No clothes photos found in <code>src/clothes</code>.</p>
+          {clothes.length === 0 ? (
+            <p>No clothes found.</p>
           ) : (
             <div className="animals-grid">
-              {clothesImages.map((img, idx) => (
+              {clothes.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={img.src} alt={img.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" />
                 </figure>
               ))}
             </div>
@@ -127,13 +123,13 @@ function App() {
     return (
       <section className="section">
         <div className="container">
-          {abstractImages.length === 0 ? (
-            <p>No abstract photos found in <code>src/abstract</code>.</p>
+          {abstract.length === 0 ? (
+            <p>No abstract items found.</p>
           ) : (
             <div className="animals-grid">
-              {abstractImages.map((img, idx) => (
+              {abstract.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={img.src} alt={img.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" />
                 </figure>
               ))}
             </div>
@@ -142,24 +138,18 @@ function App() {
       </section>
     );
   }
-
-  // Food page - loads all images in src/food
-  const foodImages = useMemo(
-    () => importAll(require.context('./food', true, /\.(png|jpe?g|webp|gif)$/i)),
-    []
-  );
 
   function FoodPage() {
     return (
       <section className="section">
         <div className="container">
-          {foodImages.length === 0 ? (
-            <p>No food photos found in <code>src/food</code>.</p>
+          {food.length === 0 ? (
+            <p>No food items found.</p>
           ) : (
             <div className="animals-grid">
-              {foodImages.map((img, idx) => (
+              {food.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={img.src} alt={img.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" />
                 </figure>
               ))}
             </div>
@@ -168,24 +158,18 @@ function App() {
       </section>
     );
   }
-
-  // Accessories page - loads all images in src/accessories
-  const accessoriesImages = useMemo(
-    () => importAll(require.context('./accessories', true, /\.(png|jpe?g|webp|gif)$/i)),
-    []
-  );
 
   function AccessoriesPage() {
     return (
       <section className="section">
         <div className="container">
-          {accessoriesImages.length === 0 ? (
-            <p>No accessories photos found in <code>src/accessories</code>.</p>
+          {accessories.length === 0 ? (
+            <p>No accessories found.</p>
           ) : (
             <div className="animals-grid">
-              {accessoriesImages.map((img, idx) => (
+              {accessories.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={img.src} alt={img.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" />
                 </figure>
               ))}
             </div>
@@ -194,12 +178,6 @@ function App() {
       </section>
     );
   }
-
-  // Homeware page - loads all images in src/homeware
-  const homewareImages = useMemo(
-    () => importAll(require.context('./homeware', true, /\.(png|jpe?g|webp|gif)$/i)),
-    []
-  );
   // Home assets
   const homeAssets = useMemo(() => {
     try {
@@ -221,14 +199,14 @@ function App() {
   function HomePage() {
     const FEATURED_ANIMALS_COUNT = 15;
     const featuredAnimals = useMemo(() => {
-      if (animalImages.length === 0) return [];
-      const pool = [...animalImages];
+      if (animals.length === 0) return [];
+      const pool = [...animals];
       for (let i = pool.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [pool[i], pool[j]] = [pool[j], pool[i]];
       }
       return pool.slice(0, Math.min(FEATURED_ANIMALS_COUNT, pool.length));
-    }, [animalImages]);
+    }, [animals]);
 
     return (
       <>
@@ -274,10 +252,10 @@ function App() {
         {featuredAnimals.length > 0 && (
           <footer className="home-footer" id="gallery" aria-label="Featured animals">
             <div className="footer-animals">
-              {featuredAnimals.map((img, idx) => (
-                <NavLink to="/animals" key={`${img.src}-${idx}`} className="footer-animal-link">
+              {featuredAnimals.map((item, idx) => (
+                <NavLink to="/animals" key={`${item.img}-${idx}`} className="footer-animal-link">
                   <figure className="footer-animal">
-                    <img src={img.src} alt={img.name} loading="lazy" />
+                    <img src={item.img} alt={item.name} loading="lazy" />
                   </figure>
                 </NavLink>
               ))}
@@ -330,13 +308,13 @@ function App() {
     return (
       <section className="section">
         <div className="container">
-          {homewareImages.length === 0 ? (
-            <p>No homeware photos found in <code>src/homeware</code>.</p>
+          {homeware.length === 0 ? (
+            <p>No homeware found.</p>
           ) : (
             <div className="animals-grid">
-              {homewareImages.map((img, idx) => (
+              {homeware.map((item, idx) => (
                 <figure className="animal-card" key={idx}>
-                  <img src={img.src} alt={img.name} loading="lazy" />
+                  <img src={item.img} alt={item.name} loading="lazy" />
                 </figure>
               ))}
             </div>
