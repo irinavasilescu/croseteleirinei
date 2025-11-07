@@ -3,7 +3,7 @@ import { useState, useMemo } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const CONTACT_EMAIL = 'hello@crosetele-irinei.ro';
+  const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -12,16 +12,15 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     const subject = encodeURIComponent(`New inquiry from ${name || 'Crochet site'}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    const body = encodeURIComponent(`${message}`);
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   }
 
-  function Page({ title, children }) {
+  function Page({children }) {
     return (
       <section className="section">
         <div className="container">
-          <h2>{title}</h2>
-          {children || <p>Coming soon. Beautiful handmade crochet items will live here.</p>}
+          {children || <p>Coming soon</p>}
         </div>
       </section>
     );
@@ -291,7 +290,7 @@ function App() {
 
   function ContactPage() {
     return (
-      <Page title="Contact">
+      <>
         <div className="contact">
           <p>Have a custom idea or want to say hello? Drop us a message and we’ll get back to you soon.</p>
           <form className="contact-form" onSubmit={handleSubmit}>
@@ -304,18 +303,6 @@ function App() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your name"
-                required
-              />
-            </div>
-            <div className="form-row">
-              <label htmlFor="contact-email">Email</label>
-              <input
-                id="contact-email"
-                name="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
                 required
               />
             </div>
@@ -333,12 +320,8 @@ function App() {
             </div>
             <button type="submit" className="btn btn-primary">Send message</button>
           </form>
-          <p className="direct-email">
-            Prefer email? Write us at{' '}
-            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-          </p>
         </div>
-      </Page>
+      </>
     );
   }
 
