@@ -60,26 +60,6 @@ function App() {
     return fuzzy ? navIcons[fuzzy] : null;
   }
 
-  // Helper function to create items array from images
-  function createItemsArray(r) {
-    try {
-      return r.keys().map((key) => {
-        const fileName = key.replace(/^\.\//, '').replace(/\.(png|jpe?g|webp|gif)$/i, '');
-        const displayName = fileName.replace(/[_-]+/g, ' ');
-        return {
-          img: r(key),
-          name: displayName,
-          price: null,
-          description: '',
-        };
-      });
-    } catch (e) {
-      return [];
-    }
-  }
-
-  // Clothes, food, accessories, homeware, and abstract arrays are now imported from hardcoded files
-
   function AnimalsPage() {
     const location = useLocation();
 
@@ -339,7 +319,6 @@ function App() {
     );
   }
 
-
   function HomewarePage() {
     return (
       <section className="section">
@@ -402,7 +381,7 @@ function App() {
         <Route path={ROUTES.clothes} element={<ClothesPage />} />
         <Route path={ROUTES.abstract} element={<AbstractPage />} />
         <Route path={ROUTES.contact} element={<ContactPage />} />
-        <Route path="*" element={<Page title="Not found"><p>The page you are looking for does not exist.</p></Page>} />
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </div>
   );
