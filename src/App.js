@@ -95,6 +95,9 @@ function App() {
   // Clothes page - loads all images in src/clothes
   const clothesImages = importAll(require.context('./clothes', true, /\.(png|jpe?g|webp|gif)$/i));
 
+  // Abstract page - loads all images in src/abstract
+  const abstractImages = importAll(require.context('./abstract', true, /\.(png|jpe?g|webp|gif)$/i));
+
   function ClothesPage() {
     return (
       <section className="section">
@@ -104,6 +107,26 @@ function App() {
           ) : (
             <div className="animals-grid">
               {clothesImages.map((img, idx) => (
+                <figure className="animal-card" key={idx}>
+                  <img src={img.src} alt={img.name} loading="lazy" />
+                </figure>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+    );
+  }
+
+  function AbstractPage() {
+    return (
+      <section className="section">
+        <div className="container">
+          {abstractImages.length === 0 ? (
+            <p>No abstract photos found in <code>src/abstract</code>.</p>
+          ) : (
+            <div className="animals-grid">
+              {abstractImages.map((img, idx) => (
                 <figure className="animal-card" key={idx}>
                   <img src={img.src} alt={img.name} loading="lazy" />
                 </figure>
@@ -194,6 +217,7 @@ function App() {
               { to: '/accessories', key: 'accessories', label: 'Accessories' },
               { to: '/animals', key: 'animals', label: 'Animals' },
               { to: '/clothes', key: 'clothes', label: 'Clothes' },
+                { to: '/abstract', key: 'abstract', label: 'Abstract' },
               { to: '/food', key: 'food', label: 'Food' },
               { to: '/homeware', key: 'homeware', label: 'Homeware' }
             ].map((link) => {
@@ -219,11 +243,12 @@ function App() {
         <Route path="/" element={<Page title="Home"> 
           <p>Welcome to Croșetele Irinei. Explore our handcrafted crochet collections.</p>
         </Page>} />
-        <Route path="/accessories" element={<AccessoriesPage />} />
         <Route path="/animals" element={<AnimalsPage />} />
-        <Route path="/clothes" element={<ClothesPage />} />
         <Route path="/food" element={<FoodPage />} />
         <Route path="/homeware" element={<HomewarePage />} />
+        <Route path="/accessories" element={<AccessoriesPage />} />
+        <Route path="/clothes" element={<ClothesPage />} />
+        <Route path="/abstract" element={<AbstractPage />} />
         <Route path="*" element={<Page title="Not found"><p>The page you are looking for does not exist.</p></Page>} />
       </Routes>
     </div>
