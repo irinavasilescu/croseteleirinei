@@ -24,6 +24,27 @@ function App() {
     home: '/',
   };
 
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  // Close modal on ESC key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        setSelectedItem(null);
+      }
+    };
+    if (selectedItem) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = '';
+    };
+  }, [selectedItem]);
+
   function Page({children }) {
     return (
       <section className="section">
@@ -62,6 +83,45 @@ function App() {
     return fuzzy ? navIcons[fuzzy] : null;
   }
 
+  function ItemModal({ item, onClose }) {
+    if (!item) return null;
+
+    const handleBackdropClick = (e) => {
+      if (e.target === e.currentTarget) {
+        onClose();
+      }
+    };
+
+    return (
+      <div className="modal-backdrop" onClick={handleBackdropClick}>
+        <div className="modal-content">
+          <button className="modal-close" onClick={onClose} aria-label="Close modal">
+            ×
+          </button>
+          <div className="modal-body">
+            <div className="modal-image">
+              <img src={item.img} alt={item.name} />
+            </div>
+            <div className="modal-info">
+              <h2 className="modal-title">{item.name}</h2>
+              {item.price && (
+                <div className="modal-price">
+                  <span className="modal-price-label">Price:</span>
+                  <span className="modal-price-value">{item.price}</span>
+                </div>
+              )}
+              {item.description && (
+                <div className="modal-description">
+                  <p>{item.description}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   function AnimalsPage() {
     const location = useLocation();
 
@@ -86,7 +146,7 @@ function App() {
           ) : (
             <div className="animals-grid">
               {animals.map((item, idx) => (
-                <figure className="animal-card" key={idx}>
+                <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
@@ -106,7 +166,7 @@ function App() {
           ) : (
             <div className="animals-grid">
               {clothes.map((item, idx) => (
-                <figure className="animal-card" key={idx}>
+                <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
@@ -126,7 +186,7 @@ function App() {
           ) : (
             <div className="animals-grid">
               {abstract.map((item, idx) => (
-                <figure className="animal-card" key={idx}>
+                <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
@@ -146,7 +206,7 @@ function App() {
           ) : (
             <div className="animals-grid">
               {food.map((item, idx) => (
-                <figure className="animal-card" key={idx}>
+                <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
@@ -166,7 +226,7 @@ function App() {
           ) : (
             <div className="animals-grid">
               {accessories.map((item, idx) => (
-                <figure className="animal-card" key={idx}>
+                <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
@@ -331,7 +391,7 @@ function App() {
           ) : (
             <div className="animals-grid">
               {homeware.map((item, idx) => (
-                <figure className="animal-card" key={idx}>
+                <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
@@ -386,6 +446,7 @@ function App() {
         <Route path={ROUTES.contact} element={<ContactPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
+      <ItemModal item={selectedItem} onClose={() => setSelectedItem(null)} />
     </div>
   );
 }
