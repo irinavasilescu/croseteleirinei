@@ -1,45 +1,93 @@
-import black1 from './homeware/black1.png';
-import black2 from './homeware/black2.png';
-import black3 from './homeware/black3.png';
-import blue1 from './homeware/blue1.png';
-import blue2 from './homeware/blue2.png';
-import blue3 from './homeware/blue3.png';
-import red1 from './homeware/red1.png';
-import red2 from './homeware/red2.png';
-import red3 from './homeware/red3.png';
-import s_coaster from './homeware/s_coaster.png';
+import x_basket from './homeware/x_basket.png';
+import y_basket from './homeware/y_basket.png';
+import z_basket from './homeware/z_basket.png';
+import a_coaster from './homeware/a_coaster.png';
+import b_coaster from './homeware/b_coaster.png';
+import c_coaster from './homeware/c_coaster.png';
+import d_coaster from './homeware/d_coaster.png';
+import e_coaster from './homeware/e_coaster.png';
+import f_coaster from './homeware/f_coaster.png';
+import g_doily from './homeware/g_doily.png';
 
 export const homeware = [
     {
-        img: black1,
+        img: x_basket,
         name: 'Coșuleț',
         price: null,
         description: null,
-        id: 'black1',
+        id: 'x_basket',
         tags: ['homeware']
     },
     {
-        img: blue1,
+        img: y_basket,
         name: 'Coșuleț',
         price: null,
         description: null,
-        id: 'blue1',
+        id: 'y_basket',
         tags: ['homeware']
     },
     {
-        img: red1,
+        img: z_basket,
         name: 'Coșuleț',
         price: null,
         description: null,
-        id: 'red1',
+        id: 'z_basket',
         tags: ['homeware']
     },
     {
-        img: s_coaster,
+        img: a_coaster,
         name: 'Coaster',
         price: null,
         description: null,
-        id: 's_coaster',
+        id: 'a_coaster',
+        tags: ['homeware']
+    },
+    {
+        img: b_coaster,
+        name: 'Coaster',
+        price: null,
+        description: null,
+        id: 'b_coaster',
+        tags: ['homeware']
+    },
+    {
+        img: c_coaster,
+        name: 'Coaster',
+        price: null,
+        description: null,
+        id: 'c_coaster',
+        tags: ['homeware']
+    },
+    {
+        img: d_coaster,
+        name: 'Coaster',
+        price: null,
+        description: null,
+        id: 'd_coaster',
+        tags: ['homeware']
+    },
+    {
+        img: e_coaster,
+        name: 'Coaster',
+        price: null,
+        description: null,
+        id: 'e_coaster',
+        tags: ['homeware']
+    },
+    {
+        img: f_coaster,
+        name: 'Coaster',
+        price: null,
+        description: null,
+        id: 'f_coaster',
+        tags: ['homeware']
+    },
+    {
+        img: g_doily,
+        name: 'Doily',
+        price: null,
+        description: null,
+        id: 'g_doily',
         tags: ['homeware']
     },
 ];

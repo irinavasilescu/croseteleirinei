@@ -13,11 +13,9 @@ function App() {
   const BASE_URL = '/croseteleirinei';
 
   const ROUTES = {
-    animals: '/animals',
-    food: '/food',
+    plushies: '/plushies',
     homeware: '/homeware',
     wearables: '/wearables',
-    abstract: '/abstract',
     contact: '/contact',
     home: '/',
   };
@@ -133,8 +131,11 @@ function App() {
     );
   }
 
-  function AnimalsPage() {
+  function PlushiesPage() {
     const location = useLocation();
+    const plushies = useMemo(() => {
+      return [...animals, ...food, ...abstract];
+    }, []);
 
     useEffect(() => {
       if (location.hash) {
@@ -152,11 +153,11 @@ function App() {
     return (
       <section className="section">
         <div className="container">
-          {animals.length === 0 ? (
-            <p>No animals found.</p>
+          {plushies.length === 0 ? (
+            <p>No plushies found.</p>
           ) : (
             <div className="animals-grid">
-              {animals.map((item, idx) => (
+              {plushies.map((item, idx) => (
                 <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
@@ -188,45 +189,6 @@ function App() {
     );
   }
 
-  function AbstractPage() {
-    return (
-      <section className="section">
-        <div className="container">
-          {abstract.length === 0 ? (
-            <p>No abstract items found.</p>
-          ) : (
-            <div className="animals-grid">
-              {abstract.map((item, idx) => (
-                <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
-                  <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
-                </figure>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-    );
-  }
-
-  function FoodPage() {
-    return (
-      <section className="section">
-        <div className="container">
-          {food.length === 0 ? (
-            <p>No food items found.</p>
-          ) : (
-            <div className="animals-grid">
-              {food.map((item, idx) => (
-                <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
-                  <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
-                </figure>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-    );
-  }
 
   // Home assets
   const homeAssets = useMemo(() => {
@@ -265,7 +227,7 @@ function App() {
             <div className="landing-content">
               <h1 className="landing-title">Croșetele Irinei</h1>
               <div className="landing-actions">
-                <a href={`${BASE_URL}${ROUTES.animals}`} className="landing-btn landing-btn-primary">Explore</a>
+                <a href={`${BASE_URL}${ROUTES.plushies}`} className="landing-btn landing-btn-primary">Explore</a>
                 <a href={`${BASE_URL}${ROUTES.contact}`} className="landing-btn landing-btn-secondary">Contact</a>
               </div>
               <div className="landing-social">
@@ -308,7 +270,7 @@ function App() {
           <footer className="home-footer" id="gallery" aria-label="Featured animals">
             <div className="footer-animals">
               {featuredAnimals.map((item, idx) => (
-                <NavLink to={`${ROUTES.animals}#${item.id}`} key={`${item.img}-${idx}`} className="footer-animal-link">
+                <NavLink to={`${ROUTES.plushies}#${item.id}`} key={`${item.img}-${idx}`} className="footer-animal-link">
                   <figure className="footer-animal">
                     <span class="footer-animal-name">{item.name}</span>
                     <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
@@ -401,11 +363,9 @@ function App() {
           <nav className="nav nav-tabs">
             {[
               { to: ROUTES.home, key: 'home', label: 'Home', end: true },
-              { to: ROUTES.animals, key: 'animals', label: 'Animals' },
-              { to: ROUTES.food, key: 'food', label: 'Food' },
+              { to: ROUTES.plushies, key: 'plushies', label: 'Plushies' },
               { to: ROUTES.homeware, key: 'homeware', label: 'Homeware' },
               { to: ROUTES.wearables, key: 'wearables', label: 'Wearables' },
-              { to: ROUTES.abstract, key: 'abstract', label: 'Abstract' },
               { to: ROUTES.contact, key: 'contact', label: 'Contact' },
             ].map((link) => {
               const icon = findIcon(link.key);
@@ -428,11 +388,9 @@ function App() {
 
       <Routes>
         <Route path={ROUTES.home} element={<HomePage />} />
-        <Route path={ROUTES.animals} element={<AnimalsPage />} />
-        <Route path={ROUTES.food} element={<FoodPage />} />
+        <Route path={ROUTES.plushies} element={<PlushiesPage />} />
         <Route path={ROUTES.homeware} element={<HomewarePage />} />
         <Route path={ROUTES.wearables} element={<WearablesPage />} />
-        <Route path={ROUTES.abstract} element={<AbstractPage />} />
         <Route path={ROUTES.contact} element={<ContactPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>

@@ -1,4 +1,5 @@
 import a_frog from './animals/a_frog.png';
+import ab_ghost from './animals/ab_ghost.png';
 import b_bee from './animals/b_bee.png';
 import c_teddy from './animals/c_teddy.png';
 import d_chick from './animals/d_chick.png';
@@ -45,6 +46,16 @@ export const animals = [
         dimensions: '',
         tags: ['toys', 'bag charms'],
         in_stock: false,
+    },
+    {
+        img: ab_ghost,
+        name: 'Mița',
+        price: null,
+        description: null,
+        id: 'ab_ghost',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: true,
     },
     {
         img: c_teddy,

@@ -1,4 +1,7 @@
 import a_top from './wearables/a_top.png';
+import a_shawl from './wearables/a_shawl.png';
+import ab_shophie from './wearables/ab_shophie.png';
+import ac_sophie from './wearables/ac_sophie.png';
 import b_top from './wearables/b_top.png';
 import c_top from './wearables/c_top.png';
 import a_hat from './wearables/a_hat.png';
@@ -38,12 +41,36 @@ export const wearables = [
         tags: ['wearables'],
     },
     {
+        img: a_shawl,
+        name: 'Shawl',
+        price: null,
+        description: null,
+        id: 'a_shawl',
+        tags: ['wearables'],
+    },
+    {
+        img: ab_shophie,
+        name: 'Sophie hood',
+        price: null,
+        description: null,
+        id: 'ab_sophie',
+        tags: ['wearables'],
+    },
+    {
+        img: ac_sophie,
+        name: 'Crochet sophie scarf',
+        price: null,
+        description: null,
+        id: 'ac_sophie',
+        tags: ['wearables'],
+    },
+    {
         img: a_hat,
         name: 'Hat',
         price: null,
         description: null,
         id: 'a_hat',
-        tags: ['wearable']
+        tags: ['wearables']
     },
     {
         img: b_hat,
@@ -59,7 +86,7 @@ export const wearables = [
         price: null,
         description: null,
         id: 'c_hat',
-        tags: ['wearable']
+        tags: ['wearables']
     },
     {
         img: d_hat,
@@ -67,7 +94,7 @@ export const wearables = [
         price: null,
         description: null,
         id: 'd_hat',
-        tags: ['wearable']
+        tags: ['wearables']
     },
     {
         img: e_hat,
@@ -75,7 +102,7 @@ export const wearables = [
         price: null,
         description: null,
         id: 'e_hat',
-        tags: ['wearable']
+        tags: ['wearables']
     },
     {
         img: g_bag,
@@ -83,7 +110,7 @@ export const wearables = [
         price: null,
         description: null,
         id: 'g_bag',
-        tags: ['wearable']
+        tags: ['wearables']
     },
     {
         img: h_bag,
@@ -91,7 +118,7 @@ export const wearables = [
         price: null,
         description: null,
         id: 'h_bag',
-        tags: ['wearable']
+        tags: ['wearables']
     },
     {
         img: i_pouch,
@@ -107,7 +134,7 @@ export const wearables = [
         price: null,
         description: null,
         id: 'j_bag',
-        tags: ['wearable']
+        tags: ['wearables']
     },
 ];
 
