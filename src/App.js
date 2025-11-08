@@ -223,11 +223,15 @@ function App() {
     return (
       <>
         <section className="landing-hero">
+          <div className="landing-banner">
+            {homeAssets.banner && (
+              <img src={homeAssets.banner} alt="" role="presentation" />
+            )}
+          </div>
           <div className="landing-container">
             <div className="landing-content">
-              <h1 className="landing-title">Croșetele Irinei</h1>
               <div className="landing-actions">
-                <a href={`${BASE_URL}${ROUTES.plushies}`} className="landing-btn landing-btn-primary">Explore</a>
+                <a href={`${BASE_URL}${ROUTES.plushies}`} className="landing-btn landing-btn-primary">Explorează</a>
                 <a href={`${BASE_URL}${ROUTES.contact}`} className="landing-btn landing-btn-secondary">Contact</a>
               </div>
               <div className="landing-social">
@@ -261,6 +265,45 @@ function App() {
                     )}
                   </a>
                   <span className="landing-social-hover-text">croseteleirinei@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="section how-i-work">
+          <div className="container">
+            <div className="how-i-work-cards">
+              <div className="how-i-work-card">
+                {homeAssets.locally_sourced && (
+                  <div className="how-i-work-image">
+                    <img src={homeAssets.locally_sourced} alt="Locally sourced materials" />
+                  </div>
+                )}
+                <div className="how-i-work-card-content">
+                  <h3>Proveniență locală</h3>
+                  <p>Fiecare creație prinde viață din materiale alese cu grijă. Firele provin de la furnizori locali, sprijinind comunitatea și reducând impactul asupra mediului. Fiecare piesă spune o poveste despre meșteșug, grijă și valori sustenabile.</p>
+                </div>
+              </div>
+              <div className="how-i-work-card">
+                {homeAssets.no_waste && (
+                  <div className="how-i-work-image">
+                    <img src={homeAssets.no_waste} alt="No waste" />
+                  </div>
+                )}
+                <div className="how-i-work-card-content">
+                  <h3>Fără risipă</h3>
+                  <p>Nimic nu se irosește. Fiecare fir rămas este refolosit, transformat în proiecte colorate din fire diverse sau folosit ca umplutură moale pentru jucării. Este un mod de a onora fiecare material și de a menține un proces prietenos cu planeta.</p>
+                </div>
+              </div>
+              <div className="how-i-work-card">
+                {homeAssets.stuffing && (
+                  <div className="how-i-work-image">
+                    <img src={homeAssets.stuffing} alt="Hypoallergenic stuffing" />
+                  </div>
+                )}
+                <div className="how-i-work-card-content">
+                  <h3>Pufos și sigur</h3>
+                  <p>Fiecare jucărie este umplută cu un material hipoalergenic, moale și sigur, potrivit pentru toate vârstele. Fiecare piesă este creată pentru a aduce confort și bucurie, lucrată manual cu grijă, de la început până la sfârșit.</p>
                 </div>
               </div>
             </div>
