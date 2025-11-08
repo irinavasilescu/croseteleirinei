@@ -2,9 +2,8 @@ import './App.css';
 import { useState, useMemo, useEffect } from 'react';
 import { NavLink, Routes, Route, useLocation } from 'react-router-dom';
 import { animals } from './animals';
-import { clothes } from './clothes';
+import { wearables } from './wearables';
 import { food } from './food';
-import { accessories } from './accessories';
 import { homeware } from './homeware';
 import { abstract } from './abstract';
 
@@ -17,8 +16,7 @@ function App() {
     animals: '/animals',
     food: '/food',
     homeware: '/homeware',
-    accessories: '/accessories',
-    clothes: '/clothes',
+    wearables: '/wearables',
     abstract: '/abstract',
     contact: '/contact',
     home: '/',
@@ -92,6 +90,11 @@ function App() {
       }
     };
 
+    const getTagClassName = (tag) => {
+      const normalizedTag = tag.toLowerCase().replace(/\s+/g, '-');
+      return `modal-tag modal-tag-${normalizedTag}`;
+    };
+
     return (
       <div className="modal-backdrop" onClick={handleBackdropClick}>
         <div className="modal-content">
@@ -104,15 +107,23 @@ function App() {
             </div>
             <div className="modal-info">
               <h2 className="modal-title">{item.name}</h2>
-              {item.price && (
-                <div className="modal-price">
-                  <span className="modal-price-label">Price:</span>
-                  <span className="modal-price-value">{item.price}</span>
+              {item.tags?.length && (
+                <div className="modal-tags">
+                  {item.tags.map(tag => (
+                    <span className={getTagClassName(tag)}>
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               )}
               {item.description && (
                 <div className="modal-description">
                   <p>{item.description}</p>
+                </div>
+              )}
+              {item.dimensions && (
+                <div className="modal-dimensions">
+                  <p>{item.dimensions}</p>
                 </div>
               )}
             </div>
@@ -157,15 +168,15 @@ function App() {
     );
   }
 
-  function ClothesPage() {
+  function WearablesPage() {
     return (
       <section className="section">
         <div className="container">
-          {clothes.length === 0 ? (
-            <p>No clothes found.</p>
+          {wearables.length === 0 ? (
+            <p>No wearables found.</p>
           ) : (
             <div className="animals-grid">
-              {clothes.map((item, idx) => (
+              {wearables.map((item, idx) => (
                 <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
@@ -217,25 +228,6 @@ function App() {
     );
   }
 
-  function AccessoriesPage() {
-    return (
-      <section className="section">
-        <div className="container">
-          {accessories.length === 0 ? (
-            <p>No accessories found.</p>
-          ) : (
-            <div className="animals-grid">
-              {accessories.map((item, idx) => (
-                <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
-                  <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
-                </figure>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-    );
-  }
   // Home assets
   const homeAssets = useMemo(() => {
     try {
@@ -412,8 +404,7 @@ function App() {
               { to: ROUTES.animals, key: 'animals', label: 'Animals' },
               { to: ROUTES.food, key: 'food', label: 'Food' },
               { to: ROUTES.homeware, key: 'homeware', label: 'Homeware' },
-              { to: ROUTES.accessories, key: 'accessories', label: 'Accessories' },
-              { to: ROUTES.clothes, key: 'clothes', label: 'Clothes' },
+              { to: ROUTES.wearables, key: 'wearables', label: 'Wearables' },
               { to: ROUTES.abstract, key: 'abstract', label: 'Abstract' },
               { to: ROUTES.contact, key: 'contact', label: 'Contact' },
             ].map((link) => {
@@ -440,8 +431,7 @@ function App() {
         <Route path={ROUTES.animals} element={<AnimalsPage />} />
         <Route path={ROUTES.food} element={<FoodPage />} />
         <Route path={ROUTES.homeware} element={<HomewarePage />} />
-        <Route path={ROUTES.accessories} element={<AccessoriesPage />} />
-        <Route path={ROUTES.clothes} element={<ClothesPage />} />
+        <Route path={ROUTES.wearables} element={<WearablesPage />} />
         <Route path={ROUTES.abstract} element={<AbstractPage />} />
         <Route path={ROUTES.contact} element={<ContactPage />} />
         <Route path="*" element={<HomePage />} />

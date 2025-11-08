@@ -32,6 +32,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'a_frog',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: b_bee,
@@ -39,6 +42,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'b_bee',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: c_teddy,
@@ -46,6 +52,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'c_teddy',
+        dimensions: '',
+        tags: ['toys'],
+        in_stock: false,
     },
     {
         img: d_chick,
@@ -53,6 +62,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'd_chick',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: e_octopus,
@@ -60,6 +72,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'e_octopus',
+        dimensions: '',
+        tags: ['toys'],
+        in_stock: false,
     },
     {
         img: f_rabbit,
@@ -67,6 +82,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'f_rabbit',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: g_rabbit,
@@ -74,6 +92,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'g_rabbit',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: h_rabbit,
@@ -81,6 +102,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'h_rabbit',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: i_fish,
@@ -88,6 +112,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'i_fish',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: j_chick,
@@ -95,6 +122,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'j_chick',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: k_teddy,
@@ -102,6 +132,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'k_teddy',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: l_cat,
@@ -109,6 +142,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'l_cat',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: n_chick,
@@ -116,6 +152,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'n_chick',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: o_rabbit,
@@ -123,6 +162,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'o_rabbit',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: p_chick,
@@ -130,6 +172,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'p_chick',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: q_rabbit,
@@ -137,6 +182,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'q_rabbit',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: r_rabbit,
@@ -144,6 +192,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'r_rabbit',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: s_stingray,
@@ -151,6 +202,9 @@ export const animals = [
         price: null,
         description: null,
         id: 's_stingray',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: t_chick,
@@ -158,6 +212,9 @@ export const animals = [
         price: null,
         description: null,
         id: 't_chick',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: u_mouse,
@@ -165,6 +222,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'u_mouse',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: v_octopus,
@@ -172,6 +232,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'v_octopus',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: w_cow,
@@ -179,6 +242,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'w_cow',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: false,
     },
     {
         img: x_penguin,
@@ -186,6 +252,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'x_penguin',
+        dimensions: '',
+        tags: ['toys'],
+        in_stock: true,
     },
     {
         img: y_octopus,
@@ -193,6 +262,9 @@ export const animals = [
         price: null,
         description: null,
         id: 'y_octopus',
+        dimensions: '',
+        tags: ['toys'],
+        in_stock: false,
     },
     {
         img: z_octopus,
@@ -200,5 +272,8 @@ export const animals = [
         price: null,
         description: null,
         id: 'z_octopus',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: true,
     },
 ];

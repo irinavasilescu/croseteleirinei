@@ -9,6 +9,7 @@ export const abstract = [
         price: null,
         description: null,
         id: 'a_heart',
+        tags: ['toys'],
     },
     {
         img: b_moon,
@@ -16,6 +17,7 @@ export const abstract = [
         price: null,
         description: null,
         id: 'b_moon',
+        tags: ['toys'],
     },
     {
         img: c_pikachu,
@@ -23,6 +25,7 @@ export const abstract = [
         price: null,
         description: null,
         id: 'c_pikachu',
+        tags: ['toys'],
     },
 ];
 

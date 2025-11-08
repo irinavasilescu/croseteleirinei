@@ -471,7 +471,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.75rem;
 }
 
 .modal-title {
@@ -512,6 +512,47 @@
   font-size: 1rem;
 }
 
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-tag {
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: black;
+}
+
+.modal-tag-toys {
+  background-color: rgba(255,214,107,.3);
+}
+
+.modal-tag-bag-charms {
+  background-color: rgba(254, 54, 54, .3);
+}
+
+.modal-tag-homeware {
+  background-color: rgba(97, 212, 179, .3);
+}
+
+.modal-tag-wearables {
+  background-color: rgba(233, 116, 81, .3);
+}
+
+.modal-tag-accessories {
+  background-color: rgba(255,214,107,.3);
+}
+
+.modal-tag-abstract {
+  background-color: rgba(156, 138, 114, .3);
+}
+
 /* Responsive modal */
 @media (max-width: 768px) {
   .modal-body {
@@ -521,13 +562,14 @@
   }
 
   .modal-image {
+    justify-items: center;
     width: 100%;
     max-width: 280px;
     margin: 0 auto;
   }
 
   .modal-image img {
-    max-height: 300px;
+    max-height: 150px;
     width: auto;
     object-fit: contain;
   }

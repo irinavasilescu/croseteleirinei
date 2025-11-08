@@ -12,66 +12,27 @@ import s_coaster from './homeware/s_coaster.png';
 export const homeware = [
     {
         img: black1,
-        name: 'Black',
+        name: 'Coșuleț',
         price: null,
         description: null,
         id: 'black1',
-    },
-    {
-        img: black2,
-        name: 'Black',
-        price: null,
-        description: null,
-        id: 'black2',
-    },
-    {
-        img: black3,
-        name: 'Black',
-        price: null,
-        description: null,
-        id: 'black3',
+        tags: ['homeware']
     },
     {
         img: blue1,
-        name: 'Blue',
+        name: 'Coșuleț',
         price: null,
         description: null,
         id: 'blue1',
-    },
-    {
-        img: blue2,
-        name: 'Blue',
-        price: null,
-        description: null,
-        id: 'blue2',
-    },
-    {
-        img: blue3,
-        name: 'Blue',
-        price: null,
-        description: null,
-        id: 'blue3',
+        tags: ['homeware']
     },
     {
         img: red1,
-        name: 'Red',
+        name: 'Coșuleț',
         price: null,
         description: null,
         id: 'red1',
-    },
-    {
-        img: red2,
-        name: 'Red',
-        price: null,
-        description: null,
-        id: 'red2',
-    },
-    {
-        img: red3,
-        name: 'Red',
-        price: null,
-        description: null,
-        id: 'red3',
+        tags: ['homeware']
     },
     {
         img: s_coaster,
@@ -79,6 +40,7 @@ export const homeware = [
         price: null,
         description: null,
         id: 's_coaster',
+        tags: ['homeware']
     },
 ];
 
