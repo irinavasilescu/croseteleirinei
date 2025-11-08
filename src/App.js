@@ -230,42 +230,15 @@ function App() {
           </div>
           <div className="landing-container">
             <div className="landing-content">
+              <p className="landing-subtitle">
+              Bună! Sunt Irina, iar pasiunea mea pentru croșetat a apărut din pură curiozitate. Am văzut un clip pe YouTube despre cum poți crea o pătură simplă, și mi-am spus: „De ce nu?”
+              De atunci, fiecare proiect a fost o nouă aventură. Am învățat pas cu pas, am greșit, am deșirat, dar am descoperit câtă bucurie poate aduce o piesă creată cu propriile mâini.
+              Astăzi, fiecare lucru pe care îl croșetez este făcut cu grijă, din materiale alese local și cu atenție la detalii. Îmi place să dau viață micilor personaje, colorate, jucăușe, perfecte pentru a aduce zâmbete celor mici și celor mari.
+              La Croșetele Irinei, fiecare creație poartă o poveste simplă: o mică idee născută din curiozitate, transformată în bucurie, buclă cu buclă.
+              </p>
               <div className="landing-actions">
-                <a href={`${BASE_URL}${ROUTES.plushies}`} className="landing-btn landing-btn-primary">Explorează</a>
+                <a href={`${BASE_URL}${ROUTES.plushies}`} className="landing-btn landing-btn-primary">Vezi colecția</a>
                 <a href={`${BASE_URL}${ROUTES.contact}`} className="landing-btn landing-btn-secondary">Contact</a>
-              </div>
-              <div className="landing-social">
-                <div className="landing-social-item">
-                  <a
-                    href="https://instagram.com/crosetele_irinei"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="landing-social-link"
-                    aria-label="Open Croșetele Irinei on Instagram"
-                  >
-                    {homeAssets.instagram ? (
-                      <img src={homeAssets.instagram} alt="Instagram" />
-                    ) : (
-                      <span>📸</span>
-                    )}
-                  </a>
-                  <span className="landing-social-hover-text">@crosetele_irinei</span>
-                </div>
-                <div className="landing-social-item">
-                  <a
-                    href={`mailto:${CONTACT_EMAIL}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="landing-social-link"
-                  >
-                    {homeAssets.mail ? (
-                      <img src={homeAssets.mail} alt="Email" />
-                    ) : (
-                      <span>@</span>
-                    )}
-                  </a>
-                  <span className="landing-social-hover-text">croseteleirinei@gmail.com</span>
-                </div>
               </div>
             </div>
           </div>
@@ -309,6 +282,39 @@ function App() {
             </div>
           </div>
         </section>
+        <div className="landing-social">
+                <div className="landing-social-item">
+                  <a
+                    href="https://instagram.com/crosetele_irinei"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="landing-social-link"
+                    aria-label="Open Croșetele Irinei on Instagram"
+                  >
+                    {homeAssets.instagram ? (
+                      <img src={homeAssets.instagram} alt="Instagram" />
+                    ) : (
+                      <span>📸</span>
+                    )}
+                  </a>
+                  <span className="landing-social-hover-text">@crosetele_irinei</span>
+                </div>
+                <div className="landing-social-item">
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="landing-social-link"
+                  >
+                    {homeAssets.mail ? (
+                      <img src={homeAssets.mail} alt="Email" />
+                    ) : (
+                      <span>@</span>
+                    )}
+                  </a>
+                  <span className="landing-social-hover-text">croseteleirinei@gmail.com</span>
+                </div>
+              </div>
         {featuredAnimals.length > 0 && (
           <footer className="home-footer" id="gallery" aria-label="Featured animals">
             <div className="footer-animals">
