@@ -10,8 +10,6 @@ import { abstract } from './abstract';
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
 
-  const BASE_URL = '/croseteleirinei';
-
   const ROUTES = {
     plushies: '/plushies',
     homeware: '/homeware',
@@ -237,8 +235,8 @@ function App() {
               La Croșetele Irinei, fiecare creație poartă o poveste simplă: o mică idee născută din curiozitate, transformată în bucurie, buclă cu buclă.
               </p>
               <div className="landing-actions">
-                <a href={`${BASE_URL}${ROUTES.plushies}`} className="landing-btn landing-btn-primary">Vezi colecția</a>
-                <a href={`${BASE_URL}${ROUTES.contact}`} className="landing-btn landing-btn-secondary">Contact</a>
+                <a href={`${ROUTES.plushies}`} className="landing-btn landing-btn-primary">Vezi colecția</a>
+                <a href={`${ROUTES.contact}`} className="landing-btn landing-btn-secondary">Contact</a>
               </div>
             </div>
           </div>

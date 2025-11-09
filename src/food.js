@@ -15,6 +15,7 @@ export const food = [
         price: null,
         description: null,
         id: 'a_mushroom',
+        tags: ['toys', 'bag charms']
     },
     {
         img: b_icecream,
@@ -22,6 +23,7 @@ export const food = [
         price: null,
         description: null,
         id: 'b_icecream',
+        tags: ['toys']
     },
     {
         img: c_pumpkin,
@@ -29,6 +31,7 @@ export const food = [
         price: null,
         description: null,
         id: 'c_pumpkin',
+        tags: ['toys']
     },
     {
         img: d_orange,
@@ -36,6 +39,7 @@ export const food = [
         price: null,
         description: null,
         id: 'd_orange',
+        tags: ['toys', 'bag charms']
     },
     {
         img: e_strawberry,
@@ -43,6 +47,7 @@ export const food = [
         price: null,
         description: null,
         id: 'e_strawberry',
+        tags: ['toys', 'bag charms']
     },
     {
         img: f_blueberry,
@@ -50,6 +55,7 @@ export const food = [
         price: null,
         description: null,
         id: 'f_blueberry',
+        tags: ['toys', 'bag charms']
     },
     {
         img: g_blueberry,
@@ -57,6 +63,7 @@ export const food = [
         price: null,
         description: null,
         id: 'g_blueberry',
+        tags: ['toys', 'bag charms']
     },
     {
         img: h_parsnip,
@@ -64,6 +71,7 @@ export const food = [
         price: null,
         description: null,
         id: 'h_parsnip',
+        tags: ['toys', 'bag charms']
     },
     {
         img: i_eggplant,
@@ -71,6 +79,7 @@ export const food = [
         price: null,
         description: null,
         id: 'i_eggplant',
+        tags: ['toys', 'bag charms']
     },
 ];
 

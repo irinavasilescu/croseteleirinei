@@ -284,7 +284,7 @@ export const animals = [
         description: null,
         id: 'z_octopus',
         dimensions: '',
-        tags: ['toys', 'bag charms'],
+        tags: ['toys'],
         in_stock: true,
     },
 ];

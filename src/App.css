@@ -24,7 +24,7 @@
 .section { padding: 4rem 0; }
 .section h2 { font-size: 2rem; margin: 0 0 1rem; color: var(--burnt-sienna); position: relative; }
 .section h2::after { content: ''; display: block; width: 140px; height: 8px; margin-top: 8px; border-radius: 999px; background: repeating-linear-gradient(90deg, var(--burnt-sienna) 0 14px, transparent 14px 22px); opacity: .55; }
-.section p { color: var(--muted); line-height: 1.7; }
+.section p { color: var(--muted); }
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.75); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,.05); }
@@ -238,12 +238,11 @@
 }
 
 .landing-subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: 1rem;
   font-weight: 400;
   color: #000000;
   margin: 0 0 3rem;
   opacity: 0.7;
-  letter-spacing: 0.05em;
 }
 
 .landing-actions {
@@ -444,7 +443,6 @@
 
 .how-i-work-card-content p {
   color: var(--muted);
-  line-height: 1.7;
   margin: 0;
   font-size: 0.95rem;
 }
