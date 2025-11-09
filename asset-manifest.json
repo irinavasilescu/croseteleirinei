@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/croseteleirinei/static/css/main.2b931558.css",
-    "main.js": "/croseteleirinei/static/js/main.04ffece3.js",
+    "main.js": "/croseteleirinei/static/js/main.967386ba.js",
     "static/js/453.a1c98a7c.chunk.js": "/croseteleirinei/static/js/453.a1c98a7c.chunk.js",
     "static/media/g_bag.png": "/croseteleirinei/static/media/g_bag.cf00adb3f351ec452d91.png",
     "static/media/a_top.png": "/croseteleirinei/static/media/a_top.dfbe80d8a2a1025381b5.png",
@@ -81,11 +81,11 @@
     "static/media/instagram.png": "/croseteleirinei/static/media/instagram.90511daa00c18028bf2d.png",
     "index.html": "/croseteleirinei/index.html",
     "main.2b931558.css.map": "/croseteleirinei/static/css/main.2b931558.css.map",
-    "main.04ffece3.js.map": "/croseteleirinei/static/js/main.04ffece3.js.map",
+    "main.967386ba.js.map": "/croseteleirinei/static/js/main.967386ba.js.map",
     "453.a1c98a7c.chunk.js.map": "/croseteleirinei/static/js/453.a1c98a7c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2b931558.css",
-    "static/js/main.04ffece3.js"
+    "static/js/main.967386ba.js"
   ]
 }
