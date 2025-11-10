@@ -39,16 +39,6 @@ function App() {
     };
   }, [selectedItem]);
 
-  function Page({children }) {
-    return (
-      <section className="section">
-        <div className="container">
-          {children || <p>Coming soon</p>}
-        </div>
-      </section>
-    );
-  }
-
   // Nav icons (auto-load from src/nav)
   function loadNavIcons() {
     try {
