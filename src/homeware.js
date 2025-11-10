@@ -84,7 +84,7 @@ export const homeware = [
     },
     {
         img: g_doily,
-        name: 'Doily',
+        name: 'Mileu',
         price: null,
         description: null,
         id: 'g_doily',

@@ -42,7 +42,7 @@ export const wearables = [
     },
     {
         img: a_shawl,
-        name: 'Shawl',
+        name: 'Șal',
         price: null,
         description: null,
         id: 'a_shawl',
@@ -50,7 +50,7 @@ export const wearables = [
     },
     {
         img: ab_shophie,
-        name: 'Sophie hood',
+        name: 'Glugă',
         price: null,
         description: null,
         id: 'ab_sophie',
@@ -58,7 +58,7 @@ export const wearables = [
     },
     {
         img: ac_sophie,
-        name: 'Crochet sophie scarf',
+        name: 'Eșarfă',
         price: null,
         description: null,
         id: 'ac_sophie',
@@ -66,7 +66,7 @@ export const wearables = [
     },
     {
         img: a_hat,
-        name: 'Hat',
+        name: 'Căciulă',
         price: null,
         description: null,
         id: 'a_hat',
@@ -74,7 +74,7 @@ export const wearables = [
     },
     {
         img: b_hat,
-        name: 'Hat',
+        name: 'Căciulă',
         price: null,
         description: null,
         id: 'b_hat',
@@ -82,7 +82,7 @@ export const wearables = [
     },
     {
         img: c_hat,
-        name: 'Hat',
+        name: 'Căciulă',
         price: null,
         description: null,
         id: 'c_hat',
@@ -90,7 +90,7 @@ export const wearables = [
     },
     {
         img: d_hat,
-        name: 'Hat',
+        name: 'Căciulă',
         price: null,
         description: null,
         id: 'd_hat',
@@ -98,7 +98,7 @@ export const wearables = [
     },
     {
         img: e_hat,
-        name: 'Hat',
+        name: 'Căciulă',
         price: null,
         description: null,
         id: 'e_hat',
@@ -106,7 +106,7 @@ export const wearables = [
     },
     {
         img: g_bag,
-        name: 'Bag',
+        name: 'Geantă',
         price: null,
         description: null,
         id: 'g_bag',
@@ -114,7 +114,7 @@ export const wearables = [
     },
     {
         img: h_bag,
-        name: 'Bag',
+        name: 'Geantă',
         price: null,
         description: null,
         id: 'h_bag',
@@ -122,7 +122,7 @@ export const wearables = [
     },
     {
         img: i_pouch,
-        name: 'Pouch',
+        name: 'Săculeț',
         price: null,
         description: null,
         id: 'i_pouch',
@@ -130,7 +130,7 @@ export const wearables = [
     },
     {
         img: j_bag,
-        name: 'Bag',
+        name: 'Geantă',
         price: null,
         description: null,
         id: 'j_bag',

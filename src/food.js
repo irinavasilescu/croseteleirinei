@@ -11,7 +11,7 @@ import i_eggplant from './food/i_eggplant.png';
 export const food = [
     {
         img: a_mushroom,
-        name: 'Mushroom',
+        name: 'Ciupercuță',
         price: null,
         description: null,
         id: 'a_mushroom',
@@ -19,7 +19,7 @@ export const food = [
     },
     {
         img: b_icecream,
-        name: 'Icecream',
+        name: 'Înghețată',
         price: null,
         description: null,
         id: 'b_icecream',
@@ -27,7 +27,7 @@ export const food = [
     },
     {
         img: c_pumpkin,
-        name: 'Pumpkin',
+        name: 'Dovleac',
         price: null,
         description: null,
         id: 'c_pumpkin',
@@ -35,7 +35,7 @@ export const food = [
     },
     {
         img: d_orange,
-        name: 'Orange',
+        name: 'Portocală',
         price: null,
         description: null,
         id: 'd_orange',
@@ -43,7 +43,7 @@ export const food = [
     },
     {
         img: e_strawberry,
-        name: 'Strawberry',
+        name: 'Căpșună',
         price: null,
         description: null,
         id: 'e_strawberry',
@@ -51,7 +51,7 @@ export const food = [
     },
     {
         img: f_blueberry,
-        name: 'Blueberry',
+        name: 'Afină',
         price: null,
         description: null,
         id: 'f_blueberry',
@@ -59,7 +59,7 @@ export const food = [
     },
     {
         img: g_blueberry,
-        name: 'Blueberry',
+        name: 'Afină',
         price: null,
         description: null,
         id: 'g_blueberry',
@@ -67,7 +67,7 @@ export const food = [
     },
     {
         img: h_parsnip,
-        name: 'Parsnip',
+        name: 'Păstârnac',
         price: null,
         description: null,
         id: 'h_parsnip',
@@ -75,7 +75,7 @@ export const food = [
     },
     {
         img: i_eggplant,
-        name: 'Eggplant',
+        name: 'Vânătă',
         price: null,
         description: null,
         id: 'i_eggplant',
