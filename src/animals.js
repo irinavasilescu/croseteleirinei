@@ -24,18 +24,18 @@ import w_cow from './animals/w_cow.webp';
 import x_penguin from './animals/x_penguin.webp';
 import y_octopus from './animals/y_octopus.webp';
 import z_octopus from './animals/z_octopus.webp';
-import a_mushroom from './food/a_mushroom.png';
-import b_icecream from './food/b_icecream.png';
-import c_pumpkin from './food/c_pumpkin.png';
-import d_orange from './food/d_orange.png';
-import e_strawberry from './food/e_strawberry.png';
-import f_blueberry from './food/f_blueberry.png';
-import g_blueberry from './food/g_blueberry.png';
-import h_parsnip from './food/h_parsnip.png';
-import i_eggplant from './food/i_eggplant.png';
-import a_heart from './abstract/a_heart.png';
-import b_moon from './abstract/b_moon.png';
-import c_pikachu from './abstract/c_pikachu.png';
+import a_mushroom from './food/a_mushroom.webp';
+import b_icecream from './food/b_icecream.webp';
+import c_pumpkin from './food/c_pumpkin.webp';
+import d_orange from './food/d_orange.webp';
+import e_strawberry from './food/e_strawberry.webp';
+import f_blueberry from './food/f_blueberry.webp';
+import g_blueberry from './food/g_blueberry.webp';
+import h_parsnip from './food/h_parsnip.webp';
+import i_eggplant from './food/i_eggplant.webp';
+import a_heart from './abstract/a_heart.webp';
+import b_moon from './abstract/b_moon.webp';
+import c_pikachu from './abstract/c_pikachu.webp';
 
 export const animals = [
     {
