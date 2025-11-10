@@ -348,34 +348,38 @@ function App() {
       <section className="landing-hero">
         <div className="landing-container">
           <div className="landing-content">
-            <h1 className="landing-title">Get in touch</h1>
-            <p className="landing-subtitle">Have a custom idea or want to say hello? Drop a message and I'll get back to you soon.</p>
+            <h1 className="landing-title">Contact</h1>
+            <p className="landing-subtitle">
+              Vrei să comanzi un produs sau ai o idee pentru o piesă croșetată/tricotată? Lasă-mi un mesaj și te voi contacta în cel mai scurt timp.
+            </p>
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
-                <label htmlFor="contact-name">Name</label>
+                <label htmlFor="contact-name">Nume</label>
                 <input
                   id="contact-name"
                   name="name"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="Your name"
+                  placeholder="Numele tău"
                   required
                 />
               </div>
               <div className="form-row">
-                <label htmlFor="contact-message">Message</label>
+                <label htmlFor="contact-message">Mesaj</label>
                 <textarea
                   id="contact-message"
                   name="message"
                   rows="5"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Tell me about your dream crochet piece..."
+                  placeholder="Mesajul tău"
                   required
                 />
               </div>
-              <button type="submit" className="landing-btn landing-btn-primary">Send message</button>
+              <button type="submit" className="landing-btn landing-btn-primary">
+                Trimite email
+              </button>
             </form>
           </div>
         </div>
