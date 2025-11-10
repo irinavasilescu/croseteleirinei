@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0b382455.css",
-    "main.js": "/static/js/main.9c380343.js",
+    "main.css": "/static/css/main.189c5478.css",
+    "main.js": "/static/js/main.cc38cb2b.js",
     "static/js/453.a1c98a7c.chunk.js": "/static/js/453.a1c98a7c.chunk.js",
     "static/media/g_bag.png": "/static/media/g_bag.cf00adb3f351ec452d91.png",
     "static/media/a_top.png": "/static/media/a_top.dfbe80d8a2a1025381b5.png",
@@ -50,7 +50,6 @@
     "static/media/e_strawberry.png": "/static/media/e_strawberry.6eaab835734d2c4d3508.png",
     "static/media/h_bag.png": "/static/media/h_bag.0f0727378ddb69d12922.png",
     "static/media/q_rabbit.png": "/static/media/q_rabbit.16bf49df39e5c9eebdbf.png",
-    "static/media/m_dino.png": "/static/media/m_dino.c158172261a319b80d6d.png",
     "static/media/b_hat.png": "/static/media/b_hat.ccd8078a2b044eea0b30.png",
     "static/media/j_chick.png": "/static/media/j_chick.0e6fdcb5c058ad864079.png",
     "static/media/c_coaster.png": "/static/media/c_coaster.b0cb747cfce78c5e3e07.png",
@@ -79,12 +78,12 @@
     "static/media/wearables.png": "/static/media/wearables.2dbb821f4c844e85c792.png",
     "static/media/mail.png": "/static/media/mail.fbb2c14b38d0205d6495.png",
     "index.html": "/index.html",
-    "main.0b382455.css.map": "/static/css/main.0b382455.css.map",
-    "main.9c380343.js.map": "/static/js/main.9c380343.js.map",
+    "main.189c5478.css.map": "/static/css/main.189c5478.css.map",
+    "main.cc38cb2b.js.map": "/static/js/main.cc38cb2b.js.map",
     "453.a1c98a7c.chunk.js.map": "/static/js/453.a1c98a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b382455.css",
-    "static/js/main.9c380343.js"
+    "static/css/main.189c5478.css",
+    "static/js/main.cc38cb2b.js"
   ]
 }
