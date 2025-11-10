@@ -154,6 +154,7 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: all 0.2s ease;
+  font-family: inherit;
 }
 .pagination-button:hover {
   background: #f7eb00;
