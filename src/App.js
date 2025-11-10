@@ -285,7 +285,7 @@ function App() {
               <p className="landing-subtitle">
                 Bună! Sunt Irina, iar curiozitatea mea pentru croșetat și tricotat a devenit o pasiune.
                 Am împletit, am greșit, am deșirat, dar am descoperit câtă bucurie poate aduce ceva creat cu propriile mâini.
-                Totul este creat cu grijă, din materiale alese local,cu multă grijă și pasiune.
+                Totul este creat cu grijă, din materiale alese local.
                 La <i>Croșetele Irinei</i>, fiecare creație este transformată în bucurie, buclă cu buclă.
               </p>
               <div className="landing-actions">
