@@ -126,6 +126,7 @@ html, body {
   .gallery .grid { grid-template-columns: 1fr; }
   .landing-actions { flex-direction: column; align-items: center; }
   .landing-btn { width: 100%; max-width: 280px; margin: 0 auto; }
+  .modal-cta { max-width: unset; }
 }
 
 /* Animals responsive grid */
@@ -708,6 +709,7 @@ html, body {
     flex-direction: column;
     gap: 1.5rem;
     padding: 1.5rem;
+    height: 100%;
   }
 
   .modal-image {
@@ -715,6 +717,7 @@ html, body {
     width: 100%;
     max-width: 280px;
     margin: 0 auto;
+    flex: unset;
   }
 
   .modal-image img {
@@ -731,15 +734,25 @@ html, body {
     font-size: 1.5rem;
   }
 
-  .modal-content {
-    max-height: 95vh;
-  }
-
   .modal-close {
     top: 0.5rem;
     right: 0.5rem;
     width: 36px;
     height: 36px;
     font-size: 1.5rem;
+  }
+
+  .modal-backdrop {
+    padding: 0;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
+  .modal-content {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
   }
 }
