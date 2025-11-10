@@ -317,7 +317,7 @@ function App() {
           <footer className="home-footer" id="gallery" aria-label="Featured animals">
             <div className="footer-animals">
               {featuredAnimals.map((item, idx) => (
-                <NavLink to={`${ROUTES.plushies}#${item.id}`} key={`${item.img}-${idx}`} className="footer-animal-link">
+                <NavLink to={`${ROUTES.plushies}`} key={`${item.img}-${idx}`} className="footer-animal-link">
                   <figure className="footer-animal">
                     <span class="footer-animal-name">{item.name}</span>
                     <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
