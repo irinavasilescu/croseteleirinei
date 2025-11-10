@@ -758,3 +758,7 @@ html, body {
     border-radius: 0;
   }
 }
+
+.contact-social {
+  padding: 2rem 0 3rem 0;
+}

@@ -440,6 +440,39 @@ function App() {
                 Trimite email
               </button>
             </form>
+            <div className="landing-social contact-social">
+              <div className="landing-social-item">
+                <a
+                  href="https://instagram.com/crosetele_irinei"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="landing-social-link"
+                  aria-label="Open Croșetele Irinei on Instagram"
+                >
+                  {homeAssets.instagram ? (
+                    <img src={homeAssets.instagram} alt="Instagram" />
+                  ) : (
+                    <span>📸</span>
+                  )}
+                </a>
+                <span className="landing-social-hover-text">@crosetele_irinei</span>
+              </div>
+              <div className="landing-social-item">
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="landing-social-link"
+                >
+                  {homeAssets.mail ? (
+                    <img src={homeAssets.mail} alt="Email" />
+                  ) : (
+                    <span>@</span>
+                  )}
+                </a>
+                <span className="landing-social-hover-text">croseteleirinei@gmail.com</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
