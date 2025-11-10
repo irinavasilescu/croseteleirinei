@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { NavLink, Routes, Route, useLocation } from 'react-router-dom';
 import { animals } from './animals';
 import { wearables } from './wearables';
@@ -457,6 +457,11 @@ function App() {
     );
   }
 
+  // Keep page component identities stable across renders to preserve internal state (pagination)
+  const PlushiesPageStable = useRef(PlushiesPage).current;
+  const HomewarePageStable = useRef(HomewarePage).current;
+  const WearablesPageStable = useRef(WearablesPage).current;
+
   return (
     <div className="App">
       <header className="site-header">
@@ -489,9 +494,9 @@ function App() {
 
       <Routes>
         <Route path={ROUTES.home} element={<HomePage />} />
-        <Route path={ROUTES.plushies} element={<PlushiesPage />} />
-        <Route path={ROUTES.homeware} element={<HomewarePage />} />
-        <Route path={ROUTES.wearables} element={<WearablesPage />} />
+        <Route path={ROUTES.plushies} element={<PlushiesPageStable />} />
+        <Route path={ROUTES.homeware} element={<HomewarePageStable />} />
+        <Route path={ROUTES.wearables} element={<WearablesPageStable />} />
         <Route path={ROUTES.contact} element={<ContactPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>

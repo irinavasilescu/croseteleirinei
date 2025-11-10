@@ -152,7 +152,7 @@ export const animals = [
         img: k_teddy,
         name: 'Dezbrăcatu',
         price: null,
-        description: 'Dezbrăcatu este un ursuleț croșetat care poate fi folosit ca obiect decorativ sau ca obiect de joc. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        description: 'Dezbrăcatu este un ursuleț croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'k_teddy',
         dimensions: '',
         tags: ['toys', 'bag charms'],
