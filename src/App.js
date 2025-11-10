@@ -122,6 +122,8 @@ function App() {
                   <p>{item.dimensions}</p>
                 </div>
               )}
+
+              <a href={`${ROUTES.contact}`} className="landing-btn landing-btn-primary modal-cta">Contact</a>
             </div>
           </div>
         </div>
@@ -281,38 +283,38 @@ function App() {
           </div>
         </section>
         <div className="landing-social">
-                <div className="landing-social-item">
-                  <a
-                    href="https://instagram.com/crosetele_irinei"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="landing-social-link"
-                    aria-label="Open Croșetele Irinei on Instagram"
-                  >
-                    {homeAssets.instagram ? (
-                      <img src={homeAssets.instagram} alt="Instagram" />
-                    ) : (
-                      <span>📸</span>
-                    )}
-                  </a>
-                  <span className="landing-social-hover-text">@crosetele_irinei</span>
-                </div>
-                <div className="landing-social-item">
-                  <a
-                    href={`mailto:${CONTACT_EMAIL}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="landing-social-link"
-                  >
-                    {homeAssets.mail ? (
-                      <img src={homeAssets.mail} alt="Email" />
-                    ) : (
-                      <span>@</span>
-                    )}
-                  </a>
-                  <span className="landing-social-hover-text">croseteleirinei@gmail.com</span>
-                </div>
-              </div>
+          <div className="landing-social-item">
+            <a
+              href="https://instagram.com/crosetele_irinei"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="landing-social-link"
+              aria-label="Open Croșetele Irinei on Instagram"
+            >
+              {homeAssets.instagram ? (
+                <img src={homeAssets.instagram} alt="Instagram" />
+              ) : (
+                <span>📸</span>
+              )}
+            </a>
+            <span className="landing-social-hover-text">@crosetele_irinei</span>
+          </div>
+          <div className="landing-social-item">
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="landing-social-link"
+            >
+              {homeAssets.mail ? (
+                <img src={homeAssets.mail} alt="Email" />
+              ) : (
+                <span>@</span>
+              )}
+            </a>
+            <span className="landing-social-hover-text">croseteleirinei@gmail.com</span>
+          </div>
+        </div>
         {featuredAnimals.length > 0 && (
           <footer className="home-footer" id="gallery" aria-label="Featured animals">
             <div className="footer-animals">

@@ -632,6 +632,11 @@
   background-color: rgba(156, 138, 114, .3);
 }
 
+.modal-cta {
+  margin-top: auto;
+  text-align: center;
+}
+
 /* Responsive modal */
 @media (max-width: 768px) {
   .modal-body {
