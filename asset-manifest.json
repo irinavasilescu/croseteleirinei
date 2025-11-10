@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2326c88e.css",
-    "main.js": "/static/js/main.a967cee9.js",
+    "main.css": "/static/css/main.32e42caf.css",
+    "main.js": "/static/js/main.11d402c6.js",
     "static/js/453.a1c98a7c.chunk.js": "/static/js/453.a1c98a7c.chunk.js",
     "static/media/g_bag.png": "/static/media/g_bag.cf00adb3f351ec452d91.png",
     "static/media/a_top.png": "/static/media/a_top.dfbe80d8a2a1025381b5.png",
@@ -70,22 +70,22 @@
     "static/media/n_chick.png": "/static/media/n_chick.fc29bc88090c7f99f93e.png",
     "static/media/w_cow.png": "/static/media/w_cow.a6e7971781a95d787f88.png",
     "static/media/t_chick.png": "/static/media/t_chick.9f1c31f8e8e7578e2709.png",
-    "static/media/banner.png": "/static/media/banner.96787c49189519edf737.png",
-    "static/media/contact.png": "/static/media/contact.d13a1fa403b22c9740fe.png",
-    "static/media/plushies.png": "/static/media/plushies.6d1db4d01e7742634342.png",
-    "static/media/homeware.png": "/static/media/homeware.1a6c498c76eea5cf9c87.png",
-    "static/media/wearables.png": "/static/media/wearables.e793a8606b16640ce270.png",
-    "static/media/home.png": "/static/media/home.5154b95edfd5bf49caad.png",
     "static/media/a_coaster.png": "/static/media/a_coaster.63980baeff5bb5976e05.png",
     "static/media/mail.png": "/static/media/mail.39fb0dda21f2ec7669ca.png",
+    "static/media/contact.png": "/static/media/contact.62db456f660075ea4abb.png",
+    "static/media/banner.png": "/static/media/banner.053a94376950fb50ac2a.png",
+    "static/media/plushies.png": "/static/media/plushies.113dd7a72b254f678747.png",
+    "static/media/homeware.png": "/static/media/homeware.e1cab2be6d3d6ffeccbf.png",
+    "static/media/home.png": "/static/media/home.231d43bd7eb438847dae.png",
+    "static/media/wearables.png": "/static/media/wearables.2dbb821f4c844e85c792.png",
     "static/media/instagram.png": "/static/media/instagram.90511daa00c18028bf2d.png",
     "index.html": "/index.html",
-    "main.2326c88e.css.map": "/static/css/main.2326c88e.css.map",
-    "main.a967cee9.js.map": "/static/js/main.a967cee9.js.map",
+    "main.32e42caf.css.map": "/static/css/main.32e42caf.css.map",
+    "main.11d402c6.js.map": "/static/js/main.11d402c6.js.map",
     "453.a1c98a7c.chunk.js.map": "/static/js/453.a1c98a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2326c88e.css",
-    "static/js/main.a967cee9.js"
+    "static/css/main.32e42caf.css",
+    "static/js/main.11d402c6.js"
   ]
 }
