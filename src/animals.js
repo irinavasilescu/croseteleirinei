@@ -1,3 +1,29 @@
+import a_frog from './animals/a_frog.png';
+import ab_ghost from './animals/ab_ghost.png';
+import b_bee from './animals/b_bee.png';
+import c_teddy from './animals/c_teddy.png';
+import d_chick from './animals/d_chick.png';
+import e_octopus from './animals/e_octopus.png';
+import f_rabbit from './animals/f_rabbit.png';
+import g_rabbit from './animals/g_rabbit.png';
+import h_rabbit from './animals/h_rabbit.png';
+import i_fish from './animals/i_fish.png';
+import j_chick from './animals/j_chick.png';
+import k_teddy from './animals/k_teddy.png';
+import l_cat from './animals/l_cat.png';
+import n_chick from './animals/n_chick.png';
+import o_rabbit from './animals/o_rabbit.png';
+import p_chick from './animals/p_chick.png';
+import q_rabbit from './animals/q_rabbit.png';
+import r_rabbit from './animals/r_rabbit.png';
+import s_stingray from './animals/s_stingray.png';
+import t_chick from './animals/t_chick.png';
+import u_mouse from './animals/u_mouse.png';
+import v_octopus from './animals/v_octopus.png';
+import w_cow from './animals/w_cow.png';
+import x_penguin from './animals/x_penguin.png';
+import y_octopus from './animals/y_octopus.png';
+import z_octopus from './animals/z_octopus.png';
 import a_mushroom from './food/a_mushroom.png';
 import b_icecream from './food/b_icecream.png';
 import c_pumpkin from './food/c_pumpkin.png';
@@ -13,7 +39,7 @@ import c_pikachu from './abstract/c_pikachu.png';
 
 export const animals = [
     {
-        img: 'https://i.imgur.com/4dhqIIm.png',
+        img: a_frog,
         name: 'Frăguța',
         price: null,
         description: 'Frăguța este o broscuță croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -23,7 +49,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/qJ54RDQ.png',
+        img: b_bee,
         name: 'Bulina',
         price: null,
         description: 'Bulina este o albinuță croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -33,7 +59,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/M4zpfua.png',
+        img: ab_ghost,
         name: 'Mița',
         price: null,
         description: 'Mița este o fantomiță croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -43,7 +69,7 @@ export const animals = [
         in_stock: true,
     },
     {
-        img: 'https://i.imgur.com/gZOIW5j.png',
+        img: c_teddy,
         name: 'Mitică',
         price: null,
         description: 'Mitică este un ursuleț croșetat care poate fi folosit ca obiect decorativ sau ca obiect de joc. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -53,7 +79,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/sdR7Q68.png',
+        img: d_chick,
         name: 'Pătrunjel',
         price: null,
         description: 'Pătrunjel este un pui croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -63,7 +89,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/c4D9olj.png',
+        img: e_octopus,
         name: 'Cornelia',
         price: null,
         description: null,
@@ -73,7 +99,7 @@ export const animals = [
         in_stock: true,
     },
     {
-        img: 'https://i.imgur.com/mXkHNcC.png',
+        img: f_rabbit,
         name: 'Vasile',
         price: null,
         description: 'Vasile este un iepuraș croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -83,7 +109,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/ZtaBini.png',
+        img: g_rabbit,
         name: 'Ion',
         price: null,
         description: 'Ion este un iepuraș croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -93,7 +119,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/Hf8dGRv.png',
+        img: h_rabbit,
         name: 'Lăptic',
         price: null,
         description: 'Lăptic este un iepuraș croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -103,7 +129,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/Pnf5cik.png',
+        img: i_fish,
         name: 'Gheorghe',
         price: null,
         description: 'Gheorghe este un pește croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -113,7 +139,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/i8yk9DD.png',
+        img: j_chick,
         name: 'Brândușa',
         price: null,
         description: 'Brândușa este o găinușă croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -123,7 +149,7 @@ export const animals = [
         in_stock: true,
     },
     {
-        img: 'https://i.imgur.com/0lNlOeI.png',
+        img: k_teddy,
         name: 'Dezbrăcatu',
         price: null,
         description: 'Dezbrăcatu este un ursuleț croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -133,7 +159,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/kMSIk71.png',
+        img: l_cat,
         name: 'Bidon',
         price: null,
         description: 'Bidon este un motan croșetat care poate fi folosit ca obiect decorativ sau ca obiect de joc. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -143,7 +169,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/hv52dPJ.png',
+        img: n_chick,
         name: 'Codruța',
         price: null,
         description: 'Codruța este o găinușă croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -153,7 +179,7 @@ export const animals = [
         in_stock: true,
     },
     {
-        img: 'https://i.imgur.com/meIKUTL.png',
+        img: o_rabbit,
         name: 'Mihaela',
         price: null,
         description: 'Mihaela este un iepuraș croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -163,7 +189,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/E73JLUW.png',
+        img: p_chick,
         name: 'Mihăiță',
         price: null,
         description: 'Mihăiță este un pui croșetată care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -173,7 +199,7 @@ export const animals = [
         in_stock: true,
     },
     {
-        img: 'https://i.imgur.com/cDGVGPM.png',
+        img: q_rabbit,
         name: 'Gică',
         price: null,
         description: 'Gică este un iepuraș croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -183,7 +209,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/kvRXhyu.png',
+        img: r_rabbit,
         name: 'Nelu',
         price: null,
         description: 'Nelu este un iepuraș croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -193,7 +219,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/C1v0la1.png',
+        img: s_stingray,
         name: 'Mariana',
         price: null,
         description: 'Mariana este o pisică de mare croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -203,7 +229,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/cmZ1Q7p.png',
+        img: t_chick,
         name: 'Didina',
         price: null,
         description: 'Didina este o găinușă croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -213,7 +239,7 @@ export const animals = [
         in_stock: true,
     },
     {
-        img: 'https://i.imgur.com/Dq0qC9i.png',
+        img: u_mouse,
         name: 'Florică',
         price: null,
         description: 'Florică este un șoricel croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -223,7 +249,7 @@ export const animals = [
         in_stock: true,
     },
     {
-        img: 'https://i.imgur.com/aFZ0vxZ.png',
+        img: v_octopus,
         name: 'Lucreția',
         price: null,
         description: 'Lucreția este o caracatiță croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -233,7 +259,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/MM5oh8J.png',
+        img: w_cow,
         name: 'Steluța',
         price: null,
         description: 'Steluța este o văcuță croșetată care poate fi folosită ca obiect decorativ sau ca obiect de joc. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -243,7 +269,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/C1GN1nE.png',
+        img: x_penguin,
         name: 'Clămpănică',
         price: null,
         description: 'Clămpănică este un pinguin croșetat care poate fi folosit ca obiect decorativ sau ca obiect de joc. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -253,7 +279,7 @@ export const animals = [
         in_stock: true,
     },
     {
-        img: 'https://i.imgur.com/MEbsivW.png',
+        img: y_octopus,
         name: 'Nectarina',
         price: null,
         description: 'Nectarina este o caracatiță croșetată care poate fi folosită ca obiect decorativ sau ca obiect de joc. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
@@ -263,7 +289,7 @@ export const animals = [
         in_stock: false,
     },
     {
-        img: 'https://i.imgur.com/gDKf4Tf.png',
+        img: z_octopus,
         name: 'Geta',
         price: null,
         description: 'Geta este o caracatiță croșetată care poate fi folosită ca obiect decorativ sau ca obiect de joc. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
