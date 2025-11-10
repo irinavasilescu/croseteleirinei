@@ -145,11 +145,19 @@ function App() {
             </div>
             <div className="modal-info">
               <h2 className="modal-title">{item.name}</h2>
+              {typeof item.in_stock === 'boolean' && (
+                <div className="modal-stock">
+                  <span className={`modal-stock-badge ${item.in_stock ? 'is-in-stock' : 'is-out-of-stock'}`}>
+                    <span className="modal-stock-dot" aria-hidden="true" />
+                    <span className="modal-stock-text">{item.in_stock ? 'În stoc' : 'Pe comandă'}</span>
+                  </span>
+                </div>
+              )}
               {item.tags?.length && (
                 <div className="modal-tags">
                   {item.tags.map(tag => (
-                    <span className={getTagClassName(tag)}>
-                      {tag}
+                    <span key={tag} className={getTagClassName(tag)}>
+                      <span className="modal-tag-text">#{tag}</span>
                     </span>
                   ))}
                 </div>
