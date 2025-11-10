@@ -229,10 +229,10 @@ function App() {
           <div className="landing-container">
             <div className="landing-content">
               <p className="landing-subtitle">
-              Bună! Sunt Irina, iar pasiunea mea pentru croșetat a apărut din pură curiozitate. Am văzut un clip pe YouTube despre cum poți crea o pătură simplă, și mi-am spus: „De ce nu?”
-              De atunci, fiecare proiect a fost o nouă aventură. Am învățat pas cu pas, am greșit, am deșirat, dar am descoperit câtă bucurie poate aduce o piesă creată cu propriile mâini.
-              Astăzi, fiecare lucru pe care îl croșetez este făcut cu grijă, din materiale alese local și cu atenție la detalii. Îmi place să dau viață micilor personaje, colorate, jucăușe, perfecte pentru a aduce zâmbete celor mici și celor mari.
-              La Croșetele Irinei, fiecare creație poartă o poveste simplă: o mică idee născută din curiozitate, transformată în bucurie, buclă cu buclă.
+                Bună! Sunt Irina, iar curiozitate mea pentru croșetat și tricotat a devenit o pasiune.
+                Am împletit, am greșit, am deșirat, dar am descoperit câtă bucurie poate aduce ceva creat cu propriile mâini.
+                Astăzi, fiecare lucru pe care îl croșetez este făcut cu grijă, din materiale alese local și cu multa pasiune.
+                La Croșetele Irinei, fiecare creatie este transformată în bucurie, buclă cu buclă.
               </p>
               <div className="landing-actions">
                 <a href={`${ROUTES.plushies}`} className="landing-btn landing-btn-primary">Vezi colecția</a>
