@@ -23,6 +23,7 @@ export const wearables = [
         description: null,
         id: 'a_top',
         tags: ['wearables'],
+        in_stock: false,
     },
     {
         img: b_top,
@@ -31,6 +32,7 @@ export const wearables = [
         description: null,
         id: 'b_top',
         tags: ['wearables'],
+        in_stock: false,
     },
     {
         img: c_top,
@@ -39,6 +41,7 @@ export const wearables = [
         description: null,
         id: 'c_top',
         tags: ['wearables'],
+        in_stock: true,
     },
     {
         img: a_shawl,
@@ -47,6 +50,7 @@ export const wearables = [
         description: null,
         id: 'a_shawl',
         tags: ['wearables'],
+        in_stock: true,
     },
     {
         img: ab_shophie,
@@ -55,6 +59,7 @@ export const wearables = [
         description: null,
         id: 'ab_sophie',
         tags: ['wearables'],
+        in_stock: false,
     },
     {
         img: ac_sophie,
@@ -63,6 +68,7 @@ export const wearables = [
         description: null,
         id: 'ac_sophie',
         tags: ['wearables'],
+        in_stock: false,
     },
     {
         img: a_hat,
@@ -70,7 +76,8 @@ export const wearables = [
         price: null,
         description: null,
         id: 'a_hat',
-        tags: ['wearables']
+        tags: ['wearables'],
+        in_stock: false,
     },
     {
         img: b_hat,
@@ -78,7 +85,8 @@ export const wearables = [
         price: null,
         description: null,
         id: 'b_hat',
-        tags: ['wearables']
+        tags: ['wearables'],
+        in_stock: false,
     },
     {
         img: c_hat,
@@ -86,7 +94,8 @@ export const wearables = [
         price: null,
         description: null,
         id: 'c_hat',
-        tags: ['wearables']
+        tags: ['wearables'],
+        in_stock: false,
     },
     {
         img: d_hat,
@@ -94,7 +103,8 @@ export const wearables = [
         price: null,
         description: null,
         id: 'd_hat',
-        tags: ['wearables']
+        tags: ['wearables'],
+        in_stock: false,
     },
     {
         img: e_hat,
@@ -102,7 +112,8 @@ export const wearables = [
         price: null,
         description: null,
         id: 'e_hat',
-        tags: ['wearables']
+        tags: ['wearables'],
+        in_stock: false,
     },
     {
         img: g_bag,
@@ -110,7 +121,8 @@ export const wearables = [
         price: null,
         description: null,
         id: 'g_bag',
-        tags: ['wearables']
+        tags: ['wearables'],
+        in_stock: false,
     },
     {
         img: h_bag,
@@ -118,7 +130,8 @@ export const wearables = [
         price: null,
         description: null,
         id: 'h_bag',
-        tags: ['wearables']
+        tags: ['wearables'],
+        in_stock: true,
     },
     {
         img: i_pouch,
@@ -126,7 +139,8 @@ export const wearables = [
         price: null,
         description: null,
         id: 'i_pouch',
-        tags: ['wearables']
+        tags: ['wearables'],
+        in_stock: false,
     },
     {
         img: j_bag,
@@ -134,7 +148,8 @@ export const wearables = [
         price: null,
         description: null,
         id: 'j_bag',
-        tags: ['wearables']
+        tags: ['wearables'],
+        in_stock: true,
     },
 ];
 
