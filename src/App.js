@@ -39,6 +39,17 @@ function App() {
     };
   }, [selectedItem]);
 
+  // Stable featured animals for HomePage (avoid reshuffle on modal open)
+  const featuredAnimalsRef = useRef(null);
+  if (!featuredAnimalsRef.current) {
+    const pool = [...animals];
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    featuredAnimalsRef.current = pool.slice(0, Math.min(15, pool.length));
+  }
+
   // Nav icons (auto-load from src/nav)
   function loadNavIcons() {
     try {
@@ -251,16 +262,7 @@ function App() {
   }, []);
 
   function HomePage() {
-    const FEATURED_ANIMALS_COUNT = 15;
-    const featuredAnimals = useMemo(() => {
-      if (animals.length === 0) return [];
-      const pool = [...animals];
-      for (let i = pool.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [pool[i], pool[j]] = [pool[j], pool[i]];
-      }
-      return pool.slice(0, Math.min(FEATURED_ANIMALS_COUNT, pool.length));
-    }, [animals]);
+    const featuredAnimals = featuredAnimalsRef.current || [];
 
     return (
       <>
@@ -361,7 +363,12 @@ function App() {
           <footer className="home-footer" id="gallery" aria-label="Featured animals">
             <div className="footer-animals">
               {featuredAnimals.map((item, idx) => (
-                <NavLink to={`${ROUTES.plushies}`} key={`${item.img}-${idx}`} className="footer-animal-link">
+                <NavLink
+                  to={`${ROUTES.plushies}`}
+                  key={`${item.img}-${idx}`}
+                  className="footer-animal-link"
+                  onClick={(e) => { e.preventDefault(); setSelectedItem(item); }}
+                >
                   <figure className="footer-animal">
                     <span className="footer-animal-name">{item.name}</span>
                     <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
@@ -394,7 +401,7 @@ function App() {
           <div className="landing-content">
             <h1 className="landing-title">Contact</h1>
             <p className="landing-subtitle">
-              Vrei să comanzi un produs sau ai o idee pentru o piesă croșetată/tricotată? Lasă-mi un mesaj și te voi contacta în cel mai scurt timp.
+              Vrei să comanzi un produs sau ai o idee pentru o piesă croșetată sau tricotată? Lasă-mi un mesaj și te voi contacta în cel mai scurt timp.
             </p>
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
