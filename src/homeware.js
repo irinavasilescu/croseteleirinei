@@ -11,84 +11,94 @@ import g_doily from './homeware/g_doily.png';
 
 export const homeware = [
     {
-        img: x_basket,
-        name: 'Coșuleț',
-        price: null,
-        description: null,
-        id: 'x_basket',
-        tags: ['homeware']
-    },
-    {
         img: y_basket,
-        name: 'Coșuleț',
+        name: 'Coșuleț #1',
         price: null,
-        description: null,
+        description: "Coșuleț croșetat, realizat din multiple tipuri și grosimi de fire. Conține un mix de fire de bumbac, acril și lână. Este conceput după principiul no waste, folosind material rămas în urma altor proiecte.",
         id: 'y_basket',
-        tags: ['homeware']
+        tags: ['homeware'],
+        in_stock: true,
     },
     {
         img: z_basket,
-        name: 'Coșuleț',
+        name: 'Coșuleț #2',
         price: null,
-        description: null,
+        description: "Coșuleț croșetat, realizat din multiple tipuri și grosimi de fire. Conține un mix de fire de bumbac, acril și lână. Este conceput după principiul no waste, folosind material rămas în urma altor proiecte.",
         id: 'z_basket',
-        tags: ['homeware']
+        tags: ['homeware'],
+        in_stock: true,
+    },
+    {
+        img: x_basket,
+        name: 'Coșuleț #3',
+        price: null,
+        description: "Coșuleț croșetat, realizat din multiple tipuri și grosimi de fire. Conține un mix de fire de bumbac, acril și lână. Este conceput după principiul no waste, folosind material rămas în urma altor proiecte.",
+        id: 'x_basket',
+        tags: ['homeware'],
+        in_stock: false,
     },
     {
         img: a_coaster,
-        name: 'Coaster',
+        name: 'Coaster #1',
         price: null,
-        description: null,
+        description: "Suport de pahar croșetat, realizat din fir macrame, 80% bumbac și 20% poliester",
         id: 'a_coaster',
-        tags: ['homeware']
+        tags: ['homeware'],
+        in_stock: true,
     },
     {
         img: b_coaster,
-        name: 'Coaster',
+        name: 'Coaster #2',
         price: null,
-        description: null,
+        description: "Suport de pahar croșetat, realizat din fir macrame, 80% bumbac și 20% poliester",
         id: 'b_coaster',
-        tags: ['homeware']
+        tags: ['homeware'],
+        in_stock: true,
     },
     {
         img: c_coaster,
-        name: 'Coaster',
+        name: 'Coaster #3',
         price: null,
-        description: null,
+        description: "Suport de pahar croșetat, realizat din fir macrame, 80% bumbac și 20% poliester",
         id: 'c_coaster',
-        tags: ['homeware']
+        tags: ['homeware'],
+        in_stock: true,
     },
     {
         img: d_coaster,
-        name: 'Coaster',
+        name: 'Coaster #4',
         price: null,
-        description: null,
+        description: "Suport de pahar croșetat, realizat din fir macrame, 80% bumbac și 20% poliester",
         id: 'd_coaster',
-        tags: ['homeware']
+        tags: ['homeware'],
+        in_stock: true,
     },
     {
         img: e_coaster,
-        name: 'Coaster',
+        name: 'Coaster #5',
         price: null,
-        description: null,
+        description: "Suport de pahar croșetat, realizat din fir macrame, 80% bumbac și 20% poliester",
         id: 'e_coaster',
-        tags: ['homeware']
+        tags: ['homeware'],
+        in_stock: true,
     },
     {
         img: f_coaster,
-        name: 'Coaster',
+        name: 'Coaster #6',
         price: null,
-        description: null,
+        description: "Suport de pahar croșetat, realizat din fir macrame, 80% bumbac și 20% poliester",
         id: 'f_coaster',
-        tags: ['homeware']
+        tags: ['homeware'],
+        in_stock: true,
     },
     {
         img: g_doily,
         name: 'Mileu',
         price: null,
-        description: null,
+        description: "Mileu croșetat, realizat din fir 100% bumbac",
         id: 'g_doily',
-        tags: ['homeware']
+        tags: ['homeware'],
+        in_stock: true,
     },
 ];
 
