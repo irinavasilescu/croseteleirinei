@@ -285,8 +285,8 @@ function App() {
               <p className="landing-subtitle">
                 Bună! Sunt Irina, iar curiozitatea mea pentru croșetat și tricotat a devenit o pasiune.
                 Am împletit, am greșit, am deșirat, dar am descoperit câtă bucurie poate aduce ceva creat cu propriile mâini.
-                Astăzi, fiecare lucru este creat cu grijă, din materiale alese local și cu multă pasiune.
-                La Croșetele Irinei, fiecare creație este transformată în bucurie, buclă cu buclă.
+                Totul este creat cu grijă, din materiale alese local,cu multă grijă și pasiune.
+                La <i>Croșetele Irinei</i>, fiecare creație este transformată în bucurie, buclă cu buclă.
               </p>
               <div className="landing-actions">
                 <a href={`${ROUTES.plushies}`} className="landing-btn landing-btn-primary">Vezi colecția</a>
@@ -306,7 +306,7 @@ function App() {
                 )}
                 <div className="how-i-work-card-content">
                   <h3>Proveniență locală</h3>
-                  <p>Fiecare creație prinde viață din materiale alese cu grijă. Firele provin de la furnizori locali, sprijinind comunitatea și reducând impactul asupra mediului. Fiecare piesă spune o poveste despre meșteșug, grijă și valori sustenabile.</p>
+                  <p>Firele provin de la furnizori locali, sprijinind comunitatea și reducând impactul asupra mediului. Fiecare creație prinde viață din materiale alese cu grijă și spun o poveste despre valori sustenabile.</p>
                 </div>
               </div>
               <div className="how-i-work-card">
@@ -317,7 +317,7 @@ function App() {
                 )}
                 <div className="how-i-work-card-content">
                   <h3>Fără risipă</h3>
-                  <p>Nimic nu se irosește. Fiecare fir rămas este refolosit, transformat în proiecte colorate din fire diverse sau folosit ca umplutură moale pentru jucării. Este un mod de a onora fiecare material și de a menține un proces prietenos cu planeta.</p>
+                  <p>Nimic nu se irosește. Orice fir rămas este refolosit, transformat în proiecte colorate din culori și texturi diverse sau folosit ca umplutură moale pentru jucării. Este un mod de a prețui materialul și de a menține un proces prietenos cu planeta.</p>
                 </div>
               </div>
               <div className="how-i-work-card">
@@ -328,7 +328,7 @@ function App() {
                 )}
                 <div className="how-i-work-card-content">
                   <h3>Pufos și sigur</h3>
-                  <p>Fiecare jucărie este umplută cu un material hipoalergenic, moale și sigur, potrivit pentru toate vârstele. Fiecare piesă este creată pentru a aduce confort și bucurie, lucrată manual cu grijă, de la început până la sfârșit.</p>
+                  <p>Toate jucăriile sunt umplute cu melană hipoalergenică, moale și sigură, potrivită pentru toate vârstele. Piesele sunt create pentru a aduce confort și bucurie, lucrate manual cu atenție de la început până la sfârșit.</p>
                 </div>
               </div>
             </div>
