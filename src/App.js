@@ -16,6 +16,8 @@ function App() {
     home: '/',
   };
 
+  const ITEMS_PER_PAGE = 12;
+
   const [selectedItem, setSelectedItem] = useState(null);
 
   // Close modal on ESC key
@@ -63,6 +65,47 @@ function App() {
     if (exact) return exact;
     const fuzzy = Object.keys(navIcons).find((k) => k.includes(key));
     return fuzzy ? navIcons[fuzzy] : null;
+  }
+
+  function Pagination({ currentPage, totalPages, onPageChange }) {
+    if (totalPages <= 1) return null;
+    const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+    const goTo = (p) => {
+      if (p < 1 || p > totalPages || p === currentPage) return;
+      onPageChange(p);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    return (
+      <nav className="pagination" aria-label="Pagination">
+        <button
+          className="pagination-button"
+          onClick={() => goTo(currentPage - 1)}
+          disabled={currentPage === 1}
+          aria-label="Previous page"
+        >
+          ‹ Prev
+        </button>
+        {pages.map((p) => (
+          <button
+            key={p}
+            className={`pagination-button${p === currentPage ? ' is-active' : ''}`}
+            onClick={() => goTo(p)}
+            aria-current={p === currentPage ? 'page' : undefined}
+            aria-label={`Page ${p}`}
+          >
+            {p}
+          </button>
+        ))}
+        <button
+          className="pagination-button"
+          onClick={() => goTo(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          aria-label="Next page"
+        >
+          Next ›
+        </button>
+      </nav>
+    );
   }
 
   function ItemModal({ item, onClose }) {
@@ -124,6 +167,10 @@ function App() {
     const plushies = useMemo(() => {
       return [...animals];
     }, []);
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = Math.ceil(plushies.length / ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const currentItems = plushies.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
     useEffect(() => {
       if (location.hash) {
@@ -145,19 +192,25 @@ function App() {
             <p>No plushies found.</p>
           ) : (
             <div className="animals-grid">
-              {plushies.map((item, idx) => (
+              {currentItems.map((item, idx) => (
                 <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
             </div>
           )}
+          <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
         </div>
       </section>
     );
   }
 
   function WearablesPage() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = Math.ceil(wearables.length / ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const currentItems = wearables.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
     return (
       <section className="section">
         <div className="container">
@@ -165,13 +218,14 @@ function App() {
             <p>No wearables found.</p>
           ) : (
             <div className="animals-grid">
-              {wearables.map((item, idx) => (
+              {currentItems.map((item, idx) => (
                 <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
             </div>
           )}
+          <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
         </div>
       </section>
     );
@@ -378,6 +432,11 @@ function App() {
   }
 
   function HomewarePage() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = Math.ceil(homeware.length / ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const currentItems = homeware.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
     return (
       <section className="section">
         <div className="container">
@@ -385,13 +444,14 @@ function App() {
             <p>No homeware found.</p>
           ) : (
             <div className="animals-grid">
-              {homeware.map((item, idx) => (
+              {currentItems.map((item, idx) => (
                 <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
             </div>
           )}
+          <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
         </div>
       </section>
     );
