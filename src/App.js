@@ -317,7 +317,7 @@ function App() {
                 )}
                 <div className="how-i-work-card-content">
                   <h3>Fără risipă</h3>
-                  <p>Nimic nu se irosește. Orice fir rămas este refolosit, transformat în proiecte colorate din culori și texturi diverse sau folosit ca umplutură moale pentru jucării. Este un mod de a prețui materialul și de a menține un proces prietenos cu planeta.</p>
+                  <p>Nimic nu se irosește. Orice fir rămas este refolosit, transformat în proiecte colorate și texturi diverse sau folosit ca umplutură moale pentru jucării. Este un mod de a prețui materialul și de a menține un proces prietenos cu planeta.</p>
                 </div>
               </div>
               <div className="how-i-work-card">
