@@ -11,7 +11,6 @@ import i_fish from './animals/i_fish.png';
 import j_chick from './animals/j_chick.png';
 import k_teddy from './animals/k_teddy.png';
 import l_cat from './animals/l_cat.png';
-import m_dino from './animals/m_dino.png';
 import n_chick from './animals/n_chick.png';
 import o_rabbit from './animals/o_rabbit.png';
 import p_chick from './animals/p_chick.png';
@@ -25,6 +24,18 @@ import w_cow from './animals/w_cow.png';
 import x_penguin from './animals/x_penguin.png';
 import y_octopus from './animals/y_octopus.png';
 import z_octopus from './animals/z_octopus.png';
+import a_mushroom from './food/a_mushroom.png';
+import b_icecream from './food/b_icecream.png';
+import c_pumpkin from './food/c_pumpkin.png';
+import d_orange from './food/d_orange.png';
+import e_strawberry from './food/e_strawberry.png';
+import f_blueberry from './food/f_blueberry.png';
+import g_blueberry from './food/g_blueberry.png';
+import h_parsnip from './food/h_parsnip.png';
+import i_eggplant from './food/i_eggplant.png';
+import a_heart from './abstract/a_heart.png';
+import b_moon from './abstract/b_moon.png';
+import c_pikachu from './abstract/c_pikachu.png';
 
 export const animals = [
     {
@@ -286,5 +297,101 @@ export const animals = [
         dimensions: '',
         tags: ['toys'],
         in_stock: true,
+    },
+    {
+        img: a_mushroom,
+        name: 'Fănica',
+        price: null,
+        description: 'Fănica este o ciupercuță croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'a_mushroom',
+        tags: ['toys', 'bag charms']
+    },
+    {
+        img: b_icecream,
+        name: 'Înghețată',
+        price: null,
+        description: 'Înghețata croșetată poate fi folosită ca obiect decorativ sau ca obiect de joc. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'b_icecream',
+        tags: ['toys']
+    },
+    {
+        img: c_pumpkin,
+        name: 'Dovleac',
+        price: null,
+        description: 'Dovleacul croșetat poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'c_pumpkin',
+        tags: ['toys']
+    },
+    {
+        img: d_orange,
+        name: 'Petruța',
+        price: null,
+        description: 'Petruța este o portocală croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'd_orange',
+        tags: ['toys', 'bag charms']
+    },
+    {
+        img: e_strawberry,
+        name: 'Căpșunică',
+        price: null,
+        description: 'Căpșunica croșetată poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'e_strawberry',
+        tags: ['toys', 'bag charms']
+    },
+    {
+        img: f_blueberry,
+        name: 'Mărioara',
+        price: null,
+        description: 'Mărioara este o afină croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'f_blueberry',
+        tags: ['toys', 'bag charms']
+    },
+    {
+        img: g_blueberry,
+        name: 'Mădălina',
+        price: null,
+        description: 'Mădălina este o afină croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'g_blueberry',
+        tags: ['toys', 'bag charms']
+    },
+    {
+        img: h_parsnip,
+        name: 'Păstârnac',
+        price: null,
+        description: 'Păstârnacul croșetat poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'h_parsnip',
+        tags: ['toys', 'bag charms']
+    },
+    {
+        img: i_eggplant,
+        name: 'Vânătă',
+        price: null,
+        description: 'Vânăta croșetată poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'i_eggplant',
+        tags: ['toys', 'bag charms']
+    },
+    {
+        img: a_heart,
+        name: 'Inimioară',
+        price: null,
+        description: 'Inimioara croșetată poate fi folosită ca obiect decorativ sau ca obiect de joc. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'a_heart',
+        tags: ['toys'],
+    },
+    {
+        img: b_moon,
+        name: 'Lună',
+        price: null,
+        description: 'Luna croșetată poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'b_moon',
+        tags: ['toys', 'bag charms'],
+    },
+    {
+        img: c_pikachu,
+        name: 'Pikachu',
+        price: null,
+        description: 'Pikachu este un pokemon croșetat care poate fi folosit ca obiect decorativ sau ca obiect de joc. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'c_pikachu',
+        tags: ['toys'],
     },
 ];

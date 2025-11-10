@@ -3,9 +3,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { NavLink, Routes, Route, useLocation } from 'react-router-dom';
 import { animals } from './animals';
 import { wearables } from './wearables';
-import { food } from './food';
 import { homeware } from './homeware';
-import { abstract } from './abstract';
 
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
@@ -124,7 +122,7 @@ function App() {
   function PlushiesPage() {
     const location = useLocation();
     const plushies = useMemo(() => {
-      return [...animals, ...food, ...abstract];
+      return [...animals];
     }, []);
 
     useEffect(() => {
