@@ -6,6 +6,7 @@ import { wearables } from './wearables';
 import { homeware } from './homeware';
 import plushies from './products/plushies.webp';
 import beanies from './products/beanies.webp';
+import baskets from './products/baskets.webp';
 
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
@@ -521,6 +522,12 @@ function App() {
             <figure className="animal-card background-image">
               <NavLink to={ROUTES.wearables}>
                 <img src={beanies} alt='beanies' loading="lazy" />
+              </NavLink>
+            </figure>
+
+            <figure className="animal-card background-image">
+              <NavLink to={ROUTES.homeware}>
+                <img src={baskets} alt='baskets' loading="lazy" />
               </NavLink>
             </figure>
           </div>
