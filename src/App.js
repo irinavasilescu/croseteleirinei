@@ -4,6 +4,8 @@ import { NavLink, Routes, Route, useLocation } from 'react-router-dom';
 import { animals } from './animals';
 import { wearables } from './wearables';
 import { homeware } from './homeware';
+import plushies from './products/plushies.webp';
+import beanies from './products/beanies.webp';
 
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
@@ -13,6 +15,7 @@ function App() {
     homeware: '/homeware',
     wearables: '/wearables',
     contact: '/contact',
+    products: '/products',
     home: '/',
   };
 
@@ -249,7 +252,6 @@ function App() {
       </section>
     );
   }
-
 
   // Home assets
   const homeAssets = useMemo(() => {
@@ -505,6 +507,28 @@ function App() {
     );
   }
 
+  function ProductsPage() {
+    return (
+      <section className="section">
+        <div className="container">
+          <div className="animals-grid">
+            <figure className="animal-card background-image">
+              <NavLink to={ROUTES.plushies}>
+                <img src={plushies} alt='plushies' loading="lazy" />
+              </NavLink>
+            </figure>
+
+            <figure className="animal-card background-image">
+              <NavLink to={ROUTES.wearables}>
+                <img src={beanies} alt='beanies' loading="lazy" />
+              </NavLink>
+            </figure>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   // Keep page component identities stable across renders to preserve internal state (pagination)
   const PlushiesPageStable = useRef(PlushiesPage).current;
   const HomewarePageStable = useRef(HomewarePage).current;
@@ -517,9 +541,7 @@ function App() {
           <nav className="nav nav-tabs">
             {[
               { to: ROUTES.home, key: 'home', label: 'Home', end: true },
-              { to: ROUTES.plushies, key: 'plushies', label: 'Plushies' },
-              { to: ROUTES.homeware, key: 'homeware', label: 'Homeware' },
-              { to: ROUTES.wearables, key: 'wearables', label: 'Wearables' },
+              { to: ROUTES.products, key: 'products', label: 'Products' },
               { to: ROUTES.contact, key: 'contact', label: 'Contact' },
             ].map((link) => {
               const icon = findIcon(link.key);
@@ -545,6 +567,7 @@ function App() {
         <Route path={ROUTES.plushies} element={<PlushiesPageStable />} />
         <Route path={ROUTES.homeware} element={<HomewarePageStable />} />
         <Route path={ROUTES.wearables} element={<WearablesPageStable />} />
+        <Route path={ROUTES.products} element={<ProductsPage/>} />
         <Route path={ROUTES.contact} element={<ContactPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
