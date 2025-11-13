@@ -131,9 +131,25 @@ html, body {
 
 /* Animals responsive grid */
 .animals-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
-.animal-card { background: transparent; border: 0; border-radius: 0; padding: 0; box-shadow: none; cursor: pointer; transition: transform 0.2s ease, opacity 0.2s ease; }
+.animal-card { background: transparent; border: 0; border-radius: 0; padding: 0; box-shadow: none; cursor: pointer; transition: transform 0.2s ease, opacity 0.2s ease; position: relative; }
 .animal-card:hover { transform: scale(1.02); opacity: 0.9; }
 .animal-card img { width: 100%; height: auto; max-height: 300px; object-fit: contain; display: block; border-radius: 0; background: transparent; }
+
+.badge-new {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  background-color: #fe3636;
+  color: black;
+  border: 2px solid black;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
 
 /* Pagination */
 .pagination {
@@ -547,6 +563,7 @@ html, body {
 .modal-image {
   flex: 1;
   min-width: 0;
+  position: relative;
 }
 
 .modal-image img {

@@ -145,6 +145,9 @@ function App() {
           </button>
           <div className="modal-body">
             <div className="modal-image">
+              {item.is_new &&(
+                <span className="badge-new" aria-label="Produs nou">Nou</span>
+              )}
               <img src={item.img} alt={item.name} />
             </div>
             <div className="modal-info">
@@ -217,6 +220,9 @@ function App() {
             <div className="animals-grid">
               {currentItems.map((item, idx) => (
                 <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
+                  {item.is_new &&(
+                    <span className="badge-new" aria-label="Produs nou">Nou</span>
+                  )}
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
@@ -243,6 +249,9 @@ function App() {
             <div className="animals-grid">
               {currentItems.map((item, idx) => (
                 <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
+                  {item.is_new &&(
+                    <span className="badge-new" aria-label="Produs nou">Nou</span>
+                  )}
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
@@ -497,6 +506,9 @@ function App() {
             <div className="animals-grid">
               {currentItems.map((item, idx) => (
                 <figure className="animal-card" key={idx} onClick={() => setSelectedItem(item)}>
+                  {item.is_new &&(
+                    <span className="badge-new" aria-label="Produs nou">Nou</span>
+                  )}
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                 </figure>
               ))}
