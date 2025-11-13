@@ -283,13 +283,25 @@ function App() {
 
   function HomePage() {
     const featuredAnimals = featuredAnimalsRef.current || [];
+    const newProducts = useMemo(() => {
+      return [...wearables, ...animals, ...homeware].filter(item => item && item.is_new);
+    }, []);
 
     return (
       <>
         <section className="landing-hero">
           <div className="landing-banner">
-            {homeAssets.banner && (
-              <img src={homeAssets.banner} alt="" role="presentation" />
+            {(homeAssets.banner_large || homeAssets.banner || homeAssets.banner_small) && (
+              <picture>
+                {homeAssets.banner_small && (
+                  <source media="(max-width: 768px)" srcSet={homeAssets.banner_small} />
+                )}
+                <img
+                  src={homeAssets.banner_large || homeAssets.banner || homeAssets.banner_small}
+                  alt=""
+                  role="presentation"
+                />
+              </picture>
             )}
           </div>
           <div className="landing-container">
@@ -307,6 +319,24 @@ function App() {
             </div>
           </div>
         </section>
+
+        {newProducts.length > 0 && (
+          <section className="section new-products" aria-label="Produse noi">
+            <div className="container">
+              <div className="animals-grid">
+                {newProducts.map((item, idx) => (
+                  <figure className="animal-card" key={`${item.id || idx}-new`} onClick={() => setSelectedItem(item)}>
+                    {item.is_new && (
+                      <span className="badge-new" aria-label="Produs nou">Nou</span>
+                    )}
+                    <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         <section className="section how-i-work">
           <div className="container">
             <div className="how-i-work-cards">
@@ -390,7 +420,6 @@ function App() {
                   onClick={(e) => { e.preventDefault(); setSelectedItem(item); }}
                 >
                   <figure className="footer-animal">
-                    <span className="footer-animal-name">{item.name}</span>
                     <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
                   </figure>
                 </NavLink>
