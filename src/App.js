@@ -4,9 +4,9 @@ import { NavLink, Routes, Route, useLocation } from 'react-router-dom';
 import { animals } from './animals';
 import { wearables } from './wearables';
 import { homeware } from './homeware';
-import plushies from './products/plushies.webp';
-import beanies from './products/beanies.webp';
-import baskets from './products/baskets.webp';
+import plushies from './products/plushies.png';
+import beanies from './products/beanies.png';
+import baskets from './products/baskets.png';
 
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
@@ -313,7 +313,7 @@ function App() {
                 La <i>Croșetele Irinei</i>, fiecare creație este transformată în bucurie, buclă cu buclă.
               </p>
               <div className="landing-actions">
-                <a href={`${ROUTES.plushies}`} className="landing-btn landing-btn-primary">Vezi colecția</a>
+                <a href={`${ROUTES.products}`} className="landing-btn landing-btn-primary">Vezi colecția</a>
                 <a href={`${ROUTES.contact}`} className="landing-btn landing-btn-secondary">Contact</a>
               </div>
             </div>

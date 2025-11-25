@@ -30,7 +30,7 @@ html, body {
 
 /* Layout */
 .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; }
-.section { padding: 4rem 0; }
+.section { padding: 3rem 0; }
 .section h2 { font-size: 2rem; margin: 0 0 1rem; color: var(--burnt-sienna); position: relative; }
 .section h2::after { content: ''; display: block; width: 140px; height: 8px; margin-top: 8px; border-radius: 999px; background: repeating-linear-gradient(90deg, var(--burnt-sienna) 0 14px, transparent 14px 22px); opacity: .55; }
 .section p { color: var(--muted); }
@@ -315,6 +315,7 @@ html, body {
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
+  padding: 3rem 0;
 }
 
 .landing-social-item {
@@ -377,7 +378,7 @@ html, body {
 
 /* How I Work Section */
 .how-i-work {
-  padding-top: 0;
+  padding-top: 3rem;
 }
 
 .how-i-work-cards {
@@ -458,12 +459,20 @@ html, body {
 }
 
 /* Home footer gallery */
-.home-footer { margin-top: 0; width: 100vw; max-width: 100vw; margin-left: 50%; transform: translateX(-50%); overflow-x: hidden; }
+.home-footer {
+  margin-top: 0;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  overflow-x: hidden;
+}
+
 .footer-contact { display: flex; justify-content: center; gap: 1.5rem; padding-bottom: 2rem; font-weight: 700; }
 .footer-contact a { display: inline-flex; align-items: center; justify-content: center; color: var(--text); text-decoration: none; font-size: 1.5rem; }
 .footer-contact a:hover span:first-child { transform: scale(1.12); }
 .footer-contact span:first-child { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; background: rgba(255,214,107,.3); border-radius: 50%; transition: transform .2s ease; }
-.footer-animals { padding: 2rem 0 1rem 0; display: flex; justify-content: center; align-items: flex-end; width: 100vw; min-height: 250px; }
+.footer-animals { padding: 2rem 0; display: flex; justify-content: center; align-items: flex-end; width: 100vw; min-height: 250px; }
 .footer-animal-link { display: block; text-decoration: none; color: inherit; }
 .footer-animal-link:not(:first-child) .footer-animal { margin-left: -4rem; }
 .footer-animal { margin: 0; position: relative; transition: transform .2s ease, filter .2s ease; }
@@ -774,7 +783,7 @@ html, body {
 }
 
 .section.new-products {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .new-products .animals-grid {
@@ -783,5 +792,5 @@ html, body {
 }
 
 .new-products {
-  background-color: rgba(247, 235, 0, 0.6);
+  background-color: rgba(254, 54, 54, 0.2);
 }
