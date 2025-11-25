@@ -315,7 +315,7 @@ html, body {
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
 }
 
 .landing-social-item {
@@ -472,7 +472,7 @@ html, body {
 .footer-contact a { display: inline-flex; align-items: center; justify-content: center; color: var(--text); text-decoration: none; font-size: 1.5rem; }
 .footer-contact a:hover span:first-child { transform: scale(1.12); }
 .footer-contact span:first-child { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; background: rgba(255,214,107,.3); border-radius: 50%; transition: transform .2s ease; }
-.footer-animals { padding: 2rem 0; display: flex; justify-content: center; align-items: flex-end; width: 100vw; min-height: 250px; }
+.footer-animals { padding: 3rem 0 2rem 0; display: flex; justify-content: center; align-items: flex-end; width: 100vw; min-height: 250px; }
 .footer-animal-link { display: block; text-decoration: none; color: inherit; }
 .footer-animal-link:not(:first-child) .footer-animal { margin-left: -4rem; }
 .footer-animal { margin: 0; position: relative; transition: transform .2s ease, filter .2s ease; }
