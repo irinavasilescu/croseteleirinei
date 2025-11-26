@@ -4,6 +4,8 @@ import c_hat from './wearables/c_hat.webp';
 import d_hat from './wearables/d_hat.webp';
 import e_hat from './wearables/e_hat.webp';
 import f_hat from './wearables/f_hat.webp';
+import g_hat from './wearables/g_hat.webp';
+import h_hat from './wearables/h_hat.webp';
 
 export const wearables = [
     {
@@ -54,6 +56,24 @@ export const wearables = [
     },
     {
         img: f_hat,
+        name: 'Căciulă',
+        price: null,
+        description: "Căciulă croșetată, realizată din fir 100% acril",
+        id: 'f_hat',
+        tags: ['wearables'],
+        in_stock: false,
+    },
+    {
+        img: g_hat,
+        name: 'Căciulă',
+        price: null,
+        description: "Căciulă croșetată, realizată din fir 100% acril",
+        id: 'f_hat',
+        tags: ['wearables'],
+        in_stock: false,
+    },
+    {
+        img: h_hat,
         name: 'Căciulă',
         price: null,
         description: "Căciulă croșetată, realizată din fir 100% acril",
