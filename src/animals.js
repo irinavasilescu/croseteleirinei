@@ -41,7 +41,7 @@ export const animals = [
         dimensions: '',
         tags: ['toys', 'bag charms'],
         in_stock: true,
-        is_new: true,
+        is_new: false,
     },
     {
         img: j_chick,
@@ -52,7 +52,7 @@ export const animals = [
         dimensions: '',
         tags: ['toys', 'bag charms'],
         in_stock: true,
-        is_new: true,
+        is_new: false,
     },
     {
         img: d_orange,
@@ -62,7 +62,7 @@ export const animals = [
         id: 'd_orange',
         tags: ['toys', 'bag charms'],
         in_stock: true,
-        is_new: true,
+        is_new: false,
     },
     {
         img: a_frog,

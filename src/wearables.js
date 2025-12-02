@@ -16,7 +16,7 @@ export const wearables = [
         id: 'a_hat',
         tags: ['wearables'],
         in_stock: true,
-        is_new: true,
+        is_new: false,
     },
     {
         img: b_hat,

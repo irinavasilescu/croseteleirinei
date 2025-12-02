@@ -320,23 +320,6 @@ function App() {
           </div>
         </section>
 
-        {newProducts.length > 0 && (
-          <section className="section new-products" aria-label="Produse noi">
-            <div className="container">
-              <div className="animals-grid">
-                {newProducts.map((item, idx) => (
-                  <figure className="animal-card" key={`${item.id || idx}-new`} onClick={() => setSelectedItem(item)}>
-                    {item.is_new && (
-                      <span className="badge-new" aria-label="Produs nou">Nou</span>
-                    )}
-                    <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
-                  </figure>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
         <section className="section how-i-work">
           <div className="container">
             <div className="how-i-work-cards">
