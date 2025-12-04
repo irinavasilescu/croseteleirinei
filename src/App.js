@@ -1,12 +1,15 @@
 import './App.css';
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { NavLink, Routes, Route, useLocation } from 'react-router-dom';
+
 import { animals } from './animals';
 import { wearables } from './wearables';
 import { homeware } from './homeware';
+
 import plushies from './products/plushies.png';
 import beanies from './products/beanies.png';
 import baskets from './products/baskets.png';
+import dolls from './products/dolls.png';
 
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
@@ -18,6 +21,7 @@ function App() {
     contact: '/contact',
     products: '/products',
     home: '/',
+    dolls: '/dolls',
   };
 
   const ITEMS_PER_PAGE = 12;
@@ -281,6 +285,24 @@ function App() {
     }
   }, []);
 
+  // Dolly assets
+  const dollyAssets = useMemo(() => {
+    try {
+      const ctx = require.context('./dolly', false, /\.(png|jpe?g|webp|gif)$/i);
+      const images = [];
+      ctx.keys().forEach((k) => {
+        images.push(ctx(k));
+      });
+      return images.sort((a, b) => {
+        const numA = parseInt(a.match(/\d+/)?.[0] || '0');
+        const numB = parseInt(b.match(/\d+/)?.[0] || '0');
+        return numA - numB;
+      });
+    } catch (e) {
+      return [];
+    }
+  }, []);
+
   function HomePage() {
     const featuredAnimals = featuredAnimalsRef.current || [];
     const newProducts = useMemo(() => {
@@ -538,6 +560,12 @@ function App() {
         <div className="container">
           <div className="animals-grid">
             <figure className="animal-card background-image">
+              <NavLink to={ROUTES.dolls}>
+                <img src={dolls} alt='dolls' loading="lazy" />
+              </NavLink>
+            </figure>
+
+            <figure className="animal-card background-image">
               <NavLink to={ROUTES.plushies}>
                 <img src={plushies} alt='plushies' loading="lazy" />
               </NavLink>
@@ -554,6 +582,65 @@ function App() {
                 <img src={baskets} alt='baskets' loading="lazy" />
               </NavLink>
             </figure>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  function DollPage() {
+    const [selectedOutfit, setSelectedOutfit] = useState(0);
+    
+    const outfits = dollyAssets.map((dolly, index) => {
+      return {
+        id: index,
+        mainImage: dolly || null,
+        thumbnail: dolly || null,
+      };
+    });
+
+    const currentOutfit = outfits[selectedOutfit];
+    const mainImage = currentOutfit?.mainImage || dollyAssets[0] || null;
+
+    return (
+      <section className="section doll-page">
+        <div className="container">
+          <div className="doll-page-content">
+            <div className="doll-page-image">
+              {mainImage && (
+                <img src={mainImage} alt={currentOutfit?.name || 'Păpușă croșetată'} />
+              )}
+            </div>
+            <div className="doll-page-info">
+              <div className="doll-outfit-selection">
+                <div className="doll-outfit-options">
+                  {outfits.map((outfit, index) => (
+                    <div
+                      key={index}
+                      className={`doll-outfit-option ${selectedOutfit === index ? 'is-selected' : ''}`}
+                      onClick={() => setSelectedOutfit(index)}
+                    >
+                      {selectedOutfit === index && (
+                        <span className="doll-outfit-checkmark" aria-label="Selected">✔</span>
+                      )}
+                      {outfit.thumbnail && (
+                        <img 
+                          src={outfit.thumbnail} 
+                          alt={`Outfit ${index + 1}`} 
+                          className="doll-outfit-thumbnail"
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <a 
+                href={ROUTES.contact} 
+                className="landing-btn landing-btn-primary doll-page-cta"
+              >
+                Comandă Păpușa Personalizată
+              </a>
           </div>
         </div>
       </section>
@@ -600,6 +687,7 @@ function App() {
         <Route path={ROUTES.wearables} element={<WearablesPageStable />} />
         <Route path={ROUTES.products} element={<ProductsPage/>} />
         <Route path={ROUTES.contact} element={<ContactPage />} />
+        <Route path={ROUTES.dolls} element={<DollPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
       <ItemModal item={selectedItem} onClose={() => setSelectedItem(null)} />
