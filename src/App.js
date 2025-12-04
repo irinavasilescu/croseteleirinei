@@ -659,6 +659,7 @@ function App() {
           <nav className="nav nav-tabs">
             {[
               { to: ROUTES.home, key: 'home', label: 'Home', end: true },
+              { to: ROUTES.dolls, key: 'dolls', label: 'Dolls' },
               { to: ROUTES.products, key: 'products', label: 'Products' },
               { to: ROUTES.contact, key: 'contact', label: 'Contact' },
             ].map((link) => {
