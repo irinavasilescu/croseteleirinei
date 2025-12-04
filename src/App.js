@@ -476,7 +476,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section why-custom-doll">
+        {/* <section className="section why-custom-doll">
           <div className="container">
             <h2 className="why-custom-doll-title">De ce să alegi o păpușă personalizată?</h2>
             <div className="why-custom-doll-grid">
@@ -531,7 +531,7 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <div className="landing-social">
           <div className="landing-social-item">
