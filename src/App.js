@@ -10,6 +10,7 @@ import plushies from './products/plushies.png';
 import beanies from './products/beanies.png';
 import baskets from './products/baskets.png';
 import dolls from './products/dolls.png';
+import customDoll from './home/main_dolly.png';
 
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
@@ -352,7 +353,10 @@ function App() {
                   </div>
                 )}
                 <div className="how-i-work-card-content">
-                  <h3>Proveniență locală</h3>
+                  <h3>
+                    <img />
+                    Proveniență locală
+                  </h3>
                   <p>Firele provin de la furnizori locali, sprijinind comunitatea și reducând impactul asupra mediului. Fiecare creație prinde viață din materiale alese cu grijă și spun o poveste despre valori sustenabile.</p>
                 </div>
               </div>
@@ -381,6 +385,154 @@ function App() {
             </div>
           </div>
         </section>
+
+        <section className="doll-carousel-section">
+          <div className="doll-carousel-container">
+            <div className="doll-carousel-track">
+              {dollyAssets.map((doll, index) => (
+                <NavLink 
+                  key={`doll-${index}`} 
+                  to={ROUTES.dolls} 
+                  className="doll-carousel-item"
+                >
+                  <img src={doll} alt={`Doll ${index + 1}`} />
+                </NavLink>
+              ))}
+              {/* Duplicate for seamless loop */}
+              {dollyAssets.map((doll, index) => (
+                <NavLink 
+                  key={`doll-duplicate-${index}`} 
+                  to={ROUTES.dolls} 
+                  className="doll-carousel-item"
+                >
+                  <img src={doll} alt={`Doll ${index + 1}`} />
+                </NavLink>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section custom-doll-section">
+          <div className="container">
+            <div className="custom-doll-content">
+              <div className="custom-doll-image">
+                <img src={customDoll} alt="Păpușă personalizată" />
+              </div>
+              <div className="custom-doll-text">
+                <h2 className="custom-doll-title">Păpuși personalizate</h2>
+                <p className="custom-doll-description">
+                  Creez păpuși personalizate, inspirate de oameni reali.
+                  Fiecare păpușă este realizată manual, cu ținute, coafuri și accesorii ce capteaza trăsăturile și stilul persoanei pe care o reprezintă. 
+                  Este perfectă pentru un cadou unic și personal sau pentru captura momente prețioase într-o formă pufoasă și creativă.
+                </p>
+                
+                <div className="custom-doll-faq">
+                  <div className="custom-doll-faq-item">
+                    <h3 className="custom-doll-faq-question">
+                      <img src={homeAssets.bullet}/>
+                      Dimensiunea păpușilor
+                    </h3>
+                    <p className="custom-doll-faq-answer">
+                      Păpușile au înălțimea de aproximativ 35-40 cm, fiind perfecte pentru joc sau expunere.
+                    </p>
+                  </div>
+                  <div className="custom-doll-faq-item">
+                    <h3 className="custom-doll-faq-question">
+                      <img src={homeAssets.bullet}/>
+                      Materialele folosite
+                    </h3>
+                    <p className="custom-doll-faq-answer">
+                      Folosesc fire de calitate, provenite de la furnizori locali, și melană hipoalergenică pentru umplutură, sigură pentru toate vârstele.
+                    </p>
+                  </div>
+                  <div className="custom-doll-faq-item">
+                    <h3 className="custom-doll-faq-question">
+                      <img src={homeAssets.bullet}/>
+                      Timpul de realizare
+                    </h3>
+                    <p className="custom-doll-faq-answer">
+                      Fiecare păpușă personalizată necesită între 2-3 săptămâni pentru realizare, în funcție de complexitatea designului.
+                    </p>
+                  </div>
+                  <div className="custom-doll-faq-item">
+                    <h3 className="custom-doll-faq-question">
+                      <img src={homeAssets.bullet}/>
+                      Transport și livrare
+                    </h3>
+                    <p className="custom-doll-faq-answer">
+                      Livrez prin curier. Detaliile despre costuri și timpii de livrare le putem discuta la momentul comenzii.
+                    </p>
+                  </div>
+                </div>
+
+                <a 
+                  href={ROUTES.contact} 
+                  className="landing-btn landing-btn-primary doll-page-cta"
+                >
+                  Comandă păpușa
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section why-custom-doll">
+          <div className="container">
+            <h2 className="why-custom-doll-title">De ce să alegi o păpușă personalizată?</h2>
+            <div className="why-custom-doll-grid">
+              <div className="why-custom-doll-item">
+                <div className="why-custom-doll-number">1</div>
+                <h3 className="why-custom-doll-heading">100% personalizată</h3>
+                <p className="why-custom-doll-text">
+                  Fiecare păpușă este creată pe baza trăsăturilor și stilului persoanei reprezentate, de la coafură și culoarea ochilor, la ținută și accesorii.
+                </p>
+              </div>
+              <div className="why-custom-doll-item">
+                <div className="why-custom-doll-number">2</div>
+                <h3 className="why-custom-doll-heading">Lucrată manual cu grijă</h3>
+                <p className="why-custom-doll-text">
+                  Toate păpușile sunt croșetate manual, cu atenție la detalii, astfel încât fiecare creație este unică și de calitate superioară.
+                </p>
+              </div>
+              <div className="why-custom-doll-item">
+                <div className="why-custom-doll-number">3</div>
+                <h3 className="why-custom-doll-heading">Cadou cu valoare emoțională</h3>
+                <p className="why-custom-doll-text">
+                  O păpușă personalizată este mai mult decât un obiect, este un simbol al afecțiunii și al legăturii dintre tine și persoana dragă.
+                </p>
+              </div>
+              <div className="why-custom-doll-item">
+                <div className="why-custom-doll-number">4</div>
+                <h3 className="why-custom-doll-heading">Creativă și jucăușă</h3>
+                <p className="why-custom-doll-text">
+                  Păpușile croșetate adaugă un strop de magie și culoare în orice spațiu și sunt perfecte pentru copii, colecționari sau iubitorii de handmade.
+                </p>
+              </div>
+              <div className="why-custom-doll-item">
+                <div className="why-custom-doll-number">5</div>
+                <h3 className="why-custom-doll-heading">Sigură și durabilă</h3>
+                <p className="why-custom-doll-text">
+                  Materialele folosite sunt moi, prietenoase cu pielea și rezistente, astfel încât păpușa să fie păstrată mulți ani.
+                </p>
+              </div>
+              <div className="why-custom-doll-item">
+                <div className="why-custom-doll-number">6</div>
+                <h3 className="why-custom-doll-heading">Perfectă pentru orice ocazie</h3>
+                <p className="why-custom-doll-text">
+                  Ideală pentru cadouri sau pur și simplu pentru a surprinde o persoană dragă într-un mod original.
+                </p>
+              </div>
+              <div className="why-custom-doll-item">
+                <div className="why-custom-doll-number">7</div>
+                <h3 className="why-custom-doll-heading">Susții artizanatul</h3>
+                <p className="why-custom-doll-text">
+                  Fiecare păpușă este o piesă lucrată manual, iar alegând-o, susții munca unui creator independent și pasiunea sa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div className="landing-social">
           <div className="landing-social-item">
             <a
@@ -414,6 +566,7 @@ function App() {
             <span className="landing-social-hover-text">croseteleirinei@gmail.com</span>
           </div>
         </div>
+
         {featuredAnimals.length > 0 && (
           <footer className="home-footer" id="gallery" aria-label="Featured animals">
             <div className="footer-animals">
@@ -636,11 +789,11 @@ function App() {
               </div>
             </div>
             <a 
-                href={ROUTES.contact} 
-                className="landing-btn landing-btn-primary doll-page-cta"
-              >
-                Comandă Păpușa Personalizată
-              </a>
+              href={ROUTES.contact} 
+              className="landing-btn landing-btn-primary doll-page-cta"
+            >
+              Comandă păpușa
+            </a>
           </div>
         </div>
       </section>

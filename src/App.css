@@ -31,9 +31,6 @@ html, body {
 /* Layout */
 .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; }
 .section { padding: 3rem 0; }
-.section h2 { font-size: 2rem; margin: 0 0 1rem; color: var(--burnt-sienna); position: relative; }
-.section h2::after { content: ''; display: block; width: 140px; height: 8px; margin-top: 8px; border-radius: 999px; background: repeating-linear-gradient(90deg, var(--burnt-sienna) 0 14px, transparent 14px 22px); opacity: .55; }
-.section p { color: var(--muted); }
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.75); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,.05); }
@@ -260,7 +257,6 @@ html, body {
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
 }
 
 .landing-btn {
@@ -374,6 +370,259 @@ html, body {
 .landing-social-item:hover .landing-social-hover-text {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Doll Carousel Section */
+.doll-carousel-section {
+  padding: 3rem 0;
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.doll-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+
+.doll-carousel-track {
+  display: flex;
+  animation: slideLeft 15s linear infinite;
+  will-change: transform;
+  user-select: none;
+}
+
+.doll-carousel-item {
+  flex-shrink: 0;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+.doll-carousel-item:hover {
+  transform: scale(1.05);
+}
+
+.doll-carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .doll-carousel-item {
+    width: 150px;
+    height: 200px;
+  }
+
+  .doll-carousel-track {
+    gap: 1.5rem;
+    animation-duration: 12s;
+  }
+}
+
+/* Custom Doll Section */
+.custom-doll-section {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.custom-doll-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.custom-doll-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-doll-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.custom-doll-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.custom-doll-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+  color: #fe3636;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.custom-doll-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+
+.custom-doll-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  border: 2px solid black;
+}
+
+.custom-doll-faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.custom-doll-faq-question {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  img {
+    width: 1rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.custom-doll-faq-answer {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0;
+  color: #000000;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .custom-doll-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .custom-doll-title {
+    font-size: 2rem;
+  }
+
+  .custom-doll-description {
+    font-size: 1rem;
+  }
+}
+
+/* Why Custom Doll Section */
+.why-custom-doll {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.why-custom-doll-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0 0 3rem 0;
+  color: #000000;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.why-custom-doll-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.why-custom-doll-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 2px solid #000000;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.why-custom-doll-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.why-custom-doll-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fe3636;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.why-custom-doll-heading {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0;
+  color: #000000;
+  line-height: 1.3;
+}
+
+.why-custom-doll-text {
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0;
+  color: #000000;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .why-custom-doll-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .why-custom-doll-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .why-custom-doll-item {
+    padding: 1.25rem;
+  }
 }
 
 /* How I Work Section */
@@ -903,7 +1152,7 @@ html, body {
   background: #ffffff;
 }
 
-.doll-page-content > .doll-page-cta {
+.doll-page-cta {
   grid-column: 1 / -1;
   justify-self: center;
   margin-top: 2rem;
