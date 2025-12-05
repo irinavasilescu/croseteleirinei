@@ -380,7 +380,18 @@ function App() {
                 )}
                 <div className="how-i-work-card-content">
                   <h3>Pufos și sigur</h3>
-                  <p>Toate jucăriile sunt umplute cu melană hipoalergenică, moale și sigură, potrivită pentru toate vârstele. Piesele sunt create pentru a aduce confort și bucurie, lucrate manual cu atenție de la început până la sfârșit.</p>
+                  <p>Toate jucăriile sunt umplute cu melană hipoalergenică, moale și sigură, potrivită pentru toate vârstele. Obiectele sunt create pentru a aduce confort și bucurie, lucrate manual cu atenție de la început până la sfârșit.</p>
+                </div>
+              </div>
+              <div className="how-i-work-card">
+                {homeAssets.custom && (
+                  <div className="how-i-work-image">
+                    <img src={homeAssets.custom} alt="Personalizare" />
+                  </div>
+                )}
+                <div className="how-i-work-card-content">
+                  <h3>Personalizare</h3>
+                  <p>Fiecare produs poate fi realizat pe comandă, exact după preferințele tale, de la culori, dimensiuni, modele, până la cele mai mici detalii. Astfel, primești o piesă cu adevărat unică, creată special pentru tine sau pentru cei dragi.</p>
                 </div>
               </div>
             </div>
