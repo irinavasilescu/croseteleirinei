@@ -11,6 +11,7 @@ import beanies from './products/beanies.png';
 import baskets from './products/baskets.png';
 import dolls from './products/dolls.png';
 import customDoll from './home/main_dolly.png';
+import bagKeychain from './home/bag_keychain.png';
 
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
@@ -421,8 +422,7 @@ function App() {
               <div className="custom-doll-text">
                 <h2 className="custom-doll-title">Păpuși personalizate</h2>
                 <p className="custom-doll-description">
-                  Creez păpuși personalizate, inspirate de oameni reali.
-                  Fiecare păpușă este realizată manual, cu ținute, coafuri și accesorii ce capteaza trăsăturile și stilul persoanei pe care o reprezintă. 
+                  Creez păpuși personalizate cu ținute, coafuri și accesorii ce capteaza trăsăturile și stilul persoanei pe care o reprezintă. 
                   Este perfectă pentru un cadou unic și personal sau pentru captura momente prețioase într-o formă pufoasă și creativă.
                 </p>
                 
@@ -471,6 +471,37 @@ function App() {
                 >
                   Comandă
                 </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section bag-accessories-section">
+          <div className="container">
+            <div className="bag-accessories-content">
+              <div className="bag-accessories-text">
+                <h2 className="bag-accessories-title">Accesorii pentru genți, brelocuri și jucării</h2>
+                <p className="bag-accessories-description">
+                  Descoperă colecția de accesorii pentru genți, brelocuri și jucării croșetate. Fiecare produs îmbină creativitatea cu funcționalitatea, transformând obiectele de zi cu zi în mici bucurii pline de culoare.
+                </p>
+                <p className="bag-accessories-description">
+                  Alege dintre brelocuri adorabile, jucării croșetate și accesorii decorative pentru genți, perfecte pentru a-ți personaliza stilul sau pentru a oferi un cadou unic celor dragi.
+                </p>
+                <p className="bag-accessories-description">
+                  Fie că îți dorești un detaliu simpatic pentru geanta preferată sau un mic companion croșetat, aici vei găsi accesorii care aduc un strop de farmec și originalitate în fiecare zi.
+                </p>
+                <p className="bag-accessories-description bag-accessories-highlight">
+                  Dacă îți dorești ceva personalizat, care nu se regăsește în colecția actuală de pe site, îți stau cu drag la dispoziție. Pot crea modele la comandă, după preferințele tale, pentru a obține exact accesoriul sau jucăria pe care ți le imaginezi.
+                </p>
+                <a 
+                  href={ROUTES.contact} 
+                  className="landing-btn landing-btn-primary bag-accessories-cta"
+                >
+                  Comandă
+                </a>
+              </div>
+              <div className="bag-accessories-image">
+                <img src={bagKeychain} alt="Accesorii pentru genți" />
               </div>
             </div>
           </div>

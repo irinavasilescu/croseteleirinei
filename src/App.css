@@ -246,6 +246,7 @@ html, body {
   font-weight: 400;
   color: #000000;
   margin: 0 0 3rem;
+  line-height: 1.3;
 
   i {
     font-weight: 600;
@@ -443,7 +444,7 @@ html, body {
 
 /* Custom Doll Section */
 .custom-doll-section {
-  padding: 4rem 0;
+  padding: 4rem 0 0 0;
   background: #ffffff;
 }
 
@@ -488,7 +489,8 @@ html, body {
   font-size: 1rem;
   font-weight: 400;
   color: #000000;
-  margin-bottom: 2rem;
+  line-height: 1.3;
+  margin: 0;
 }
 
 .custom-doll-faq {
@@ -539,6 +541,84 @@ html, body {
 
   .custom-doll-description {
     font-size: 1rem;
+  }
+}
+
+/* Bag Accessories Section */
+.bag-accessories-section {
+  padding: 4rem 0 0 0;
+  background: #ffffff;
+}
+
+.bag-accessories-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "text image";
+  gap: 4rem;
+  align-items: center;
+}
+
+.bag-accessories-text {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bag-accessories-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+  color: #fe3636;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.bag-accessories-description {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  color: #000000;
+  line-height: 1.3;
+}
+
+.bag-accessories-description.bag-accessories-highlight {
+  color: #fe3636;
+  font-weight: 500;
+}
+
+.bag-accessories-cta {
+  justify-self: center;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.bag-accessories-image {
+  grid-area: image;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bag-accessories-image img {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .bag-accessories-content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "text";
+    gap: 2.5rem;
+  }
+
+  .bag-accessories-title {
+    font-size: 2rem;
   }
 }
 
