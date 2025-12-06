@@ -483,12 +483,20 @@ function App() {
                   </div>
                 </div>
 
-                <a 
-                  href={ROUTES.contact} 
-                  className="landing-btn landing-btn-primary doll-page-cta"
-                >
-                  Comandă
-                </a>
+                <div className="custom-doll-cta-container">
+                  <a 
+                    href={ROUTES.dolls} 
+                    className="landing-btn landing-btn-secondary"
+                  >
+                    Vezi colecția
+                  </a>
+                  <a 
+                    href={ROUTES.contact} 
+                    className="landing-btn landing-btn-primary"
+                  >
+                    Comandă
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -511,12 +519,20 @@ function App() {
                 <p className="bag-accessories-description bag-accessories-highlight">
                   Dacă îți dorești ceva personalizat, care nu se regăsește în colecția actuală de pe site, îți stau cu drag la dispoziție. Pot crea modele la comandă, după preferințele tale, pentru a obține exact accesoriul sau jucăria pe care ți le imaginezi.
                 </p>
-                <a 
-                  href={ROUTES.contact} 
-                  className="landing-btn landing-btn-primary bag-accessories-cta"
-                >
-                  Comandă
-                </a>
+                <div className="bag-accessories-cta-container">
+                  <a 
+                    href={ROUTES.products} 
+                    className="landing-btn landing-btn-secondary"
+                  >
+                    Vezi colecția
+                  </a>
+                  <a 
+                    href={ROUTES.contact} 
+                    className="landing-btn landing-btn-primary"
+                  >
+                    Comandă
+                  </a>
+                </div>
               </div>
               <div className="bag-accessories-image">
                 <img src={bagKeychain} alt="Accesorii pentru genți" />
