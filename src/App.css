@@ -764,6 +764,17 @@ html, body {
   .why-custom-doll-text {
     font-size: 0.875rem;
   }
+
+  .doll-page-cta-container {
+    width: 100%;
+    padding: 0 1.25rem;
+  }
+
+  .doll-page-cta {
+    width: 100% !important;
+    display: block !important;
+    max-width: none !important;
+  }
 }
 
 /* How I Work Section */
@@ -1302,6 +1313,7 @@ html, body {
   justify-self: center;
   text-align: center;
   padding: 1rem 2rem;
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
