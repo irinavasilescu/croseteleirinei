@@ -441,7 +441,7 @@ function App() {
                 <h2 className="custom-doll-title">Păpuși personalizate</h2>
                 <p className="custom-doll-description">
                   Creez păpuși personalizate cu ținute, coafuri și accesorii ce capteaza trăsăturile și stilul persoanei pe care o reprezintă. 
-                  Este perfectă pentru un cadou unic și personal sau pentru captura momente prețioase într-o formă pufoasă și creativă.
+                  Este perfectă pentru un cadou unic și personal sau pentru a captura momente prețioase într-o formă pufoasă și creativă.
                 </p>
                 
                 <div className="custom-doll-faq">
