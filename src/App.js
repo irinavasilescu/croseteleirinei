@@ -13,6 +13,13 @@ import dolls from './products/dolls.png';
 import customDoll from './home/main_dolly.png';
 import bagKeychain from './home/bag_keychain.png';
 
+import yarnBall1 from './home/yarn_ball1.png';
+import yarnBall2 from './home/yarn_ball2.png';
+import yarnBall3 from './home/yarn_ball3.png';
+import yarnBall4 from './home/yarn_ball4.png';
+import yarnBall5 from './home/yarn_ball5.png';
+import yarnBall6 from './home/yarn_ball6.png';
+
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
 
@@ -778,18 +785,22 @@ function App() {
         <section className="section why-custom-doll">
           <div className="container">
             <h2 className="why-custom-doll-title">De ce să alegi o păpușă personalizată?</h2>
-            <div className="why-custom-doll-grid">
+            <div className="why-custom-doll-list">
               <div className="why-custom-doll-item">
-                <div className="why-custom-doll-number">1</div>
+                <div className="why-custom-doll-image">
+                  <img src={yarnBall1} alt="Yarn ball" />
+                </div>
                 <div className="why-custom-doll-content">
-                  <h3 className="why-custom-doll-heading">100% personalizată</h3>
+                  <h3 className="why-custom-doll-heading">Unică</h3>
                   <p className="why-custom-doll-text">
                     Fiecare păpușă este creată pe baza trăsăturilor și stilului persoanei reprezentate, de la coafură și culoarea ochilor, la ținută și accesorii.
                   </p>
                 </div>
               </div>
               <div className="why-custom-doll-item">
-                <div className="why-custom-doll-number">2</div>
+                <div className="why-custom-doll-image">
+                  <img src={yarnBall2} alt="Yarn ball" />
+                </div>
                 <div className="why-custom-doll-content">
                   <h3 className="why-custom-doll-heading">Lucrată manual cu grijă</h3>
                   <p className="why-custom-doll-text">
@@ -798,7 +809,9 @@ function App() {
                 </div>
               </div>
               <div className="why-custom-doll-item">
-                <div className="why-custom-doll-number">3</div>
+                <div className="why-custom-doll-image">
+                  <img src={yarnBall3} alt="Yarn ball" />
+                </div>
                 <div className="why-custom-doll-content">
                   <h3 className="why-custom-doll-heading">Cadou cu valoare emoțională</h3>
                   <p className="why-custom-doll-text">
@@ -807,7 +820,9 @@ function App() {
                 </div>
               </div>
               <div className="why-custom-doll-item">
-                <div className="why-custom-doll-number">4</div>
+                <div className="why-custom-doll-image">
+                  <img src={yarnBall4} alt="Yarn ball" />
+                </div>
                 <div className="why-custom-doll-content">
                   <h3 className="why-custom-doll-heading">Creativă și jucăușă</h3>
                   <p className="why-custom-doll-text">
@@ -816,7 +831,9 @@ function App() {
                 </div>
               </div>
               <div className="why-custom-doll-item">
-                <div className="why-custom-doll-number">5</div>
+                <div className="why-custom-doll-image">
+                  <img src={yarnBall5} alt="Yarn ball" />
+                </div>
                 <div className="why-custom-doll-content">
                   <h3 className="why-custom-doll-heading">Sigură și durabilă</h3>
                   <p className="why-custom-doll-text">
@@ -825,7 +842,9 @@ function App() {
                 </div>
               </div>
               <div className="why-custom-doll-item">
-                <div className="why-custom-doll-number">6</div>
+                <div className="why-custom-doll-image">
+                  <img src={yarnBall6} alt="Yarn ball" />
+                </div>
                 <div className="why-custom-doll-content">
                   <h3 className="why-custom-doll-heading">Perfectă pentru orice ocazie</h3>
                   <p className="why-custom-doll-text">
