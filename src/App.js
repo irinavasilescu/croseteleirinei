@@ -829,7 +829,7 @@ function App() {
                   <img src={yarnBall3} alt="Yarn ball" />
                 </div>
                 <div className="why-custom-doll-content">
-                  <h3 className="why-custom-doll-heading">Cadou cu valoare emoțională</h3>
+                  <h3 className="why-custom-doll-heading">Cadou cu semnificație specială</h3>
                   <p className="why-custom-doll-text">
                     O păpușă personalizată este mai mult decât un obiect, este un simbol al afecțiunii și al legăturii dintre tine și persoana dragă.
                   </p>
