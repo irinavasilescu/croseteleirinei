@@ -819,6 +819,15 @@ function App() {
                   ))}
                 </div>
               </div>
+              <div className="doll-price-section">
+                <div className="doll-price-range">300 - 400 lei</div>
+                <p className="doll-price-description">
+                  Prețul variază în funcție de complexitatea personalizărilor alese. Fiecare element adăugat influențează costul final: 
+                  coafura (simplă sau elaborată, cu accesorii sau fără), ținuta (design-ul hainelor, numărul de piese, detalii speciale), 
+                  accesoriile (genți, bijuterii, obiecte personalizate) și alte elemente speciale. Prețul de bază este pentru o păpușă cu personalizări minime, iar fiecare 
+                  adăugare sau complexitate suplimentară se reflectă în costul final.
+                </p>
+              </div>
             </div>
           </div>
         </div>
