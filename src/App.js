@@ -10,15 +10,15 @@ import plushies from './products/plushies.png';
 import beanies from './products/beanies.png';
 import baskets from './products/baskets.png';
 import dolls from './products/dolls.png';
-import customDoll from './home/main_dolly.png';
-import bagKeychain from './home/bag_keychain.png';
+import customDoll from './home/main_dolly.webp';
+import bagKeychain from './home/bag_keychain.webp';
 
-import yarnBall1 from './home/yarn_ball1.png';
-import yarnBall2 from './home/yarn_ball2.png';
-import yarnBall3 from './home/yarn_ball3.png';
-import yarnBall4 from './home/yarn_ball4.png';
-import yarnBall5 from './home/yarn_ball5.png';
-import yarnBall6 from './home/yarn_ball6.png';
+import yarnBall1 from './home/yarn_ball1.webp';
+import yarnBall2 from './home/yarn_ball2.webp';
+import yarnBall3 from './home/yarn_ball3.webp';
+import yarnBall4 from './home/yarn_ball4.webp';
+import yarnBall5 from './home/yarn_ball5.webp';
+import yarnBall6 from './home/yarn_ball6.webp';
 
 function App() {
   const CONTACT_EMAIL = 'croseteleirinei@gmail.com';
