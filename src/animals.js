@@ -105,7 +105,7 @@ export const animals = [
     {
         img: n_chick,
         name: 'Codruța',
-        price: 35,
+        price: 40,
         description: 'Codruța este o găinușă croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'n_chick',
         dimensions: '',
@@ -253,7 +253,7 @@ export const animals = [
     {
         img: t_chick,
         name: 'Didina',
-        price: 35,
+        price: 40,
         description: 'Didina este o găinușă croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 't_chick',
         dimensions: '',
