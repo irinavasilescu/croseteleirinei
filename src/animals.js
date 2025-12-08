@@ -296,6 +296,7 @@ export const animals = [
         dimensions: '',
         tags: ['toys'],
         in_stock: false,
+        dimensions: '17x9x9 (cm)',
     },
     {
         img: z_octopus,

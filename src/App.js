@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useMemo, useEffect, useRef } from 'react';
-import { NavLink, Routes, Route, useLocation } from 'react-router-dom';
+import { NavLink, Routes, Route, useLocation, useSearchParams } from 'react-router-dom';
 
 import { animals } from './animals';
 import { wearables } from './wearables';
@@ -36,7 +36,70 @@ function App() {
 
   const ITEMS_PER_PAGE = 20;
 
+  const [searchParams, setSearchParams] = useSearchParams();
   const [selectedItem, setSelectedItem] = useState(null);
+
+  // Helper function to find an item by ID from all collections
+  const findItemById = (itemId) => {
+    const allItems = [...animals, ...wearables, ...homeware];
+    return allItems.find(item => item.id === itemId) || null;
+  };
+
+  // Track if we're initializing from query params to avoid loops
+  const isInitializingRef = useRef(true);
+
+  // Initialize selectedItem from query params on mount
+  useEffect(() => {
+    const itemId = searchParams.get('item');
+    if (itemId) {
+      const item = findItemById(itemId);
+      if (item) {
+        isInitializingRef.current = true;
+        setSelectedItem(item);
+      } else {
+        // If item not found, remove invalid query param
+        setSearchParams(prev => {
+          const newParams = new URLSearchParams(prev);
+          newParams.delete('item');
+          return newParams;
+        });
+      }
+    }
+    // Mark initialization as complete after a brief delay
+    const timer = setTimeout(() => {
+      isInitializingRef.current = false;
+    }, 100);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Only run on mount
+
+  // Update query params when selectedItem changes (but not during initialization)
+  useEffect(() => {
+    if (isInitializingRef.current) {
+      return; // Skip during initialization
+    }
+    
+    if (selectedItem) {
+      const currentItemId = searchParams.get('item');
+      // Only update if different to avoid unnecessary updates
+      if (currentItemId !== selectedItem.id) {
+        setSearchParams(prev => {
+          const newParams = new URLSearchParams(prev);
+          newParams.set('item', selectedItem.id);
+          return newParams;
+        });
+      }
+    } else {
+      // Only remove if it exists
+      if (searchParams.get('item')) {
+        setSearchParams(prev => {
+          const newParams = new URLSearchParams(prev);
+          newParams.delete('item');
+          return newParams;
+        });
+      }
+    }
+  }, [selectedItem, searchParams, setSearchParams]);
 
   // Close modal on ESC key
   useEffect(() => {
