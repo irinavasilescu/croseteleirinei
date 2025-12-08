@@ -199,7 +199,7 @@ function App() {
               )}
               {item.dimensions && (
                 <div className="modal-dimensions">
-                  <p>{item.dimensions}</p>
+                  <p className="modal-dimensions-value">{item.dimensions}</p>
                 </div>
               )}
                {item.tags?.length && (

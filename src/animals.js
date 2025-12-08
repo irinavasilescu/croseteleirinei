@@ -51,7 +51,7 @@ export const animals = [
         dimensions: '',
         tags: ['toys', 'bag charms'],
         in_stock: true,
-        is_new: false,
+        dimensions: '9x9x6 (cm)',
     },
     {
         img: a_frog,
@@ -101,6 +101,7 @@ export const animals = [
         dimensions: '',
         tags: ['toys', 'bag charms'],
         in_stock: true,
+        dimensions: '9x9x6 (cm)',
     },
     {
         img: n_chick,
@@ -111,6 +112,7 @@ export const animals = [
         dimensions: '',
         tags: ['toys', 'bag charms', 'keychains'],
         in_stock: true,
+        dimensions: '6x5x5 (cm)',
     },
     {
         img: e_octopus,
@@ -121,6 +123,7 @@ export const animals = [
         description: 'Cornelia este o caracatiță croșetată care poate fi folosită ca obiect decorativ sau ca obiect de joc. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         tags: ['toys'],
         in_stock: true,
+        dimensions: '17x9x9 (cm)',
     },
     {
         img: b_icecream,
@@ -130,6 +133,7 @@ export const animals = [
         id: 'b_icecream',
         tags: ['toys'],
         in_stock: true,
+        dimensions: '15x8x8 (cm)',
     },
     {
         img: v_octopus,
@@ -160,7 +164,7 @@ export const animals = [
         dimensions: '',
         tags: ['toys', 'bag charms'],
         in_stock: true,
-        is_new: false,
+        dimensions: '7x7x7 (cm)',
     },
     {
         img: d_orange,
@@ -170,7 +174,6 @@ export const animals = [
         id: 'd_orange',
         tags: ['toys', 'bag charms'],
         in_stock: true,
-        is_new: false,
     },
     {
         img: h_rabbit,
@@ -190,6 +193,7 @@ export const animals = [
         id: 'f_blueberry',
         tags: ['toys', 'bag charms'],
         in_stock: true,
+        dimensions: '8x7x7 (cm)'
     },
     {
         img: g_blueberry,
@@ -199,6 +203,7 @@ export const animals = [
         id: 'g_blueberry',
         tags: ['toys', 'bag charms'],
         in_stock: false,
+        dimensions: '8x7x7 (cm)'
     },
     {
         img: o_rabbit,
@@ -256,9 +261,9 @@ export const animals = [
         price: 40,
         description: 'Didina este o găinușă croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 't_chick',
-        dimensions: '',
         tags: ['toys', 'bag charms', 'keychains'],
         in_stock: true,
+        dimensions: '6x5x5 (cm)',
     },
     {
         img: u_mouse,
@@ -269,6 +274,7 @@ export const animals = [
         dimensions: '',
         tags: ['toys', 'bag charms'],
         in_stock: true,
+        dimensions: '8x7x7 (cm)',
     },
     {
         img: x_penguin,
@@ -279,6 +285,7 @@ export const animals = [
         dimensions: '',
         tags: ['toys'],
         in_stock: true,
+        dimensions: '15x10x10 (cm)',
     },
     {
         img: y_octopus,
@@ -299,6 +306,7 @@ export const animals = [
         dimensions: '',
         tags: ['toys'],
         in_stock: true,
+        dimensions: '17x9x9 (cm)',
     },
     {
         img: c_pumpkin,
@@ -317,6 +325,7 @@ export const animals = [
         id: 'e_strawberry',
         tags: ['toys', 'bag charms'],
         in_stock: true,
+        dimensions: '9x6x6 (cm)',
     },
     {
         img: a_heart,

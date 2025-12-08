@@ -1046,6 +1046,17 @@ html, body {
   font-size: 1rem;
 }
 
+.modal-dimensions {
+  margin: 0;
+}
+
+.modal-dimensions-value {
+  font-size: 0.9rem;
+  color: #2f2a24;
+  line-height: 1.5;
+  margin: 0;
+}
+
 .modal-tags {
   display: flex;
   flex-wrap: wrap;
