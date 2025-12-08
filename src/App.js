@@ -401,9 +401,6 @@ function App() {
 
   function HomePage() {
     const featuredAnimals = featuredAnimalsRef.current || [];
-    const newProducts = useMemo(() => {
-      return [...wearables, ...animals, ...homeware].filter(item => item && item.is_new);
-    }, []);
 
     return (
       <>
@@ -810,25 +807,25 @@ function App() {
       <section className="section">
         <div className="container">
           <div className="animals-grid">
-            <figure className="animal-card background-image">
+            <figure className="animal-card">
               <NavLink to={ROUTES.dolls}>
                 <img src={dolls} alt='dolls' loading="lazy" />
               </NavLink>
             </figure>
 
-            <figure className="animal-card background-image">
+            <figure className="animal-card">
               <NavLink to={ROUTES.plushies}>
                 <img src={plushies} alt='plushies' loading="lazy" />
               </NavLink>
             </figure>
 
-            <figure className="animal-card background-image">
+            <figure className="animal-card">
               <NavLink to={ROUTES.wearables}>
                 <img src={beanies} alt='beanies' loading="lazy" />
               </NavLink>
             </figure>
 
-            <figure className="animal-card background-image">
+            <figure className="animal-card">
               <NavLink to={ROUTES.homeware}>
                 <img src={baskets} alt='baskets' loading="lazy" />
               </NavLink>
@@ -982,11 +979,6 @@ function App() {
     );
   }
 
-  // Keep page component identities stable across renders to preserve internal state (pagination)
-  const PlushiesPageStable = useRef(PlushiesPage).current;
-  const HomewarePageStable = useRef(HomewarePage).current;
-  const WearablesPageStable = useRef(WearablesPage).current;
-
   return (
     <div className="App">
       <header className="site-header">
@@ -1018,9 +1010,9 @@ function App() {
 
       <Routes>
         <Route path={ROUTES.home} element={<HomePage />} />
-        <Route path={ROUTES.plushies} element={<PlushiesPageStable />} />
-        <Route path={ROUTES.homeware} element={<HomewarePageStable />} />
-        <Route path={ROUTES.wearables} element={<WearablesPageStable />} />
+        <Route path={ROUTES.plushies} element={<PlushiesPage />} />
+        <Route path={ROUTES.homeware} element={<HomewarePage />} />
+        <Route path={ROUTES.wearables} element={<WearablesPage />} />
         <Route path={ROUTES.products} element={<ProductsPage/>} />
         <Route path={ROUTES.contact} element={<ContactPage />} />
         <Route path={ROUTES.dolls} element={<DollPage />} />
