@@ -1092,26 +1092,10 @@ html, body {
 
 .modal-tag-bag-charms { background-color: #fe3636; }
 
-.modal-tag-homeware {
-  background-color: rgba(97, 212, 179, .3);
-}
-
 .modal-tag-homeware { background-color: #61d4b3; }
-
-.modal-tag-wearables {
-  background-color: rgba(233, 116, 81, .3);
-}
-
 .modal-tag-wearables { background-color: #e97451; }
-
-.modal-tag-accessories { background-color: rgba(255,214,107,.3); }
-
 .modal-tag-accessories { background-color: #ffd66b; }
-
-.modal-tag-abstract { background-color: rgba(156, 138, 114, .3); }
-
 .modal-tag-abstract { background-color: #9c8a72; }
-
 .modal-tag-keychains { background-color: #61d4b3; }
 
 .modal-stock-badge {
@@ -1252,7 +1236,7 @@ html, body {
 
 .doll-price-section {
   padding: 0;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .doll-price-range {
