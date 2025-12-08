@@ -11,7 +11,7 @@ export const wearables = [
     {
         img: a_hat,
         name: 'Căciulă',
-        price: null,
+        price: 50,
         description: "Căciulă croșetată, realizată din multiple culori de fire, 100% acril.",
         id: 'a_hat',
         tags: ['wearables'],
@@ -21,7 +21,7 @@ export const wearables = [
     {
         img: b_hat,
         name: 'Căciulă',
-        price: null,
+        price: 50,
         description: "Căciulă croșetată, realizată din fir 100% acril",
         id: 'b_hat',
         tags: ['wearables'],
@@ -30,7 +30,7 @@ export const wearables = [
     {
         img: c_hat,
         name: 'Căciulă',
-        price: null,
+        price: 50,
         description: "Căciulă croșetată, realizată din fir 75% acril și 25% lână.",
         id: 'c_hat',
         tags: ['wearables'],
@@ -39,7 +39,7 @@ export const wearables = [
     {
         img: d_hat,
         name: 'Căciulă',
-        price: null,
+        price: 50,
         description: "Căciulă croșetată, realizată din fir 100% acril",
         id: 'd_hat',
         tags: ['wearables'],
@@ -48,7 +48,7 @@ export const wearables = [
     {
         img: e_hat,
         name: 'Căciulă',
-        price: null,
+        price: 50,
         description: "Căciulă croșetată, realizată din fir 100% acril",
         id: 'e_hat',
         tags: ['wearables'],
@@ -57,7 +57,7 @@ export const wearables = [
     {
         img: f_hat,
         name: 'Căciulă',
-        price: null,
+        price: 50,
         description: "Căciulă croșetată, realizată din fir 100% acril",
         id: 'f_hat',
         tags: ['wearables'],
@@ -66,7 +66,7 @@ export const wearables = [
     {
         img: g_hat,
         name: 'Căciulă',
-        price: null,
+        price: 50,
         description: "Căciulă croșetată, realizată din fir 100% acril",
         id: 'f_hat',
         tags: ['wearables'],
@@ -75,7 +75,7 @@ export const wearables = [
     {
         img: h_hat,
         name: 'Căciulă',
-        price: null,
+        price: 50,
         description: "Căciulă croșetată, realizată din fir 100% acril",
         id: 'f_hat',
         tags: ['wearables'],
@@ -84,7 +84,7 @@ export const wearables = [
     // {
     //     img: g_bag,
     //     name: 'Geantă',
-    //     price: null,
+    //     price: 50,
     //     description: "Geantă croșetată, folosind 3 granny squares, realizată din fir macrame, 80% bumbac și 20% poliester",
     //     id: 'g_bag',
     //     tags: ['wearables'],
@@ -93,7 +93,7 @@ export const wearables = [
     // {
     //     img: h_bag,
     //     name: 'Geantă',
-    //     price: null,
+    //     price: 50,
     //     description: "Geantă croșetată, realizată din fir macrame, 80% bumbac și 20% poliester",
     //     id: 'h_bag',
     //     tags: ['wearables'],
@@ -102,7 +102,7 @@ export const wearables = [
     // {
     //     img: i_pouch,
     //     name: 'Săculeț',
-    //     price: null,
+    //     price: 50,
     //     description: "Săculeț croșetat, realizat din multiple culori de fire din bumbac. Este conceput după principiul no waste, folosind material rămas în urma altor proiecte.",
     //     id: 'i_pouch',
     //     tags: ['wearables'],
@@ -111,7 +111,7 @@ export const wearables = [
     // {
     //     img: j_bag,
     //     name: 'Geantă',
-    //     price: null,
+    //     price: 50,
     //     description: "Geantă croșetată, folosind 14 granny squares, realizată din fir macrame, 80% bumbac și 20% poliester",
     //     id: 'j_bag',
     //     tags: ['wearables'],
@@ -120,7 +120,7 @@ export const wearables = [
     // {
     //     img: a_top,
     //     name: 'Top',
-    //     price: null,
+    //     price: 50,
     //     description: "Top croșetat, folosind 12 granny squares mari si 4 granny squares mici. Este realizat din fir 100% bumbac.",
     //     id: 'a_top',
     //     tags: ['wearables'],
@@ -129,7 +129,7 @@ export const wearables = [
     // {
     //     img: b_top,
     //     name: 'Top',
-    //     price: null,
+    //     price: 50,
     //     description: "Top croșetat, realizat din fir 53% bumbac, 33% vâscoză, 14% in.",
     //     id: 'b_top',
     //     tags: ['wearables'],
@@ -138,7 +138,7 @@ export const wearables = [
     // {
     //     img: c_top,
     //     name: 'Top',
-    //     price: null,
+    //     price: 50,
     //     description: "Top croșetat, folosind 12 granny squares mari si 4 granny squares mici. Este realizat din fir 100% acril.",
     //     id: 'c_top',
     //     tags: ['wearables'],
@@ -147,7 +147,7 @@ export const wearables = [
     // {
     //     img: a_shawl,
     //     name: 'Șal',
-    //     price: null,
+    //     price: 50,
     //     description: "Șal croșetat, realizat din multiple tipuri și grosimi de fire. Conține un mix de fire de bumbac (majoritar) și acril. Este conceput după principiul no waste, folosind material rămas în urma altor proiecte.",
     //     id: 'a_shawl',
     //     tags: ['wearables'],
@@ -156,7 +156,7 @@ export const wearables = [
     // {
     //     img: ab_shophie,
     //     name: 'Glugă',
-    //     price: null,
+    //     price: 50,
     //     description: "Glugă tricotată, realizată din fir 100% lână merino.",
     //     id: 'ab_sophie',
     //     tags: ['wearables'],
@@ -165,7 +165,7 @@ export const wearables = [
     // {
     //     img: ac_sophie,
     //     name: 'Eșarfă',
-    //     price: null,
+    //     price: 50,
     //     description: "Eșarfă croșetată, realizată din fir 80% acril și 20% lână.",
     //     id: 'ac_sophie',
     //     tags: ['wearables'],

@@ -6,7 +6,7 @@ export const homeware = [
     {
         img: y_basket,
         name: 'Coșuleț #1',
-        price: null,
+        price: 50,
         description: "Coșuleț croșetat, realizat din multiple tipuri și grosimi de fire. Conține un mix de fire de bumbac, acril și lână. Este conceput după principiul no waste, folosind material rămas în urma altor proiecte.",
         id: 'y_basket',
         tags: ['homeware'],
@@ -15,7 +15,7 @@ export const homeware = [
     {
         img: z_basket,
         name: 'Coșuleț #2',
-        price: null,
+        price: 50,
         description: "Coșuleț croșetat, realizat din multiple tipuri și grosimi de fire. Conține un mix de fire de bumbac, acril și lână. Este conceput după principiul no waste, folosind material rămas în urma altor proiecte.",
         id: 'z_basket',
         tags: ['homeware'],
@@ -24,7 +24,7 @@ export const homeware = [
     {
         img: x_basket,
         name: 'Coșuleț #3',
-        price: null,
+        price: 50,
         description: "Coșuleț croșetat, realizat din multiple tipuri și grosimi de fire. Conține un mix de fire de bumbac, acril și lână. Este conceput după principiul no waste, folosind material rămas în urma altor proiecte.",
         id: 'x_basket',
         tags: ['homeware'],

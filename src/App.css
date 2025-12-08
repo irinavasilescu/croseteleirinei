@@ -135,9 +135,31 @@ html, body {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.animal-card { background: transparent; border: 0; border-radius: 0; padding: 0; box-shadow: none; cursor: pointer; transition: transform 0.2s ease, opacity 0.2s ease; position: relative; }
+.animal-card { 
+  background: transparent; 
+  border: 0; 
+  border-radius: 0; 
+  padding: 0; 
+  box-shadow: none; 
+  cursor: pointer; 
+  transition: transform 0.2s ease, opacity 0.2s ease; 
+  position: relative;
+}
 .animal-card:hover { transform: scale(1.02); opacity: 0.9; }
 .animal-card img { width: 100%; height: auto; max-height: 300px; object-fit: contain; display: block; border-radius: 0; background: transparent; }
+
+.animal-card-price {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #fe3636;
+  font-weight: 800;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.2rem 0.4rem;
+  border: 1.5px solid #fe3636;
+  z-index: 2;
+}
 
 .badge-new {
   position: absolute;
@@ -973,6 +995,7 @@ html, body {
   flex: 1;
   min-width: 0;
   position: relative;
+  align-content: center;
 }
 
 .modal-image img {
@@ -1000,23 +1023,17 @@ html, body {
 }
 
 .modal-price {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.modal-price-label {
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #81776c;
-  font-weight: 600;
+  display: inline-block;
 }
 
 .modal-price-value {
-  font-size: 1.5rem;
-  font-weight: 800;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 900;
   color: #fe3636;
+  padding: 0.25rem 0.5rem;
+  border: 2px solid #fe3636;
+  margin: 0;
 }
 
 .modal-description {
@@ -1033,7 +1050,6 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .modal-tag {
@@ -1089,14 +1105,13 @@ html, body {
 
 .modal-tag-abstract { background-color: #9c8a72; }
 
-.modal-stock { margin-bottom: 0.25rem; }
 .modal-stock-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.35rem 0.75rem;
   border: 2px solid #000000;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;

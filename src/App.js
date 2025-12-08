@@ -150,6 +150,17 @@ function App() {
       return `modal-tag modal-tag-${normalizedTag}`;
     };
 
+    const getTagDisplayName = (tag) => {
+      switch (tag) {
+        case 'toys':
+          return 'Jucării';
+        case 'bag charms':
+          return 'Accesorii pentru geantă';
+        default:
+          return tag;
+      }
+    };
+
     return (
       <div className="modal-backdrop" onClick={handleBackdropClick}>
         <div className="modal-content">
@@ -165,21 +176,17 @@ function App() {
             </div>
             <div className="modal-info">
               <h2 className="modal-title">{item.name}</h2>
+              {item.price && (
+                <div className="modal-price">
+                  <span className="modal-price-value">{item.price} lei</span>
+                </div>
+              )}
               {typeof item.in_stock === 'boolean' && (
                 <div className="modal-stock">
                   <span className={`modal-stock-badge ${item.in_stock ? 'is-in-stock' : 'is-out-of-stock'}`}>
                     <span className="modal-stock-dot" aria-hidden="true" />
                     <span className="modal-stock-text">{item.in_stock ? 'În stoc' : 'Pe comandă'}</span>
                   </span>
-                </div>
-              )}
-              {item.tags?.length && (
-                <div className="modal-tags">
-                  {item.tags.map(tag => (
-                    <span key={tag} className={getTagClassName(tag)}>
-                      <span className="modal-tag-text">#{tag}</span>
-                    </span>
-                  ))}
                 </div>
               )}
               {item.description && (
@@ -192,7 +199,15 @@ function App() {
                   <p>{item.dimensions}</p>
                 </div>
               )}
-
+               {item.tags?.length && (
+                 <div className="modal-tags">
+                   {item.tags.map(tag => (
+                     <span key={tag} className={getTagClassName(tag)}>
+                       <span className="modal-tag-text">#{getTagDisplayName(tag)}</span>
+                     </span>
+                   ))}
+                 </div>
+               )}
               <a href={`${ROUTES.contact}`} className="landing-btn landing-btn-primary modal-cta">Contact</a>
             </div>
           </div>
@@ -237,6 +252,9 @@ function App() {
                     <span className="badge-new" aria-label="Produs nou">Nou</span>
                   )}
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
+                  {item.price && (
+                    <div className="animal-card-price">{item.price} lei</div>
+                  )}
                 </figure>
               ))}
             </div>
@@ -266,6 +284,9 @@ function App() {
                     <span className="badge-new" aria-label="Produs nou">Nou</span>
                   )}
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
+                  {item.price && (
+                    <div className="animal-card-price">{item.price} lei</div>
+                  )}
                 </figure>
               ))}
             </div>
@@ -705,6 +726,9 @@ function App() {
                     <span className="badge-new" aria-label="Produs nou">Nou</span>
                   )}
                   <img src={item.img} alt={item.name} loading="lazy" id={item.id} />
+                  {item.price && (
+                    <div className="animal-card-price">{item.price} lei</div>
+                  )}
                 </figure>
               ))}
             </div>
