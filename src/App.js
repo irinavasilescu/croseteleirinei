@@ -157,6 +157,8 @@ function App() {
           return 'Jucării';
         case 'bag charms':
           return 'Accesorii pentru geantă';
+        case 'keychains':
+          return 'Brelocuri';
         default:
           return tag;
       }

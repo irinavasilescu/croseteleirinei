@@ -109,7 +109,7 @@ export const animals = [
         description: 'Codruța este o găinușă croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'n_chick',
         dimensions: '',
-        tags: ['toys', 'bag charms'],
+        tags: ['toys', 'bag charms', 'keychains'],
         in_stock: true,
     },
     {
@@ -257,7 +257,7 @@ export const animals = [
         description: 'Didina este o găinușă croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 't_chick',
         dimensions: '',
-        tags: ['toys', 'bag charms'],
+        tags: ['toys', 'bag charms', 'keychains'],
         in_stock: true,
     },
     {
@@ -339,7 +339,7 @@ export const animals = [
     {
         img: i_fish,
         name: 'Gheorghe',
-        price: 40,
+        price: 50,
         description: 'Gheorghe este un pește croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'i_fish',
         dimensions: '',
