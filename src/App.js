@@ -6,10 +6,11 @@ import { animals } from './animals';
 import { wearables } from './wearables';
 import { homeware } from './homeware';
 
-import plushies from './products/plushies.png';
-import beanies from './products/beanies.png';
-import baskets from './products/baskets.png';
-import dolls from './products/dolls.png';
+import plushies from './products/plushies.webp';
+import beanies from './products/beanies.webp';
+import baskets from './products/baskets.webp';
+import dolls from './products/dolls.webp';
+
 import customDoll from './home/main_dolly.webp';
 import bagKeychain from './home/bag_keychain.webp';
 
