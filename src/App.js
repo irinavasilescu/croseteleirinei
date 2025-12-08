@@ -33,7 +33,7 @@ function App() {
     dolls: '/dolls',
   };
 
-  const ITEMS_PER_PAGE = 12;
+  const ITEMS_PER_PAGE = 20;
 
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -521,7 +521,7 @@ function App() {
                 </p>
                 <div className="bag-accessories-cta-container">
                   <a 
-                    href={ROUTES.products} 
+                    href={ROUTES.plushies} 
                     className="landing-btn landing-btn-secondary"
                   >
                     Vezi colecția

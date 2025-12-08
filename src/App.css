@@ -128,7 +128,13 @@ html, body {
 }
 
 /* Animals responsive grid */
-.animals-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.animals-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+
+@media (min-width: 1200px) {
+  .animals-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .animal-card { background: transparent; border: 0; border-radius: 0; padding: 0; box-shadow: none; cursor: pointer; transition: transform 0.2s ease, opacity 0.2s ease; position: relative; }
 .animal-card:hover { transform: scale(1.02); opacity: 0.9; }
 .animal-card img { width: 100%; height: auto; max-height: 300px; object-fit: contain; display: block; border-radius: 0; background: transparent; }
