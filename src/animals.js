@@ -30,7 +30,7 @@ import f_blueberry from './food/f_blueberry.webp';
 import g_blueberry from './food/g_blueberry.webp';
 import a_heart from './abstract/a_heart.webp';
 import b_moon from './abstract/b_moon.webp';
-import piggy from './animals/piggy.png';
+import piggy from './animals/piggy.webp';
 
 export const animals = [
     {
