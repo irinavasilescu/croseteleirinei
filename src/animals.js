@@ -30,8 +30,19 @@ import f_blueberry from './food/f_blueberry.webp';
 import g_blueberry from './food/g_blueberry.webp';
 import a_heart from './abstract/a_heart.webp';
 import b_moon from './abstract/b_moon.webp';
+import piggy from './animals/piggy.png';
 
 export const animals = [
+    {
+        img: piggy,
+        name: 'Yoko',
+        price: 70,
+        description: 'Yoko este un porcusor de guineea croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'piggy',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: true,
+    },
     {
         img: d_chick,
         name: 'Pătrunjel',
