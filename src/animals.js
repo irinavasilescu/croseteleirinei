@@ -47,7 +47,7 @@ export const animals = [
     {
         img: cherries,
         name: 'Cireșe',
-        price: 40,
+        price: 45,
         description: 'Cireșele croșetate pot fi folosite ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Sunt confecționate dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'cherries',
         dimensions: '',
