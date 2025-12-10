@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bfff9c8a.css",
-    "main.js": "/static/js/main.37c03b6e.js",
+    "main.js": "/static/js/main.40db0508.js",
     "static/js/453.a1c98a7c.chunk.js": "/static/js/453.a1c98a7c.chunk.js",
     "static/media/bag_keychain.webp": "/static/media/bag_keychain.9cb91730102d4f579f7b.webp",
     "static/media/no_waste.webp": "/static/media/no_waste.ee2428fe6d90ec6972ab.webp",
@@ -73,6 +73,7 @@
     "static/media/ok_dolly_19.webp": "/static/media/ok_dolly_19.2c337d2c28a5e2da9807.webp",
     "static/media/b_icecream.webp": "/static/media/b_icecream.1f05dd795727781beef2.webp",
     "static/media/d_chick.webp": "/static/media/d_chick.45fa23e07ab02368e45e.webp",
+    "static/media/cherries.webp": "/static/media/cherries.c1af2c73d75cfeb1e894.webp",
     "static/media/n_chick.webp": "/static/media/n_chick.c59272fe65b11940f7eb.webp",
     "static/media/ok_dolly_34.webp": "/static/media/ok_dolly_34.29e3ef495b8d59c8bb32.webp",
     "static/media/c_pumpkin.webp": "/static/media/c_pumpkin.0f148314c8cbd91bc31a.webp",
@@ -112,11 +113,11 @@
     "index.html": "/index.html",
     "static/media/instagram.webp": "/static/media/instagram.1f0c0dd7b36f5e7af0a8.webp",
     "main.bfff9c8a.css.map": "/static/css/main.bfff9c8a.css.map",
-    "main.37c03b6e.js.map": "/static/js/main.37c03b6e.js.map",
+    "main.40db0508.js.map": "/static/js/main.40db0508.js.map",
     "453.a1c98a7c.chunk.js.map": "/static/js/453.a1c98a7c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bfff9c8a.css",
-    "static/js/main.37c03b6e.js"
+    "static/js/main.40db0508.js"
   ]
 }
