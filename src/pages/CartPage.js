@@ -24,9 +24,9 @@ function CartPage() {
       <div className="container">
         <div className="cart-header">
           <h1 className="cart-title">Coș de cumpărături</h1>
-          <button onClick={clearCart} className="cart-clear-btn">
+          {/* <button onClick={clearCart} className="cart-clear-btn">
             Șterge tot
-          </button>
+          </button> */}
         </div>
         
         <div className="cart-items">
@@ -36,39 +36,51 @@ function CartPage() {
                 <img src={item.img} alt={item.name} />
               </div>
               <div className="cart-item-info">
-                <h3 className="cart-item-name">{item.name}</h3>
-                {item.price && (
-                  <div className="cart-item-price">{item.price} lei</div>
-                )}
+                <div className="cart-item-name-row">
+                  <h3 className="cart-item-name">{item.name}</h3>
+                  <span className="cart-item-quantity">× {item.quantity}</span>
+                </div>
+                <div className="cart-item-total">
+                  <strong>{(item.price * item.quantity).toFixed(0)} lei</strong>
+                </div>
               </div>
               <div className="cart-item-controls">
-                <div className="quantity-controls">
+                <div className="cart-item-controls-row">
+                  <div className="quantity-controls">
+                    <button
+                      className="quantity-btn"
+                      onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                      aria-label="Decrease quantity"
+                    >
+                      −
+                    </button>
+                    <input
+                      type="number"
+                      min="0"
+                      max={MAX_QUANTITY}
+                      value={item.quantity}
+                      onChange={(e) => {
+                        const newQuantity = parseInt(e.target.value) || 0;
+                        updateQuantity(item.id, Math.min(Math.max(0, newQuantity), MAX_QUANTITY));
+                      }}
+                      className="quantity-input"
+                      aria-label={`Quantity for ${item.name}`}
+                    />
+                    <button
+                      className="quantity-btn"
+                      onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                      disabled={item.quantity >= MAX_QUANTITY}
+                      aria-label="Increase quantity"
+                    >
+                      +
+                    </button>
+                  </div>
                   <button
-                    className="quantity-btn"
-                    onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                    aria-label="Decrease quantity"
+                    className="cart-item-remove"
+                    onClick={() => removeFromCart(item.id)}
+                    aria-label={`Remove ${item.name} from cart`}
                   >
-                    −
-                  </button>
-                  <input
-                    type="number"
-                    min="0"
-                    max={MAX_QUANTITY}
-                    value={item.quantity}
-                    onChange={(e) => {
-                      const newQuantity = parseInt(e.target.value) || 0;
-                      updateQuantity(item.id, Math.min(Math.max(0, newQuantity), MAX_QUANTITY));
-                    }}
-                    className="quantity-input"
-                    aria-label={`Quantity for ${item.name}`}
-                  />
-                  <button
-                    className="quantity-btn"
-                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                    disabled={item.quantity >= MAX_QUANTITY}
-                    aria-label="Increase quantity"
-                  >
-                    +
+                    ×
                   </button>
                 </div>
                 {item.quantity >= MAX_QUANTITY && (
@@ -76,16 +88,6 @@ function CartPage() {
                     Max {MAX_QUANTITY}
                   </span>
                 )}
-                <div className="cart-item-total">
-                  {(item.price * item.quantity).toFixed(0)} lei
-                </div>
-                <button
-                  className="cart-item-remove"
-                  onClick={() => removeFromCart(item.id)}
-                  aria-label={`Remove ${item.name} from cart`}
-                >
-                  ×
-                </button>
               </div>
             </div>
           ))}
