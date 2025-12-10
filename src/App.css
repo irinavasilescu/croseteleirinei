@@ -1338,7 +1338,7 @@ html, body {
 
 .cart-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
 }
@@ -1644,7 +1644,7 @@ html, body {
 
   .cart-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
   }
 
@@ -1711,6 +1711,19 @@ html, body {
   font-weight: 800;
   color: #fe3636;
   background: rgba(255, 255, 255, 0.9);
+}
+
+.doll-price-current {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.doll-price-current strong {
+  font-weight: 800;
+  color: #fe3636;
   padding: 0.2rem 0.4rem;
   border: 1.5px solid #fe3636;
   margin-bottom: 0.5rem;
@@ -1733,6 +1746,10 @@ html, body {
   flex-direction: column;
   gap: 0.75rem;
   margin-top: 0;
+}
+
+.doll-quantity-section {
+  width: 100%;
 }
 
 .doll-outfit-options {

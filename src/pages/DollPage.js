@@ -1,5 +1,6 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { ROUTES } from '../utils/constants';
+import { useCart } from '../context/CartContext';
 import yarnBall1 from '../home/yarn_ball1.webp';
 import yarnBall2 from '../home/yarn_ball2.webp';
 import yarnBall3 from '../home/yarn_ball3.webp';
@@ -9,6 +10,52 @@ import yarnBall6 from '../home/yarn_ball6.webp';
 
 function DollPage() {
   const [selectedOutfit, setSelectedOutfit] = useState(0);
+  const [localQuantity, setLocalQuantity] = useState(0);
+  const { setItemQuantity, cartItems, MAX_QUANTITY } = useCart();
+  
+  // Pricing structure for each outfit (index-based)
+  // You can customize the price for each outfit here
+  const outfitPrices = {
+    0: 350, // Outfit 1 price
+    1: 320, // Outfit 2 price
+    2: 350, // Outfit 3 price
+    3: 350, // Outfit 4 price
+    4: 370, // Outfit 5 price
+    5: 300, // Outfit 6 price
+    6: 320, // Outfit 7 price
+    7: 300, // Outfit 8 price
+    8: 300, // Outfit 9 price
+    9: 300, // Outfit 10 price
+    10: 350, // Outfit 11 price
+    11: 370, // Outfit 12 price
+    12: 300, // Outfit 13 price
+    13: 320, // Outfit 14 price
+    14: 400, // Outfit 15 price
+    15: 370, // Outfit 16 price
+    16: 300, // Outfit 17 price
+    17: 350, // Outfit 18 price
+    18: 350, // Outfit 19 price
+    19: 300, // Outfit 20 price
+    20: 350, // Outfit 21 price
+    21: 350, // Outfit 22 price
+    22: 350, // Outfit 23 price
+    23: 300, // Outfit 24 price
+    24: 300, // Outfit 25 price
+    25: 300, // Outfit 26 price
+    26: 400, // Outfit 27 price
+    27: 400, // Outfit 28 price
+    28: 300, // Outfit 29 price
+    29: 400, // Outfit 30 price
+    30: 300, // Outfit 31 price
+    31: 350, // Outfit 32 price
+    32: 320, // Outfit 33 price
+    33: 370, // Outfit 34 price
+    34: 300, // Outfit 35 price
+    35: 300, // Outfit 36 price
+    36: 300, // Outfit 37 price
+    37: 350, // Outfit 38 price
+    default: '-',
+  };
   
   // Dolly assets
   const dollyAssets = useMemo(() => {
@@ -33,11 +80,38 @@ function DollPage() {
       id: index,
       mainImage: dolly || null,
       thumbnail: dolly || null,
+      price: outfitPrices[index] !== undefined ? outfitPrices[index] : outfitPrices.default,
     };
   });
 
   const currentOutfit = outfits[selectedOutfit];
   const mainImage = currentOutfit?.mainImage || dollyAssets[0] || null;
+
+  // Create doll item object with outfit-specific price
+  const dollItem = useMemo(() => {
+    const outfitPrice = currentOutfit?.price || outfitPrices.default;
+    return {
+      id: `doll-outfit-${selectedOutfit}`,
+      name: `Păpușă personalizată - Outfit ${selectedOutfit + 1}`,
+      price: outfitPrice,
+      img: mainImage,
+    };
+  }, [selectedOutfit, mainImage, currentOutfit]);
+
+  // Check if doll is in cart
+  const cartItem = cartItems.find(item => item.id === dollItem.id);
+  const cartQuantity = cartItem ? cartItem.quantity : 0;
+
+  // Initialize local quantity from cart when outfit changes
+  useEffect(() => {
+    setLocalQuantity(cartQuantity);
+  }, [cartQuantity]);
+
+  const canAddMore = localQuantity < MAX_QUANTITY;
+
+  const handleAddToCart = () => {
+    setItemQuantity(dollItem, localQuantity);
+  };
 
   return (
     <section className="section doll-page">
@@ -72,13 +146,82 @@ function DollPage() {
               </div>
             </div>
             <div className="doll-price-section">
-              <div className="doll-price-range">300 - 400 lei</div>
+              <div className="doll-price-current"><strong>{dollItem.price} lei</strong></div>
               <p className="doll-price-description">
-                Prețul variază în funcție de complexitatea personalizărilor alese. Fiecare element adăugat influențează costul final: 
+                Prețul variază intre <strong>300 - 400 lei</strong> în funcție de complexitatea personalizărilor alese. Fiecare element adăugat influențează costul final: 
                 coafura (simplă sau elaborată, cu accesorii sau fără), ținuta (design-ul hainelor, numărul de piese, detalii speciale), 
-                accesoriile (genți, bijuterii, obiecte personalizate) și alte elemente speciale. Prețul de bază este pentru o păpușă cu personalizări minime, iar fiecare 
-                adăugare sau complexitate suplimentară se reflectă în costul final.
+                accesoriile (genți, bijuterii, obiecte personalizate) și alte elemente speciale. Prețul afișat este pentru outfit-ul selectat.
               </p>
+            </div>
+            <div className="doll-quantity-section">
+              <div className="modal-quantity-container">
+                <div className="modal-quantity-row">
+                  <div className="quantity-controls">
+                    <button
+                      className="quantity-btn"
+                      onClick={() => {
+                        if (localQuantity > 0) {
+                          setLocalQuantity(localQuantity - 1);
+                        }
+                      }}
+                      disabled={localQuantity === 0}
+                      aria-label="Decrease quantity"
+                    >
+                      −
+                    </button>
+                    <input
+                      type="number"
+                      min="0"
+                      max={MAX_QUANTITY}
+                      value={localQuantity}
+                      onChange={(e) => {
+                        const newQuantity = parseInt(e.target.value) || 0;
+                        setLocalQuantity(Math.min(Math.max(0, newQuantity), MAX_QUANTITY));
+                      }}
+                      className="quantity-input"
+                      aria-label="Quantity for doll"
+                    />
+                    <button
+                      className="quantity-btn"
+                      onClick={() => {
+                        if (localQuantity < MAX_QUANTITY) {
+                          setLocalQuantity(localQuantity + 1);
+                        }
+                      }}
+                      disabled={!canAddMore}
+                      aria-label="Increase quantity"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    onClick={handleAddToCart}
+                    disabled={localQuantity === 0}
+                    className="landing-btn landing-btn-primary modal-cta"
+                    aria-label={`Add ${localQuantity} doll to cart`}
+                  >
+                    Adaugă în coș
+                  </button>
+                </div>
+                <div className="modal-quantity-hints">
+                  <div className="modal-quantity-hint-left">
+                    {localQuantity >= MAX_QUANTITY && (
+                      <span className="quantity-limit" aria-label="Maximum quantity reached">
+                        Max {MAX_QUANTITY}
+                      </span>
+                    )}
+                  </div>
+                  <div className="modal-quantity-hint-right">
+                    <span className="modal-quantity-total" style={{ visibility: localQuantity > 0 ? 'visible' : 'hidden' }}>
+                      {localQuantity > 0 ? (
+                        <>Total: <strong>{(dollItem.price * localQuantity).toFixed(0)} lei</strong></>
+                      ) : (
+                        <>Total: <strong>0 lei</strong></>
+                      )}
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -156,14 +299,6 @@ function DollPage() {
           </div>
         </div>
       </section>
-      <div className="doll-page-cta-container">
-        <a 
-          href={ROUTES.contact} 
-          className="landing-btn landing-btn-primary doll-page-cta"
-        >
-          Comandă
-        </a>
-      </div>
     </section>
   );
 }
