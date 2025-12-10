@@ -231,7 +231,7 @@ function HomePage({ onItemClick }) {
                   href={ROUTES.contact} 
                   className="landing-btn landing-btn-primary"
                 >
-                  Comandă
+                  Contact
                 </a>
               </div>
             </div>
@@ -267,7 +267,7 @@ function HomePage({ onItemClick }) {
                   href={ROUTES.contact} 
                   className="landing-btn landing-btn-primary"
                 >
-                  Comandă
+                  Contact
                 </a>
               </div>
             </div>
