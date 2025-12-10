@@ -147,11 +147,6 @@ function DollPage() {
             </div>
             <div className="doll-price-section">
               <div className="doll-price-current"><strong>{dollItem.price} lei</strong></div>
-              <p className="doll-price-description">
-                Prețul variază intre <strong>300 - 400 lei</strong> în funcție de complexitatea personalizărilor alese. Fiecare element adăugat influențează costul final: 
-                coafura (simplă sau elaborată, cu accesorii sau fără), ținuta (design-ul hainelor, numărul de piese, detalii speciale), 
-                accesoriile (genți, bijuterii, obiecte personalizate) și alte elemente speciale. Prețul afișat este pentru outfit-ul selectat.
-              </p>
             </div>
             <div className="doll-quantity-section">
               <div className="modal-quantity-container">
@@ -228,6 +223,11 @@ function DollPage() {
       </div>
       <section className="section why-custom-doll">
         <div className="container">
+          <p className="doll-price-description">
+            <strong>Îți dorești să faci un cadou inedit unei persoane dragi oferindu-i o păpușă ce o reprezintă? Pot realiza o gamă largă de ținute, coafuri și accesorii pentru a crea o păpușă personalizată care să capteze trăsăturile și stilul persoanei careia i-o oferi. </strong>
+            <br/><br/>
+            Prețul variază în funcție de complexitatea personalizărilor alese: coafura (simplă sau elaborată, cu accesorii sau fără), ținuta (design-ul hainelor, numărul de piese, detalii speciale), accesoriile (genți, bijuterii, obiecte personalizate) și alte elemente speciale.
+          </p>
           <h2 className="why-custom-doll-title">De ce să alegi o păpușă personalizată?</h2>
           <div className="why-custom-doll-list">
             <div className="why-custom-doll-item">

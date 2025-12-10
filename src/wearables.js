@@ -11,7 +11,7 @@ export const wearables = [
     {
         img: a_hat,
         name: 'Căciulă',
-        price: 110,
+        price: 120,
         description: "Căciulă croșetată, realizată din multiple culori de fire, 100% acril.",
         id: 'a_hat',
         tags: ['wearables'],
