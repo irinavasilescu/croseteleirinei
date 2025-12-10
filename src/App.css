@@ -1330,7 +1330,7 @@ html, body {
 .cart-title {
   font-size: 2.5rem;
   font-weight: 900;
-  margin: 0 0 1rem 0;
+  margin: 0;
   color: #fe3636;
   line-height: 1.2;
   justify-self: center;
