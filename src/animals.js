@@ -31,6 +31,7 @@ import g_blueberry from './food/g_blueberry.webp';
 import a_heart from './abstract/a_heart.webp';
 import b_moon from './abstract/b_moon.webp';
 import piggy from './animals/piggy.webp';
+import cherries from './animals/cherries.webp';
 
 export const animals = [
     {
@@ -41,6 +42,16 @@ export const animals = [
         id: 'piggy',
         dimensions: '',
         tags: ['toys', 'bag charms'],
+        in_stock: true,
+    },
+    {
+        img: cherries,
+        name: 'Cireșe',
+        price: 40,
+        description: 'Cireșele croșetate pot fi folosite ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Sunt confecționate dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'cherries',
+        dimensions: '',
+        tags: ['toys', 'bag charms', 'keychains'],
         in_stock: true,
     },
     {
@@ -172,6 +183,16 @@ export const animals = [
         tags: ['toys', 'bag charms'],
         in_stock: true,
         dimensions: '7x7x7 (cm)',
+    },
+    {
+        img: e_strawberry,
+        name: 'Căpșunică',
+        price: 60,
+        description: 'Căpșunica croșetată poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'e_strawberry',
+        tags: ['toys', 'bag charms'],
+        in_stock: true,
+        dimensions: '9x6x6 (cm)',
     },
     {
         img: d_orange,
@@ -322,16 +343,6 @@ export const animals = [
         tags: ['toys'],
         in_stock: false,
         dimensions: '',
-    },
-    {
-        img: e_strawberry,
-        name: 'Căpșunică',
-        price: 60,
-        description: 'Căpșunica croșetată poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
-        id: 'e_strawberry',
-        tags: ['toys', 'bag charms'],
-        in_stock: true,
-        dimensions: '9x6x6 (cm)',
     },
     {
         img: a_heart,
