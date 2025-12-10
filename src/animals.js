@@ -32,8 +32,30 @@ import a_heart from './abstract/a_heart.webp';
 import b_moon from './abstract/b_moon.webp';
 import piggy from './animals/piggy.webp';
 import cherries from './animals/cherries.webp';
+import piggy2 from './animals/piggy2.webp';
+import blood_drop from './animals/blood_drop.webp';
 
 export const animals = [
+    {
+        img: piggy2,
+        name: 'Gelu',
+        price: 85,
+        description: 'Gelu este un porcusor croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'piggy2',
+        dimensions: '',
+        tags: ['toys', 'bag charms'],
+        in_stock: true,
+    },
+    {
+        img: blood_drop,
+        name: 'Drippy',
+        price: 60,
+        description: 'Drippy este o picătură care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'drippy',
+        dimensions: '',
+        tags: ['toys', 'bag charms', 'keychains'],
+        in_stock: false,
+    },
     {
         img: piggy,
         name: 'Yoko',
@@ -137,7 +159,7 @@ export const animals = [
     {
         img: e_octopus,
         name: 'Cornelia',
-        price: 95,
+        price: 100,
         id: 'e_octopus',
         description: 'Cornelia este o caracatiță croșetată care poate fi folosită ca obiect decorativ sau ca obiect de joc. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         tags: ['toys'],
@@ -307,7 +329,7 @@ export const animals = [
     {
         img: x_penguin,
         name: 'Clămpănică',
-        price: 95,
+        price: 100,
         description: 'Clămpănică este un pinguin croșetat care poate fi folosit ca obiect decorativ sau ca obiect de joc. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'x_penguin',
         tags: ['toys'],
@@ -317,7 +339,7 @@ export const animals = [
     {
         img: y_octopus,
         name: 'Nectarina',
-        price: 95,
+        price: 100,
         description: 'Nectarina este o caracatiță croșetată care poate fi folosită ca obiect decorativ sau ca obiect de joc. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'y_octopus',
         tags: ['toys'],
@@ -327,7 +349,7 @@ export const animals = [
     {
         img: z_octopus,
         name: 'Geta',
-        price: 95,
+        price: 100,
         description: 'Geta este o caracatiță croșetată care poate fi folosită ca obiect decorativ sau ca obiect de joc. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'z_octopus',
         tags: ['toys'],
@@ -347,7 +369,7 @@ export const animals = [
     {
         img: a_heart,
         name: 'Inimioară',
-        price: 90,
+        price: 80,
         description: 'Inimioara croșetată poate fi folosită ca obiect decorativ sau ca obiect de joc. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'a_heart',
         tags: ['toys'],
