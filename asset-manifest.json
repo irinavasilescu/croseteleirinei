@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.bfff9c8a.css",
-    "main.js": "/static/js/main.aff78a2d.js",
+    "main.css": "/static/css/main.a483f3a6.css",
+    "main.js": "/static/js/main.834b95bf.js",
     "static/js/453.a1c98a7c.chunk.js": "/static/js/453.a1c98a7c.chunk.js",
     "static/media/bag_keychain.webp": "/static/media/bag_keychain.9cb91730102d4f579f7b.webp",
     "static/media/no_waste.webp": "/static/media/no_waste.ee2428fe6d90ec6972ab.webp",
+    "static/media/golden_keychain.png": "/static/media/golden_keychain.d743c72fdfce6de8a9dd.png",
     "static/media/locally_sourced.webp": "/static/media/locally_sourced.53426c078a469ba9caae.webp",
     "static/media/stuffing.webp": "/static/media/stuffing.598e35605ad5e97bd09b.webp",
     "static/media/main_dolly.webp": "/static/media/main_dolly.e94efdd19ff768ef9b32.webp",
     "static/media/g_rabbit.webp": "/static/media/g_rabbit.1865e18924d9faff5355.webp",
     "static/media/a_hat.webp": "/static/media/a_hat.55e69238f2b45076db79.webp",
     "static/media/x_basket.webp": "/static/media/x_basket.3196d00b6fedfcb2fa7c.webp",
+    "static/media/silver_keychain.png": "/static/media/silver_keychain.2ce1d01566a6ec56b3ea.png",
     "static/media/y_basket.webp": "/static/media/y_basket.1572e929bf276f8e1261.webp",
     "static/media/z_basket.webp": "/static/media/z_basket.75b3bfe5f7fa7099b597.webp",
     "static/media/e_hat.webp": "/static/media/e_hat.04f082321e17ce016891.webp",
@@ -100,6 +102,7 @@
     "static/media/custom.webp": "/static/media/custom.c093e58fc8f30a9e3dea.webp",
     "static/media/banner_small.webp": "/static/media/banner_small.44acd88bbe7eeda74110.webp",
     "static/media/piggy.webp": "/static/media/piggy.dec322a6fcc06920bcee.webp",
+    "static/media/cart.webp": "/static/media/cart.bf1e5ece33c7ecbc0427.webp",
     "static/media/products.webp": "/static/media/products.3f7df552c8d2ba7920b4.webp",
     "static/media/home.webp": "/static/media/home.300a5a412d69e2d25042.webp",
     "static/media/yarn_ball2.webp": "/static/media/yarn_ball2.be79358d171137ee2b8f.webp",
@@ -114,12 +117,12 @@
     "static/media/mail.webp": "/static/media/mail.d0683aa6093f678dfaba.webp",
     "index.html": "/index.html",
     "static/media/instagram.webp": "/static/media/instagram.1f0c0dd7b36f5e7af0a8.webp",
-    "main.bfff9c8a.css.map": "/static/css/main.bfff9c8a.css.map",
-    "main.aff78a2d.js.map": "/static/js/main.aff78a2d.js.map",
+    "main.a483f3a6.css.map": "/static/css/main.a483f3a6.css.map",
+    "main.834b95bf.js.map": "/static/js/main.834b95bf.js.map",
     "453.a1c98a7c.chunk.js.map": "/static/js/453.a1c98a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfff9c8a.css",
-    "static/js/main.aff78a2d.js"
+    "static/css/main.a483f3a6.css",
+    "static/js/main.834b95bf.js"
   ]
 }
