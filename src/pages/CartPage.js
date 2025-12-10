@@ -38,11 +38,13 @@ function CartPage() {
     return (
       <section className="section">
         <div className="container">
-          <h1 className="cart-title">Coș de cumpărături</h1>
-          <p className="cart-empty">Coșul tău este gol.</p>
-          <a href={ROUTES.products} className="landing-btn landing-btn-primary">
-            Continuă cumpărăturile
-          </a>
+          <div className="cart-empty-state">
+            <h1 className="cart-title">Coș de cumpărături</h1>
+            <p className="cart-empty">Coșul tău este gol.</p>
+            <a href={ROUTES.products} className="landing-btn landing-btn-primary">
+              Continuă cumpărăturile
+            </a>
+          </div>
         </div>
       </section>
     );

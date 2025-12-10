@@ -1363,11 +1363,28 @@ html, body {
   color: #ffffff;
 }
 
+.cart-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  min-height: 400px;
+}
+
+.cart-empty-state .cart-title {
+  margin-bottom: 1.5rem;
+}
+
 .cart-empty {
   font-size: 1.125rem;
   color: #2f2a24;
-  margin: 2rem 0;
-  text-align: center;
+  margin: 0 0 2rem 0;
+}
+
+.cart-empty-state .landing-btn {
+  margin: 0 auto;
 }
 
 .cart-items {
