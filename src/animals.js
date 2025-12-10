@@ -39,7 +39,7 @@ export const animals = [
     {
         img: piggy2,
         name: 'Gelu',
-        price: 85,
+        price: 90,
         description: 'Gelu este un porcusor croșetat care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'gelu',
         dimensions: '14x8x7 (cm)',
@@ -123,7 +123,7 @@ export const animals = [
         description: 'Mitică este un ursuleț croșetat care poate fi folosit ca obiect decorativ sau ca obiect de joc. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'mitica',
         dimensions: '',
-        tags: ['toys'],
+        tags: ['toys', 'bag charms'],
         in_stock: false,
     },
     {

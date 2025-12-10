@@ -1391,14 +1391,14 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .cart-item {
   display: grid;
   grid-template-columns: 120px 1fr auto;
   gap: 1.5rem;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   align-items: center;
 }
 
@@ -1550,6 +1550,71 @@ html, body {
   letter-spacing: 0.05em;
 }
 
+.cart-item-keychain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.cart-keychain-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cart-keychain-options {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cart-keychain-btn {
+  padding: 0.5rem;
+  border: 2px solid #000000;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 40px;
+}
+
+.cart-keychain-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.cart-keychain-btn-text {
+  width: auto;
+  min-width: 80px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.cart-keychain-btn:hover {
+  background: #f5f5f5;
+}
+
+.cart-keychain-btn.active {
+  background: var(--yellow);
+  border-color: var(--black);
+}
+
+.cart-keychain-btn-text.active {
+  color: var(--black);
+}
+
 .cart-item-total {
   font-size: 1rem;
   color: #000000;
@@ -1584,13 +1649,13 @@ html, body {
   flex-direction: column;
   gap: 1.5rem;
   align-items: flex-end;
-  padding: 2rem 1.5rem 0 1.5rem;
+  padding: 2rem 1rem 0 1rem;
 }
 
 .cart-total {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   font-size: 1.5rem;
 }
 
@@ -1602,7 +1667,7 @@ html, body {
 .cart-total-value {
   font-weight: 900;
   color: #fe3636;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .cart-checkout {
@@ -1660,6 +1725,7 @@ html, body {
 
   .cart-checkout {
     width: 100%;
+    text-align: center;
   }
 }
 

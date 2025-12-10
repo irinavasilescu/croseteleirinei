@@ -1,12 +1,22 @@
 import { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import { ROUTES, CONTACT_EMAIL } from '../utils/constants';
+import goldenKeychain from '../cart/golden_keychain.png';
+import silverKeychain from '../cart/silver_keychain.png';
 
 function CartPage() {
-  const { cartItems, removeFromCart, updateQuantity, clearCart, getTotalPrice, MAX_QUANTITY } = useCart();
+  const { cartItems, removeFromCart, updateQuantity, updateKeychain, clearCart, getTotalPrice, MAX_QUANTITY } = useCart();
   const totalPrice = getTotalPrice();
   const [name, setName] = useState('');
   const [comment, setComment] = useState('');
+
+  const hasKeychainTag = (item) => {
+    if (!item.tags || !Array.isArray(item.tags)) return false;
+    return item.tags.some(tag => 
+      tag.toLowerCase() === 'keychains' || 
+      tag.toLowerCase() === 'bag charms'
+    );
+  };
 
   const generateOrderEmail = () => {
     const subjectText = name 
@@ -20,6 +30,10 @@ function CartPage() {
     cartItems.forEach((item, index) => {
       body += `${index + 1}. ${item.name}\n`;
       body += `Cantitate: ${item.quantity}\n`;
+      if (item.keychain) {
+        const keychainName = item.keychain === 'silver' ? 'argintiu' : 'auriu';
+        body += `Breloc: ${keychainName}\n`;
+      }
       body += '\n';
     });
     
@@ -71,6 +85,48 @@ function CartPage() {
                   <h3 className="cart-item-name">{item.name}</h3>
                   <span className="cart-item-quantity">× {item.quantity}</span>
                 </div>
+                {hasKeychainTag(item) && (
+                  <div className="cart-item-keychain">
+                    <div className="cart-keychain-options">
+                      <button
+                        type="button"
+                        className={`cart-keychain-btn ${item.keychain === 'silver' ? 'active' : ''}`}
+                        onClick={() => {
+                          if (item.keychain === 'silver') {
+                            updateKeychain(item.id, null);
+                          } else {
+                            updateKeychain(item.id, 'silver');
+                          }
+                        }}
+                        aria-label="Select silver keychain"
+                      >
+                        <img src={silverKeychain} alt="Breloc argintiu" />
+                      </button>
+                      <button
+                        type="button"
+                        className={`cart-keychain-btn ${item.keychain === 'gold' ? 'active' : ''}`}
+                        onClick={() => {
+                          if (item.keychain === 'gold') {
+                            updateKeychain(item.id, null);
+                          } else {
+                            updateKeychain(item.id, 'gold');
+                          }
+                        }}
+                        aria-label="Select golden keychain"
+                      >
+                        <img src={goldenKeychain} alt="Breloc auriu" />
+                      </button>
+                      <button
+                        type="button"
+                        className={`cart-keychain-btn cart-keychain-btn-text ${!item.keychain ? 'active' : ''}`}
+                        onClick={() => updateKeychain(item.id, null)}
+                        aria-label="Without keychain"
+                      >
+                        Fără breloc
+                      </button>
+                    </div>
+                  </div>
+                )}
                 <div className="cart-item-total">
                   <strong>{(item.price * item.quantity).toFixed(0)} lei</strong>
                 </div>

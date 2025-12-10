@@ -78,6 +78,14 @@ export function CartProvider({ children }) {
     });
   }, [removeFromCart]);
 
+  const updateKeychain = useCallback((itemId, keychainType) => {
+    setCartItems(prevItems => {
+      return prevItems.map(item =>
+        item.id === itemId ? { ...item, keychain: keychainType } : item
+      );
+    });
+  }, []);
+
   const clearCart = useCallback(() => {
     setCartItems([]);
   }, []);
@@ -96,6 +104,7 @@ export function CartProvider({ children }) {
     removeFromCart,
     updateQuantity,
     setItemQuantity,
+    updateKeychain,
     clearCart,
     getTotalItems,
     getTotalPrice,
