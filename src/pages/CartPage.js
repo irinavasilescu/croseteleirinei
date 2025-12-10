@@ -1,9 +1,38 @@
+import { useState } from 'react';
 import { useCart } from '../context/CartContext';
-import { ROUTES } from '../utils/constants';
+import { ROUTES, CONTACT_EMAIL } from '../utils/constants';
 
 function CartPage() {
   const { cartItems, removeFromCart, updateQuantity, clearCart, getTotalPrice, MAX_QUANTITY } = useCart();
   const totalPrice = getTotalPrice();
+  const [name, setName] = useState('');
+  const [comment, setComment] = useState('');
+
+  const generateOrderEmail = () => {
+    const subjectText = name 
+      ? `Comandă nouă de la ${name}`
+      : 'Comandă nouă - Croșetele Irinei';
+    const subject = encodeURIComponent(subjectText);
+    
+    let body = 'Bună ziua!\n\n';
+    body += 'Aș dori să comand următoarele produse:\n\n';
+    
+    cartItems.forEach((item, index) => {
+      body += `${index + 1}. ${item.name}\n`;
+      body += `Cantitate: ${item.quantity}\n`;
+      body += '\n';
+    });
+    
+    if (comment.trim()) {
+      body += `Comentariu:`;
+      body += '\n';
+      body += `${comment}\n\n`;
+    }
+    
+    body += 'Vă mulțumesc!\n';
+    
+    return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${encodeURIComponent(body)}`;
+  };
 
   if (cartItems.length === 0) {
     return (
@@ -98,7 +127,34 @@ function CartPage() {
             <span className="cart-total-label">Total:</span>
             <span className="cart-total-value">{totalPrice.toFixed(0)} lei</span>
           </div>
-          <a href={ROUTES.contact} className="landing-btn landing-btn-primary cart-checkout">
+          <div className="contact-form">
+            <div className="form-row">
+              <label htmlFor="cart-name">Nume</label>
+              <input
+                id="cart-name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Numele tău"
+              />
+            </div>
+            <div className="form-row">
+              <label htmlFor="cart-comment">Comentariu</label>
+              <textarea
+                id="cart-comment"
+                value={comment}
+                onChange={(e) => setComment(e.target.value)}
+                placeholder="Mesaj sau comentariu (opțional)"
+                rows="5"
+              />
+            </div>
+          </div>
+          <a 
+            href={generateOrderEmail()} 
+            className="landing-btn landing-btn-primary cart-checkout"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Finalizează comanda
           </a>
         </div>

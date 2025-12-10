@@ -25,10 +25,9 @@ function ContactPage() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const subject = encodeURIComponent(`New inquiry from ${name || 'Crochet site'}`);
+    const subject = encodeURIComponent(`Mesaj nou de la ${name}`);
     const body = encodeURIComponent(`${message}`);
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-    window.location.target = '_blank';
+    window.open(`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`, '_blank');
   }
 
   return (
@@ -37,7 +36,7 @@ function ContactPage() {
         <div className="landing-content">
           <h1 className="landing-title">Contact</h1>
           <p className="landing-subtitle">
-            Vrei să comanzi un produs sau ai o idee pentru o piesă croșetată sau tricotată? Lasă-mi un mesaj și te voi contacta în cel mai scurt timp.
+            Vrei să comanzi o piesă croșetată care nu se regăsește pe site? Lasă-mi un mesaj și te voi contacta în cel mai scurt timp.
           </p>
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-row">
