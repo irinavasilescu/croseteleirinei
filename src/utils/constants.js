@@ -8,6 +8,7 @@ export const ROUTES = {
   products: '/products',
   home: '/',
   dolls: '/dolls',
+  cart: '/cart',
 };
 
 export const ITEMS_PER_PAGE = 20;

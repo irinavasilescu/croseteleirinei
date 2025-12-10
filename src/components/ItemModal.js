@@ -1,7 +1,30 @@
+import { useState, useEffect } from 'react';
 import { ROUTES } from '../utils/constants';
+import { useCart } from '../context/CartContext';
 
 function ItemModal({ item, onClose }) {
+  const { setItemQuantity, cartItems, MAX_QUANTITY } = useCart();
+  const [localQuantity, setLocalQuantity] = useState(0);
+  
+  const cartItem = item ? cartItems.find(cartItem => cartItem.id === item.id) : null;
+  const cartQuantity = cartItem ? cartItem.quantity : 0;
+  
+  // Initialize local quantity from cart when modal opens
+  useEffect(() => {
+    if (item) {
+      setLocalQuantity(cartQuantity);
+    }
+  }, [cartQuantity, item]);
+  
   if (!item) return null;
+
+  const canAddMore = localQuantity < MAX_QUANTITY;
+  const isInStock = typeof item.in_stock === 'boolean' ? item.in_stock : true;
+  
+  const handleAddToCart = () => {
+    setItemQuantity(item, localQuantity);
+    onClose();
+  };
 
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
@@ -73,10 +96,78 @@ function ItemModal({ item, onClose }) {
                    </span>
                  ))}
                </div>
-             )}
-            <a href={`${ROUTES.contact}`} className="landing-btn landing-btn-primary modal-cta">
-                Contact
-            </a>
+               )}
+            <div className="modal-actions">
+              <div className="modal-quantity-container">
+                <div className="modal-quantity-row">
+                  <div className="quantity-controls">
+                    <button
+                      className="quantity-btn"
+                      onClick={() => {
+                        if (localQuantity > 0) {
+                          setLocalQuantity(localQuantity - 1);
+                        }
+                      }}
+                      disabled={localQuantity === 0}
+                      aria-label="Decrease quantity"
+                    >
+                      −
+                    </button>
+                    <input
+                      id="modal-quantity"
+                      type="number"
+                      min="0"
+                      max={MAX_QUANTITY}
+                      value={localQuantity}
+                      onChange={(e) => {
+                        const newQuantity = parseInt(e.target.value) || 0;
+                        setLocalQuantity(Math.min(Math.max(0, newQuantity), MAX_QUANTITY));
+                      }}
+                      className="quantity-input"
+                      aria-label={`Quantity for ${item.name}`}
+                    />
+                    <button
+                      className="quantity-btn"
+                      onClick={() => {
+                        if (localQuantity < MAX_QUANTITY) {
+                          setLocalQuantity(localQuantity + 1);
+                        }
+                      }}
+                      disabled={!canAddMore}
+                      aria-label="Increase quantity"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    onClick={handleAddToCart}
+                    disabled={localQuantity === 0}
+                    className="landing-btn landing-btn-primary modal-cta"
+                    aria-label={`Add ${localQuantity} ${item.name} to cart`}
+                  >
+                    Adaugă în coș
+                  </button>
+                </div>
+                <div className="modal-quantity-hints">
+                  <div className="modal-quantity-hint-left">
+                    {localQuantity >= MAX_QUANTITY && (
+                      <span className="quantity-limit" aria-label="Maximum quantity reached">
+                        Max {MAX_QUANTITY}
+                      </span>
+                    )}
+                  </div>
+                  <div className="modal-quantity-hint-right">
+                    <span className="modal-quantity-total" style={{ visibility: localQuantity > 0 ? 'visible' : 'hidden' }}>
+                      {localQuantity > 0 ? (
+                        <>Total: <strong>{(item.price * localQuantity).toFixed(0)} lei</strong></>
+                      ) : (
+                        <>Total: <strong>0 lei</strong></>
+                      )}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

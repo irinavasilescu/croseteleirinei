@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Routes, Route, useSearchParams } from 'react-router-dom';
 import { ROUTES } from './utils/constants';
 import { findItemById } from './utils/helpers';
+import { CartProvider } from './context/CartContext';
 import Header from './components/Header';
 import ItemModal from './components/ItemModal';
 import HomePage from './pages/HomePage';
@@ -12,6 +13,7 @@ import HomewarePage from './pages/HomewarePage';
 import ProductsPage from './pages/ProductsPage';
 import ContactPage from './pages/ContactPage';
 import DollPage from './pages/DollPage';
+import CartPage from './pages/CartPage';
 
 function App() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -94,20 +96,23 @@ function App() {
 
 
   return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route path={ROUTES.home} element={<HomePage onItemClick={setSelectedItem} />} />
-        <Route path={ROUTES.plushies} element={<PlushiesPage onItemClick={setSelectedItem} />} />
-        <Route path={ROUTES.homeware} element={<HomewarePage onItemClick={setSelectedItem} />} />
-        <Route path={ROUTES.wearables} element={<WearablesPage onItemClick={setSelectedItem} />} />
-        <Route path={ROUTES.products} element={<ProductsPage/>} />
-        <Route path={ROUTES.contact} element={<ContactPage />} />
-        <Route path={ROUTES.dolls} element={<DollPage />} />
-        <Route path="*" element={<HomePage onItemClick={setSelectedItem} />} />
-      </Routes>
-      <ItemModal item={selectedItem} onClose={() => setSelectedItem(null)} />
-    </div>
+    <CartProvider>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path={ROUTES.home} element={<HomePage onItemClick={setSelectedItem} />} />
+          <Route path={ROUTES.plushies} element={<PlushiesPage onItemClick={setSelectedItem} />} />
+          <Route path={ROUTES.homeware} element={<HomewarePage onItemClick={setSelectedItem} />} />
+          <Route path={ROUTES.wearables} element={<WearablesPage onItemClick={setSelectedItem} />} />
+          <Route path={ROUTES.products} element={<ProductsPage/>} />
+          <Route path={ROUTES.contact} element={<ContactPage />} />
+          <Route path={ROUTES.dolls} element={<DollPage />} />
+          <Route path={ROUTES.cart} element={<CartPage />} />
+          <Route path="*" element={<HomePage onItemClick={setSelectedItem} />} />
+        </Routes>
+        <ItemModal item={selectedItem} onClose={() => setSelectedItem(null)} />
+      </div>
+    </CartProvider>
   );
 }
 

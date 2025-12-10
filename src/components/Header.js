@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { ROUTES } from '../utils/constants';
 import { loadNavIcons, findIcon } from '../utils/helpers';
+import CartIcon from './CartIcon';
 
 function Header() {
   const navIcons = loadNavIcons();
@@ -29,6 +30,7 @@ function Header() {
               </NavLink>
             );
           })}
+          <CartIcon />
         </nav>
       </div>
     </header>
