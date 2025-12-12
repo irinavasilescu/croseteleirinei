@@ -299,10 +299,10 @@ export const animals = [
     {
         img: s_stingray,
         name: 'Mariana',
-        price: 65,
+        price: 75,
         description: 'Mariana este o pisică de mare croșetată care poate fi folosită ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționată dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'mariana',
-        dimensions: '',
+        dimensions: '20x18x4',
         tags: ['toys', 'bag charms'],
         in_stock: false,
     },

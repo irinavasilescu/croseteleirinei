@@ -967,7 +967,9 @@ html, body {
   flex: 1;
   min-width: 0;
   position: relative;
-  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-image img {
@@ -1220,7 +1222,9 @@ html, body {
   }
 
   .modal-image {
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 280px;
     margin: 0 auto;
@@ -1231,6 +1235,7 @@ html, body {
     max-height: 150px;
     width: auto;
     object-fit: contain;
+    margin: 0 auto;
   }
 
   .modal-info {
