@@ -7,6 +7,8 @@ import silverKeychain from '../cart/silver_keychain.png';
 function CartPage() {
   const { cartItems, removeFromCart, updateQuantity, updateKeychain, clearCart, getTotalPrice, MAX_QUANTITY } = useCart();
   const totalPrice = getTotalPrice();
+  const TRANSPORT_FEE = 17;
+  const finalTotal = totalPrice + TRANSPORT_FEE;
   const [name, setName] = useState('');
   const [comment, setComment] = useState('');
 
@@ -182,8 +184,18 @@ function CartPage() {
 
         <div className="cart-summary">
           <div className="cart-total">
-            <span className="cart-total-label">Total:</span>
-            <span className="cart-total-value">{totalPrice.toFixed(0)} lei</span>
+            <div className="cart-total-row">
+              <span className="cart-total-label">Subtotal:</span>
+              <span className="cart-total-value">{totalPrice.toFixed(0)} lei</span>
+            </div>
+            <div className="cart-total-row">
+              <span className="cart-total-label">Transport:</span>
+              <span className="cart-total-value">+{TRANSPORT_FEE} lei</span>
+            </div>
+            <div className="cart-total-row cart-total-final">
+              <span className="cart-total-label">Total:</span>
+              <span className="cart-total-value">{finalTotal.toFixed(0)} lei</span>
+            </div>
           </div>
           <div className="contact-form">
             <div className="form-row">

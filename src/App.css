@@ -1657,14 +1657,29 @@ html, body {
   flex-direction: column;
   gap: 1.5rem;
   align-items: flex-end;
-  padding: 2rem 1rem 0 1rem;
+  padding: 1rem;
 }
 
 .cart-total {
   display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+.cart-total-row {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
-  font-size: 1.5rem;
+}
+
+.cart-total-final {
+  border-top: 2px solid #000000;
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
 }
 
 .cart-total-label {
@@ -1675,7 +1690,7 @@ html, body {
 .cart-total-value {
   font-weight: 900;
   color: #fe3636;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .cart-checkout {
