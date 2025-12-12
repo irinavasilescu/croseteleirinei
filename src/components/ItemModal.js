@@ -4,15 +4,15 @@ import { useCart } from '../context/CartContext';
 
 function ItemModal({ item, onClose }) {
   const { setItemQuantity, cartItems, MAX_QUANTITY } = useCart();
-  const [localQuantity, setLocalQuantity] = useState(0);
+  const [localQuantity, setLocalQuantity] = useState(1);
   
   const cartItem = item ? cartItems.find(cartItem => cartItem.id === item.id) : null;
   const cartQuantity = cartItem ? cartItem.quantity : 0;
   
-  // Initialize local quantity from cart when modal opens
+  // Initialize local quantity from cart when modal opens, or default to 1
   useEffect(() => {
     if (item) {
-      setLocalQuantity(cartQuantity);
+      setLocalQuantity(cartQuantity > 0 ? cartQuantity : 1);
     }
   }, [cartQuantity, item]);
   
@@ -120,8 +120,12 @@ function ItemModal({ item, onClose }) {
                       max={MAX_QUANTITY}
                       value={localQuantity}
                       onChange={(e) => {
-                        const newQuantity = parseInt(e.target.value) || 0;
-                        setLocalQuantity(Math.min(Math.max(0, newQuantity), MAX_QUANTITY));
+                        const newQuantity = parseInt(e.target.value);
+                        if (isNaN(newQuantity) || newQuantity < 0) {
+                          setLocalQuantity(1);
+                        } else {
+                          setLocalQuantity(Math.min(Math.max(0, newQuantity), MAX_QUANTITY));
+                        }
                       }}
                       className="quantity-input"
                       aria-label={`Quantity for ${item.name}`}
