@@ -46,7 +46,7 @@ export function CartProvider({ children }) {
     const savedCart = loadCartFromStorage();
     return savedCart || [];
   });
-  const MAX_QUANTITY = 5;
+  const MAX_QUANTITY = 10;
 
   // Save cart to localStorage whenever cartItems changes
   useEffect(() => {

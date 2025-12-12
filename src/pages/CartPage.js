@@ -122,7 +122,7 @@ function CartPage() {
                         onClick={() => updateKeychain(item.id, null)}
                         aria-label="Without keychain"
                       >
-                        Fără breloc
+                        Fără
                       </button>
                     </div>
                   </div>
