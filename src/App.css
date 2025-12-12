@@ -1167,6 +1167,7 @@ html, body {
   align-items: flex-start;
   width: 100%;
   gap: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .modal-quantity-hint-left {
