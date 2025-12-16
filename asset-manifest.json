@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.a7366ec2.css",
-    "main.js": "/static/js/main.a48c02c7.js",
+    "main.css": "/static/css/main.3f9cce18.css",
+    "main.js": "/static/js/main.845ad39e.js",
     "static/js/453.a1c98a7c.chunk.js": "/static/js/453.a1c98a7c.chunk.js",
     "static/media/bag_keychain.webp": "/static/media/bag_keychain.9cb91730102d4f579f7b.webp",
+    "static/media/banner_large.png": "/static/media/banner_large.881e5579be35f284b6cd.png",
     "static/media/no_waste.webp": "/static/media/no_waste.ee2428fe6d90ec6972ab.webp",
     "static/media/golden_keychain.png": "/static/media/golden_keychain.e467e07bcf5d878a678d.png",
-    "static/media/locally_sourced.webp": "/static/media/locally_sourced.53426c078a469ba9caae.webp",
     "static/media/stuffing.webp": "/static/media/stuffing.598e35605ad5e97bd09b.webp",
     "static/media/main_dolly.webp": "/static/media/main_dolly.e94efdd19ff768ef9b32.webp",
     "static/media/g_rabbit.webp": "/static/media/g_rabbit.1865e18924d9faff5355.webp",
@@ -17,6 +17,7 @@
     "static/media/z_basket.webp": "/static/media/z_basket.75b3bfe5f7fa7099b597.webp",
     "static/media/e_hat.webp": "/static/media/e_hat.04f082321e17ce016891.webp",
     "static/media/ok_dolly_33.webp": "/static/media/ok_dolly_33.251a1dba7c1f008efd1f.webp",
+    "static/media/custom.webp": "/static/media/custom.09c23ee8c83dc08301a9.webp",
     "static/media/ok_dolly_5.webp": "/static/media/ok_dolly_5.8dd356d38374c00a1d6b.webp",
     "static/media/ok_dolly_12.webp": "/static/media/ok_dolly_12.b7c163f849827ad4b01c.webp",
     "static/media/ok_dolly_15.webp": "/static/media/ok_dolly_15.26164c37429c0f0ef2d3.webp",
@@ -40,6 +41,7 @@
     "static/media/ok_dolly_20.webp": "/static/media/ok_dolly_20.59d882b247f856b46022.webp",
     "static/media/ok_dolly_22.webp": "/static/media/ok_dolly_22.e64968b35012c643acc3.webp",
     "static/media/ok_dolly_29.webp": "/static/media/ok_dolly_29.be0b218313750812dd10.webp",
+    "static/media/locally_sourced.webp": "/static/media/locally_sourced.9a8a7b934b7caab655aa.webp",
     "static/media/ok_dolly_10.webp": "/static/media/ok_dolly_10.8c427fafa58a2574cdc3.webp",
     "static/media/e_octopus.webp": "/static/media/e_octopus.5ad7ecbfa6708aae26ff.webp",
     "static/media/r_rabbit.webp": "/static/media/r_rabbit.b7fa9991ff2594f558a3.webp",
@@ -99,7 +101,6 @@
     "static/media/f_hat.webp": "/static/media/f_hat.2ed027f25f62f00c470d.webp",
     "static/media/plushies.webp": "/static/media/plushies.795fb64f13825e6a1952.webp",
     "static/media/banner_large.webp": "/static/media/banner_large.fdc01a4e3c5eb6096db3.webp",
-    "static/media/custom.webp": "/static/media/custom.c093e58fc8f30a9e3dea.webp",
     "static/media/banner_small.webp": "/static/media/banner_small.44acd88bbe7eeda74110.webp",
     "static/media/piggy.webp": "/static/media/piggy.dec322a6fcc06920bcee.webp",
     "static/media/cart.webp": "/static/media/cart.bf1e5ece33c7ecbc0427.webp",
@@ -117,12 +118,12 @@
     "static/media/mail.webp": "/static/media/mail.d0683aa6093f678dfaba.webp",
     "index.html": "/index.html",
     "static/media/instagram.webp": "/static/media/instagram.1f0c0dd7b36f5e7af0a8.webp",
-    "main.a7366ec2.css.map": "/static/css/main.a7366ec2.css.map",
-    "main.a48c02c7.js.map": "/static/js/main.a48c02c7.js.map",
+    "main.3f9cce18.css.map": "/static/css/main.3f9cce18.css.map",
+    "main.845ad39e.js.map": "/static/js/main.845ad39e.js.map",
     "453.a1c98a7c.chunk.js.map": "/static/js/453.a1c98a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7366ec2.css",
-    "static/js/main.a48c02c7.js"
+    "static/css/main.3f9cce18.css",
+    "static/js/main.845ad39e.js"
   ]
 }
