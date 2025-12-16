@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { animals } from '../animals';
 import { ROUTES, CONTACT_EMAIL } from '../utils/constants';
@@ -8,6 +8,14 @@ import bagKeychain from '../home/bag_keychain.webp';
 function HomePage({ onItemClick }) {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
+  
+  // Refs for animation triggers
+  const heroContentRef = useRef(null);
+  const howIWorkRef = useRef(null);
+  const customDollRef = useRef(null);
+  const bagAccessoriesRef = useRef(null);
+  const contactRef = useRef(null);
+  const footerRef = useRef(null);
 
   // Stable featured animals for HomePage (avoid reshuffle on modal open)
   const featuredAnimalsRef = useRef(null);
@@ -65,6 +73,47 @@ function HomePage({ onItemClick }) {
 
   const featuredAnimals = featuredAnimalsRef.current || [];
 
+  // Intersection Observer for scroll animations
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const elementsToObserve = [
+      heroContentRef.current,
+      howIWorkRef.current,
+      customDollRef.current,
+      bagAccessoriesRef.current,
+      contactRef.current,
+      footerRef.current
+    ].filter(Boolean);
+
+    elementsToObserve.forEach(el => {
+      observer.observe(el);
+      // Check if element is already in view on initial load
+      const rect = el.getBoundingClientRect();
+      const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+      if (isInView) {
+        el.classList.add('animate-in');
+        observer.unobserve(el);
+      }
+    });
+
+    return () => {
+      elementsToObserve.forEach(el => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <>
       <section className="landing-hero">
@@ -83,7 +132,7 @@ function HomePage({ onItemClick }) {
           )}
         </div>
         <div className="landing-container">
-          <div className="landing-content">
+          <div className="landing-content" ref={heroContentRef}>
             <p className="landing-subtitle">
               Bună! Sunt Irina, iar curiozitatea mea pentru croșetat și tricotat a devenit o pasiune.
               Am împletit, am greșit, am deșirat, dar am descoperit câtă bucurie poate aduce ceva creat cu propriile mâini.
@@ -98,7 +147,7 @@ function HomePage({ onItemClick }) {
         </div>
       </section>
 
-      <section className="section how-i-work">
+      <section className="section how-i-work" ref={howIWorkRef}>
         <div className="container">
           <div className="how-i-work-cards">
             <div className="how-i-work-card">
@@ -178,7 +227,7 @@ function HomePage({ onItemClick }) {
         </div>
       </section>
 
-      <section className="section custom-doll-section">
+      <section className="section custom-doll-section" ref={customDollRef}>
         <div className="container">
           <div className="custom-doll-content">
             <div className="custom-doll-image">
@@ -249,7 +298,7 @@ function HomePage({ onItemClick }) {
         </div>
       </section>
 
-      <section className="section bag-accessories-section">
+      <section className="section bag-accessories-section" ref={bagAccessoriesRef}>
         <div className="container">
           <div className="bag-accessories-content">
             <div className="bag-accessories-text">
@@ -288,7 +337,7 @@ function HomePage({ onItemClick }) {
         </div>
       </section>
 
-      <section className="section contact-section" id="contact">
+      <section className="section contact-section" id="contact" ref={contactRef}>
         <div className="container">
           <div className="landing-content">
             <h1 className="landing-title">Contact</h1>
@@ -362,7 +411,7 @@ function HomePage({ onItemClick }) {
       </section>
 
       {featuredAnimals.length > 0 && (
-        <footer className="home-footer" id="gallery" aria-label="Featured animals">
+        <footer className="home-footer" id="gallery" aria-label="Featured animals" ref={footerRef}>
           <div className="footer-animals">
             {featuredAnimals.map((item, idx) => (
               <NavLink

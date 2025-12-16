@@ -7,6 +7,10 @@
   --white: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   background-color: #ffffff;
   color: #000000;
@@ -219,6 +223,18 @@ html, body {
   height: auto;
   display: block;
   object-fit: cover;
+  animation: fadeInBanner 1s ease;
+}
+
+@keyframes fadeInBanner {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .landing-container {
@@ -234,6 +250,20 @@ html, body {
   text-align: center;
   position: relative;
   z-index: 3;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.landing-content.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact section content should always be visible */
+.contact-section .landing-content {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .landing-title {
@@ -450,6 +480,14 @@ html, body {
 .custom-doll-section {
   padding: 4rem 0 0 0;
   background: #ffffff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.custom-doll-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .custom-doll-content {
@@ -472,6 +510,20 @@ html, body {
   height: auto;
   object-fit: contain;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.custom-doll-section.animate-in .custom-doll-image img {
+  animation: floatImage 3s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .custom-doll-text {
@@ -575,6 +627,14 @@ html, body {
 .bag-accessories-section {
   padding: 4rem 0 0 0;
   background: #ffffff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.bag-accessories-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .bag-accessories-content {
@@ -643,6 +703,11 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.bag-accessories-section.animate-in .bag-accessories-image img {
+  animation: floatImage 3s ease-in-out infinite 0.5s;
 }
 
 .bag-accessories-image img {
@@ -784,6 +849,14 @@ html, body {
 /* How I Work Section */
 .how-i-work {
   padding-top: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.how-i-work.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .how-i-work-cards {
@@ -801,6 +874,33 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.how-i-work.animate-in .how-i-work-card:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.how-i-work.animate-in .how-i-work-card:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.how-i-work.animate-in .how-i-work-card:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.how-i-work.animate-in .how-i-work-card:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
 }
 
 .how-i-work-image {
@@ -863,6 +963,18 @@ html, body {
   }
 }
 
+/* Contact Section */
+.contact-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Home footer gallery */
 .home-footer {
   margin-top: 0;
@@ -871,12 +983,55 @@ html, body {
   margin-left: 50%;
   transform: translateX(-50%);
   overflow-x: hidden;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.home-footer.animate-in {
+  opacity: 1;
+}
+
+.home-footer.animate-in .footer-animal {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.home-footer.animate-in .footer-animal:nth-child(1) { animation-delay: 0.1s; }
+.home-footer.animate-in .footer-animal:nth-child(2) { animation-delay: 0.15s; }
+.home-footer.animate-in .footer-animal:nth-child(3) { animation-delay: 0.2s; }
+.home-footer.animate-in .footer-animal:nth-child(4) { animation-delay: 0.25s; }
+.home-footer.animate-in .footer-animal:nth-child(5) { animation-delay: 0.3s; }
+.home-footer.animate-in .footer-animal:nth-child(6) { animation-delay: 0.35s; }
+.home-footer.animate-in .footer-animal:nth-child(7) { animation-delay: 0.4s; }
+.home-footer.animate-in .footer-animal:nth-child(8) { animation-delay: 0.45s; }
+.home-footer.animate-in .footer-animal:nth-child(9) { animation-delay: 0.5s; }
+.home-footer.animate-in .footer-animal:nth-child(10) { animation-delay: 0.55s; }
+.home-footer.animate-in .footer-animal:nth-child(11) { animation-delay: 0.6s; }
+.home-footer.animate-in .footer-animal:nth-child(12) { animation-delay: 0.65s; }
+.home-footer.animate-in .footer-animal:nth-child(13) { animation-delay: 0.7s; }
+.home-footer.animate-in .footer-animal:nth-child(14) { animation-delay: 0.75s; }
+.home-footer.animate-in .footer-animal:nth-child(15) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .footer-animals { padding: 0 0 2rem 0; display: flex; justify-content: center; align-items: flex-end; width: 100vw; min-height: 250px; }
 .footer-animal-link { display: block; text-decoration: none; color: inherit; }
 .footer-animal-link:not(:first-child) .footer-animal { margin-left: -4rem; }
-.footer-animal { margin: 0; position: relative; transition: transform .2s ease, filter .2s ease; }
+.footer-animal { 
+  margin: 0; 
+  position: relative; 
+  transition: transform .2s ease, filter .2s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
 .footer-animal img { width: 160px; height: auto; object-fit: cover; display: block; }
 .footer-animal-link:hover .footer-animal {
   transform: translateY(-6px); z-index: 2; filter: saturate(1.1);
