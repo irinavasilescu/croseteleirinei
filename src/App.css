@@ -873,7 +873,7 @@ html, body {
   overflow-x: hidden;
 }
 
-.footer-animals { padding: 3rem 0 2rem 0; display: flex; justify-content: center; align-items: flex-end; width: 100vw; min-height: 250px; }
+.footer-animals { padding: 0 0 2rem 0; display: flex; justify-content: center; align-items: flex-end; width: 100vw; min-height: 250px; }
 .footer-animal-link { display: block; text-decoration: none; color: inherit; }
 .footer-animal-link:not(:first-child) .footer-animal { margin-left: -4rem; }
 .footer-animal { margin: 0; position: relative; transition: transform .2s ease, filter .2s ease; }

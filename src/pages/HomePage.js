@@ -1,4 +1,4 @@
-import { useMemo, useRef } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { animals } from '../animals';
 import { ROUTES, CONTACT_EMAIL } from '../utils/constants';
@@ -6,6 +6,9 @@ import customDoll from '../home/main_dolly.webp';
 import bagKeychain from '../home/bag_keychain.webp';
 
 function HomePage({ onItemClick }) {
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+
   // Stable featured animals for HomePage (avoid reshuffle on modal open)
   const featuredAnimalsRef = useRef(null);
   if (!featuredAnimalsRef.current) {
@@ -15,6 +18,13 @@ function HomePage({ onItemClick }) {
       [pool[i], pool[j]] = [pool[j], pool[i]];
     }
     featuredAnimalsRef.current = pool.slice(0, Math.min(15, pool.length));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Mesaj nou de la ${name}`);
+    const body = encodeURIComponent(`${message}`);
+    window.open(`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`, '_blank');
   }
 
   // Home assets
@@ -82,7 +92,7 @@ function HomePage({ onItemClick }) {
             </p>
             <div className="landing-actions">
               <a href={`${ROUTES.products}`} className="landing-btn landing-btn-primary">Vezi colecția</a>
-              <a href={`${ROUTES.contact}`} className="landing-btn landing-btn-secondary">Contact</a>
+              <a href="#contact" className="landing-btn landing-btn-secondary">Contact</a>
             </div>
           </div>
         </div>
@@ -228,7 +238,7 @@ function HomePage({ onItemClick }) {
                   Vezi colecția
                 </a>
                 <a 
-                  href={ROUTES.contact} 
+                  href="#contact" 
                   className="landing-btn landing-btn-primary"
                 >
                   Contact
@@ -264,7 +274,7 @@ function HomePage({ onItemClick }) {
                   Vezi colecția
                 </a>
                 <a 
-                  href={ROUTES.contact} 
+                  href="#contact" 
                   className="landing-btn landing-btn-primary"
                 >
                   Contact
@@ -278,39 +288,78 @@ function HomePage({ onItemClick }) {
         </div>
       </section>
 
-      <div className="landing-social">
-        <div className="landing-social-item">
-          <a
-            href="https://instagram.com/crosetele_irinei"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="landing-social-link"
-            aria-label="Open Croșetele Irinei on Instagram"
-          >
-            {homeAssets.instagram ? (
-              <img src={homeAssets.instagram} alt="Instagram" />
-            ) : (
-              <span>📸</span>
-            )}
-          </a>
-          <span className="landing-social-hover-text">@crosetele_irinei</span>
+      <section className="section contact-section" id="contact">
+        <div className="container">
+          <div className="landing-content">
+            <h1 className="landing-title">Contact</h1>
+            <p className="landing-subtitle">
+              Vrei să comanzi o piesă croșetată care nu se regăsește pe site? Lasă-mi un mesaj și te voi contacta în cel mai scurt timp.
+            </p>
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-row">
+                <label htmlFor="contact-name">Nume</label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Numele tău"
+                  required
+                />
+              </div>
+              <div className="form-row">
+                <label htmlFor="contact-message">Mesaj</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Mesajul tău"
+                  required
+                />
+              </div>
+              <button type="submit" className="landing-btn landing-btn-primary">
+                Trimite email
+              </button>
+            </form>
+            <div className="landing-social contact-social">
+              <div className="landing-social-item">
+                <a
+                  href="https://instagram.com/crosetele_irinei"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="landing-social-link"
+                  aria-label="Open Croșetele Irinei on Instagram"
+                >
+                  {homeAssets.instagram ? (
+                    <img src={homeAssets.instagram} alt="Instagram" />
+                  ) : (
+                    <span>📸</span>
+                  )}
+                </a>
+                <span className="landing-social-hover-text">@crosetele_irinei</span>
+              </div>
+              <div className="landing-social-item">
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="landing-social-link"
+                >
+                  {homeAssets.mail ? (
+                    <img src={homeAssets.mail} alt="Email" />
+                  ) : (
+                    <span>@</span>
+                  )}
+                </a>
+                <span className="landing-social-hover-text">croseteleirinei@gmail.com</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="landing-social-item">
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="landing-social-link"
-          >
-            {homeAssets.mail ? (
-              <img src={homeAssets.mail} alt="Email" />
-            ) : (
-              <span>@</span>
-            )}
-          </a>
-          <span className="landing-social-hover-text">croseteleirinei@gmail.com</span>
-        </div>
-      </div>
+      </section>
 
       {featuredAnimals.length > 0 && (
         <footer className="home-footer" id="gallery" aria-label="Featured animals">

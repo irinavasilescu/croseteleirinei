@@ -11,7 +11,6 @@ import PlushiesPage from './pages/PlushiesPage';
 import WearablesPage from './pages/WearablesPage';
 import HomewarePage from './pages/HomewarePage';
 import ProductsPage from './pages/ProductsPage';
-import ContactPage from './pages/ContactPage';
 import DollPage from './pages/DollPage';
 import CartPage from './pages/CartPage';
 
@@ -105,7 +104,6 @@ function App() {
           <Route path={ROUTES.homeware} element={<HomewarePage onItemClick={setSelectedItem} />} />
           <Route path={ROUTES.wearables} element={<WearablesPage onItemClick={setSelectedItem} />} />
           <Route path={ROUTES.products} element={<ProductsPage/>} />
-          <Route path={ROUTES.contact} element={<ContactPage />} />
           <Route path={ROUTES.dolls} element={<DollPage />} />
           <Route path={ROUTES.cart} element={<CartPage />} />
           <Route path="*" element={<HomePage onItemClick={setSelectedItem} />} />
