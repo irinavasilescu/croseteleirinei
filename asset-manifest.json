@@ -1,12 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.dda016e8.css",
-    "main.js": "/static/js/main.613ce7a8.js",
+    "main.js": "/static/js/main.75a7ad65.js",
     "static/js/453.a1c98a7c.chunk.js": "/static/js/453.a1c98a7c.chunk.js",
-    "static/media/yellow_flowers.png": "/static/media/yellow_flowers.3aa0301ffd2fcbdcc0cc.png",
-    "static/media/purple_flowers.png": "/static/media/purple_flowers.242a176fc7c5edea7481.png",
-    "static/media/blue_flowers.png": "/static/media/blue_flowers.038b4e5e8f9ee5d27b0e.png",
-    "static/media/pink_flowers.png": "/static/media/pink_flowers.f9062025f6b006b81c0d.png",
     "static/media/flowers.png": "/static/media/flowers.4e787852dae90876bc6c.png",
     "static/media/bag_keychain.webp": "/static/media/bag_keychain.9cb91730102d4f579f7b.webp",
     "static/media/no_waste.webp": "/static/media/no_waste.ee2428fe6d90ec6972ab.webp",
@@ -86,6 +82,7 @@
     "static/media/cherries.webp": "/static/media/cherries.c1af2c73d75cfeb1e894.webp",
     "static/media/n_chick.webp": "/static/media/n_chick.c59272fe65b11940f7eb.webp",
     "static/media/ok_dolly_34.webp": "/static/media/ok_dolly_34.29e3ef495b8d59c8bb32.webp",
+    "static/media/purple_flowers.webp": "/static/media/purple_flowers.ef23d2a37ab53a913372.webp",
     "static/media/c_pumpkin.webp": "/static/media/c_pumpkin.0f148314c8cbd91bc31a.webp",
     "static/media/s_stingray.webp": "/static/media/s_stingray.28e1a177cdbbfbe978d3.webp",
     "static/media/d_orange.webp": "/static/media/d_orange.160ee13a9d5af051c137.webp",
@@ -94,9 +91,12 @@
     "static/media/t_chick.webp": "/static/media/t_chick.6b54b39df9729b8f87a3.webp",
     "static/media/e_strawberry.webp": "/static/media/e_strawberry.d00644b99297b0279547.webp",
     "static/media/j_chick.webp": "/static/media/j_chick.52ec3ef93e35d86f6c08.webp",
+    "static/media/blue_flowers.webp": "/static/media/blue_flowers.f21039b7e01bb84f2dd2.webp",
+    "static/media/yellow_flowers.webp": "/static/media/yellow_flowers.1434380e27af4822675b.webp",
     "static/media/ab_ghost.webp": "/static/media/ab_ghost.4ab68df001d05c848bd8.webp",
     "static/media/dolls.webp": "/static/media/dolls.39bf334539a84899d355.webp",
     "static/media/h_rabbit.webp": "/static/media/h_rabbit.be13c178671c8d3d91c7.webp",
+    "static/media/pink_flowers.webp": "/static/media/pink_flowers.d559103ed550f133ad76.webp",
     "static/media/h_hat.webp": "/static/media/h_hat.6a70d7ad641bdc8e12a3.webp",
     "static/media/u_mouse.webp": "/static/media/u_mouse.6089a87524eca72b59d3.webp",
     "static/media/a_mushroom.webp": "/static/media/a_mushroom.156189aba724c63e4b28.webp",
@@ -124,11 +124,11 @@
     "index.html": "/index.html",
     "static/media/instagram.webp": "/static/media/instagram.1f0c0dd7b36f5e7af0a8.webp",
     "main.dda016e8.css.map": "/static/css/main.dda016e8.css.map",
-    "main.613ce7a8.js.map": "/static/js/main.613ce7a8.js.map",
+    "main.75a7ad65.js.map": "/static/js/main.75a7ad65.js.map",
     "453.a1c98a7c.chunk.js.map": "/static/js/453.a1c98a7c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dda016e8.css",
-    "static/js/main.613ce7a8.js"
+    "static/js/main.75a7ad65.js"
   ]
 }
