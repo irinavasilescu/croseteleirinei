@@ -1,7 +1,7 @@
-import blueFlowers from './flowers/blue_flowers.png';
-import pinkFlowers from './flowers/pink_flowers.png';
-import purpleFlowers from './flowers/purple_flowers.png';
-import yellowFlowers from './flowers/yellow_flowers.png';
+import blueFlowers from './flowers/blue_flowers.webp';
+import pinkFlowers from './flowers/pink_flowers.webp';
+import purpleFlowers from './flowers/purple_flowers.webp';
+import yellowFlowers from './flowers/yellow_flowers.webp';
 
 export const flowers = [
     {
