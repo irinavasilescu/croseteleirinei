@@ -60,7 +60,7 @@ export const animals = [
     {
         img: blood_drop,
         name: 'Drippy',
-        price: 60,
+        price: 55,
         description: 'Drippy este o picătură care poate fi folosit ca obiect decorativ, ca obiect de joc sau ca accesoriu pentru geantă. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
         id: 'drippy',
         dimensions: '8x6x6 (cm)',
