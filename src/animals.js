@@ -34,8 +34,19 @@ import piggy from './animals/piggy.webp';
 import cherries from './animals/cherries.webp';
 import piggy2 from './animals/piggy2.webp';
 import blood_drop from './animals/blood_drop.webp';
+import snake from './animals/snake.webp';
 
 export const animals = [
+    {
+        img: snake,
+        name: 'Sică',
+        price: 190,
+        description: 'Sică este un șarpe croșetat care poate fi folosit ca obiect decorativ sau ca obiect de joc. Este confecționat dintr-un fir antialergenic plușat, catifelat, moale și plăcut la atingere. Umplutura este hipoalergenică, își păstrează forma și volumul, asigurând un sentiment plăcut la atingere și siguranță pentru utilizator.',
+        id: 'sica',
+        dimensions: '100x4.5x4.5 (cm)',
+        tags: ['toys'],
+        in_stock: true,
+    },
     {
         img: piggy2,
         name: 'Gelu',
