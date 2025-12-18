@@ -2,7 +2,7 @@ import { useState, useMemo, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { animals } from '../animals';
 import { ROUTES, CONTACT_EMAIL } from '../utils/constants';
-import customDoll from '../home/main_dolly.webp';
+import customDoll from '../home/main_dolly.png';
 import bagKeychain from '../home/bag_keychain.webp';
 
 function HomePage({ onItemClick }) {
@@ -236,7 +236,7 @@ function HomePage({ onItemClick }) {
             <div className="custom-doll-text">
               <h2 className="custom-doll-title">Păpuși personalizate</h2>
               <p className="custom-doll-description">
-                Creez păpuși personalizate cu ținute, coafuri și accesorii ce capteaza trăsăturile și stilul persoanei pe care o reprezintă. 
+                Creez păpuși personalizate cu ținute și accesorii ce capteaza trăsăturile și stilul persoanei pe care o reprezintă. 
                 Este perfectă pentru un cadou unic și personal sau pentru a captura momente prețioase într-o formă pufoasă și creativă.
               </p>
               
