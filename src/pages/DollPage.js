@@ -1,5 +1,4 @@
 import { useState, useMemo, useEffect } from 'react';
-import { ROUTES } from '../utils/constants';
 import { useCart } from '../context/CartContext';
 import yarnBall1 from '../home/yarn_ball1.webp';
 import yarnBall2 from '../home/yarn_ball2.webp';
@@ -12,50 +11,6 @@ function DollPage() {
   const [selectedOutfit, setSelectedOutfit] = useState(0);
   const [localQuantity, setLocalQuantity] = useState(0);
   const { setItemQuantity, cartItems, MAX_QUANTITY } = useCart();
-  
-  // Pricing structure for each outfit (index-based)
-  // You can customize the price for each outfit here
-  const outfitPrices = {
-    0: 300, // Outfit 1 price
-    1: 280, // Outfit 2 price
-    2: 300, // Outfit 3 price
-    3: 300, // Outfit 4 price
-    4: 320, // Outfit 5 price
-    5: 260, // Outfit 6 price
-    6: 280, // Outfit 7 price
-    7: 260, // Outfit 8 price
-    8: 260, // Outfit 9 price
-    9: 260, // Outfit 10 price
-    10: 300, // Outfit 11 price
-    11: 320, // Outfit 12 price
-    12: 280, // Outfit 13 price
-    13: 270, // Outfit 14 price
-    14: 350, // Outfit 15 price
-    15: 320, // Outfit 16 price
-    16: 250, // Outfit 17 price
-    17: 300, // Outfit 18 price
-    18: 300, // Outfit 19 price
-    19: 270, // Outfit 20 price
-    20: 300, // Outfit 21 price
-    21: 300, // Outfit 22 price
-    22: 300, // Outfit 23 price
-    23: 250, // Outfit 24 price
-    24: 270, // Outfit 25 price
-    25: 270, // Outfit 26 price
-    26: 320, // Outfit 27 price
-    27: 320, // Outfit 28 price
-    28: 250, // Outfit 29 price
-    29: 320, // Outfit 30 price
-    30: 260, // Outfit 31 price
-    31: 280, // Outfit 32 price
-    32: 270, // Outfit 33 price
-    33: 320, // Outfit 34 price
-    34: 260, // Outfit 35 price
-    35: 270, // Outfit 36 price
-    36: 250, // Outfit 37 price
-    37: 300, // Outfit 38 price
-    default: '-',
-  };
   
   // Dolly assets
   const dollyAssets = useMemo(() => {
@@ -80,7 +35,7 @@ function DollPage() {
       id: index,
       mainImage: dolly || null,
       thumbnail: dolly || null,
-      price: outfitPrices[index] !== undefined ? outfitPrices[index] : outfitPrices.default,
+      price: 300,
     };
   });
 
@@ -89,7 +44,7 @@ function DollPage() {
 
   // Create doll item object with outfit-specific price
   const dollItem = useMemo(() => {
-    const outfitPrice = currentOutfit?.price || outfitPrices.default;
+    const outfitPrice = 300;
     return {
       id: `doll-outfit-${selectedOutfit}`,
       name: `Păpușă personalizată - Outfit ${selectedOutfit + 1}`,
