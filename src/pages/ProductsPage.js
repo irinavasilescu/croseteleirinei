@@ -12,12 +12,6 @@ function ProductsPage() {
       <div className="container">
         <div className="animals-grid products-grid">
           <figure className="animal-card">
-            <NavLink to={ROUTES.dolls}>
-              <img src={dolls} alt='dolls' loading="lazy" />
-            </NavLink>
-          </figure>
-
-          <figure className="animal-card">
             <NavLink to={ROUTES.plushies}>
               <img src={plushies} alt='plushies' loading="lazy" />
             </NavLink>
@@ -26,6 +20,12 @@ function ProductsPage() {
           <figure className="animal-card">
             <NavLink to={ROUTES.flowers}>
               <img src={flowers} alt='flowers' loading="lazy" />
+            </NavLink>
+          </figure>
+
+          <figure className="animal-card">
+            <NavLink to={ROUTES.dolls}>
+              <img src={dolls} alt='dolls' loading="lazy" />
             </NavLink>
           </figure>
 

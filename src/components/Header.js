@@ -12,7 +12,6 @@ function Header() {
         <nav className="nav nav-tabs">
           {[
             { to: ROUTES.home, key: 'home', label: 'Home', end: true },
-            { to: ROUTES.dolls, key: 'dolls', label: 'Dolls' },
             { to: ROUTES.products, key: 'products', label: 'Products' },
           ].map((link) => {
             const icon = findIcon(link.key, navIcons);
