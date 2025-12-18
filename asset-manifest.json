@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.3f9cce18.css",
-    "main.js": "/static/js/main.845ad39e.js",
+    "main.js": "/static/js/main.8c395ff3.js",
     "static/js/453.a1c98a7c.chunk.js": "/static/js/453.a1c98a7c.chunk.js",
     "static/media/bag_keychain.webp": "/static/media/bag_keychain.9cb91730102d4f579f7b.webp",
-    "static/media/banner_large.png": "/static/media/banner_large.881e5579be35f284b6cd.png",
     "static/media/no_waste.webp": "/static/media/no_waste.ee2428fe6d90ec6972ab.webp",
     "static/media/golden_keychain.png": "/static/media/golden_keychain.e467e07bcf5d878a678d.png",
     "static/media/stuffing.webp": "/static/media/stuffing.598e35605ad5e97bd09b.webp",
@@ -20,6 +19,7 @@
     "static/media/custom.webp": "/static/media/custom.09c23ee8c83dc08301a9.webp",
     "static/media/ok_dolly_5.webp": "/static/media/ok_dolly_5.8dd356d38374c00a1d6b.webp",
     "static/media/ok_dolly_12.webp": "/static/media/ok_dolly_12.b7c163f849827ad4b01c.webp",
+    "static/media/snake.webp": "/static/media/snake.b522e8714fed65da2745.webp",
     "static/media/ok_dolly_15.webp": "/static/media/ok_dolly_15.26164c37429c0f0ef2d3.webp",
     "static/media/ok_dolly_27.webp": "/static/media/ok_dolly_27.33ca4f003d89ce99c24a.webp",
     "static/media/g_blueberry.webp": "/static/media/g_blueberry.e9d3a7599f3da72b2792.webp",
@@ -119,11 +119,11 @@
     "index.html": "/index.html",
     "static/media/instagram.webp": "/static/media/instagram.1f0c0dd7b36f5e7af0a8.webp",
     "main.3f9cce18.css.map": "/static/css/main.3f9cce18.css.map",
-    "main.845ad39e.js.map": "/static/js/main.845ad39e.js.map",
+    "main.8c395ff3.js.map": "/static/js/main.8c395ff3.js.map",
     "453.a1c98a7c.chunk.js.map": "/static/js/453.a1c98a7c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3f9cce18.css",
-    "static/js/main.845ad39e.js"
+    "static/js/main.8c395ff3.js"
   ]
 }
