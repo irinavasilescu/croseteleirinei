@@ -10,7 +10,7 @@ function ProductsPage() {
   return (
     <section className="section">
       <div className="container">
-        <div className="animals-grid">
+        <div className="animals-grid products-grid">
           <figure className="animal-card">
             <NavLink to={ROUTES.dolls}>
               <img src={dolls} alt='dolls' loading="lazy" />

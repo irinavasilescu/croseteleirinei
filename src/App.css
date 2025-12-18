@@ -113,6 +113,10 @@ html, body {
   .animals-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+  
+  .animals-grid.products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .animal-card { 
   background: transparent; 
