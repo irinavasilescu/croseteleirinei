@@ -2085,3 +2085,52 @@ html, body {
     justify-self: center;
   }
 }
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  animation: toastSlideIn 0.3s ease-out;
+}
+
+.toast-content {
+  background: rgba(247, 235, 0, 0.5);
+  border: 2px solid var(--yellow);
+  color: #000000;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 200px;
+}
+
+.toast-message {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .toast {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+  
+  .toast-content {
+    min-width: unset;
+    width: 100%;
+  }
+}

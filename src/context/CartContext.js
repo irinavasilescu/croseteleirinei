@@ -46,6 +46,7 @@ export function CartProvider({ children }) {
     const savedCart = loadCartFromStorage();
     return savedCart || [];
   });
+  const [showToast, setShowToast] = useState(false);
   const MAX_QUANTITY = 10;
 
   // Save cart to localStorage whenever cartItems changes
@@ -120,12 +121,16 @@ export function CartProvider({ children }) {
       const existingItem = prevItems.find(cartItem => cartItem.id === item.id);
       if (existingItem) {
         // Update existing item
-        return prevItems.map(cartItem =>
+        const updatedItems = prevItems.map(cartItem =>
           cartItem.id === item.id ? { ...cartItem, quantity } : cartItem
         );
+        setShowToast(true);
+        return updatedItems;
       } else {
         // Add new item with specified quantity
-        return [...prevItems, { ...item, quantity }];
+        const updatedItems = [...prevItems, { ...item, quantity }];
+        setShowToast(true);
+        return updatedItems;
       }
     });
   }, [removeFromCart]);
@@ -161,6 +166,8 @@ export function CartProvider({ children }) {
     getTotalItems,
     getTotalPrice,
     MAX_QUANTITY,
+    showToast,
+    setShowToast,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

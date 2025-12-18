@@ -3,9 +3,10 @@ import { useState, useEffect, useRef } from 'react';
 import { Routes, Route, useSearchParams } from 'react-router-dom';
 import { ROUTES } from './utils/constants';
 import { findItemById } from './utils/helpers';
-import { CartProvider } from './context/CartContext';
+import { CartProvider, useCart } from './context/CartContext';
 import Header from './components/Header';
 import ItemModal from './components/ItemModal';
+import Toast from './components/Toast';
 import HomePage from './pages/HomePage';
 import PlushiesPage from './pages/PlushiesPage';
 import WearablesPage from './pages/WearablesPage';
@@ -97,22 +98,38 @@ function App() {
 
   return (
     <CartProvider>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path={ROUTES.home} element={<HomePage onItemClick={setSelectedItem} />} />
-          <Route path={ROUTES.plushies} element={<PlushiesPage onItemClick={setSelectedItem} />} />
-          <Route path={ROUTES.homeware} element={<HomewarePage onItemClick={setSelectedItem} />} />
-          <Route path={ROUTES.wearables} element={<WearablesPage onItemClick={setSelectedItem} />} />
-          <Route path={ROUTES.products} element={<ProductsPage/>} />
-          <Route path={ROUTES.dolls} element={<DollPage />} />
-          <Route path={ROUTES.flowers} element={<FlowersPage onItemClick={setSelectedItem} />} />
-          <Route path={ROUTES.cart} element={<CartPage />} />
-          <Route path="*" element={<HomePage onItemClick={setSelectedItem} />} />
-        </Routes>
-        <ItemModal item={selectedItem} onClose={() => setSelectedItem(null)} />
-      </div>
+      <AppContent 
+        selectedItem={selectedItem} 
+        setSelectedItem={setSelectedItem}
+      />
     </CartProvider>
+  );
+}
+
+function AppContent({ selectedItem, setSelectedItem }) {
+  const { showToast, setShowToast } = useCart();
+
+  return (
+    <div className="App">
+      <Header />
+      <Routes>
+        <Route path={ROUTES.home} element={<HomePage onItemClick={setSelectedItem} />} />
+        <Route path={ROUTES.plushies} element={<PlushiesPage onItemClick={setSelectedItem} />} />
+        <Route path={ROUTES.homeware} element={<HomewarePage onItemClick={setSelectedItem} />} />
+        <Route path={ROUTES.wearables} element={<WearablesPage onItemClick={setSelectedItem} />} />
+        <Route path={ROUTES.products} element={<ProductsPage/>} />
+        <Route path={ROUTES.dolls} element={<DollPage />} />
+        <Route path={ROUTES.flowers} element={<FlowersPage onItemClick={setSelectedItem} />} />
+        <Route path={ROUTES.cart} element={<CartPage />} />
+        <Route path="*" element={<HomePage onItemClick={setSelectedItem} />} />
+      </Routes>
+      <ItemModal item={selectedItem} onClose={() => setSelectedItem(null)} />
+      <Toast 
+        message="Produs adăugat în coș"
+        isVisible={showToast}
+        onClose={() => setShowToast(false)}
+      />
+    </div>
   );
 }
 
