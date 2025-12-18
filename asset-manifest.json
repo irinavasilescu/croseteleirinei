@@ -1,8 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f9cce18.css",
-    "main.js": "/static/js/main.8c395ff3.js",
+    "main.css": "/static/css/main.dda016e8.css",
+    "main.js": "/static/js/main.613ce7a8.js",
     "static/js/453.a1c98a7c.chunk.js": "/static/js/453.a1c98a7c.chunk.js",
+    "static/media/yellow_flowers.png": "/static/media/yellow_flowers.3aa0301ffd2fcbdcc0cc.png",
+    "static/media/purple_flowers.png": "/static/media/purple_flowers.242a176fc7c5edea7481.png",
+    "static/media/blue_flowers.png": "/static/media/blue_flowers.038b4e5e8f9ee5d27b0e.png",
+    "static/media/pink_flowers.png": "/static/media/pink_flowers.f9062025f6b006b81c0d.png",
+    "static/media/flowers.png": "/static/media/flowers.4e787852dae90876bc6c.png",
     "static/media/bag_keychain.webp": "/static/media/bag_keychain.9cb91730102d4f579f7b.webp",
     "static/media/no_waste.webp": "/static/media/no_waste.ee2428fe6d90ec6972ab.webp",
     "static/media/golden_keychain.png": "/static/media/golden_keychain.e467e07bcf5d878a678d.png",
@@ -118,12 +123,12 @@
     "static/media/mail.webp": "/static/media/mail.d0683aa6093f678dfaba.webp",
     "index.html": "/index.html",
     "static/media/instagram.webp": "/static/media/instagram.1f0c0dd7b36f5e7af0a8.webp",
-    "main.3f9cce18.css.map": "/static/css/main.3f9cce18.css.map",
-    "main.8c395ff3.js.map": "/static/js/main.8c395ff3.js.map",
+    "main.dda016e8.css.map": "/static/css/main.dda016e8.css.map",
+    "main.613ce7a8.js.map": "/static/js/main.613ce7a8.js.map",
     "453.a1c98a7c.chunk.js.map": "/static/js/453.a1c98a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f9cce18.css",
-    "static/js/main.8c395ff3.js"
+    "static/css/main.dda016e8.css",
+    "static/js/main.613ce7a8.js"
   ]
 }
