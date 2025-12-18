@@ -1,9 +1,10 @@
 import { animals } from '../animals';
 import { wearables } from '../wearables';
 import { homeware } from '../homeware';
+import { flowers } from '../flowers';
 
 export function findItemById(itemId) {
-  const allItems = [...animals, ...wearables, ...homeware];
+  const allItems = [...animals, ...wearables, ...homeware, ...flowers];
   return allItems.find(item => item.id === itemId) || null;
 }
 

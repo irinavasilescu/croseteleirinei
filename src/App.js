@@ -13,6 +13,7 @@ import HomewarePage from './pages/HomewarePage';
 import ProductsPage from './pages/ProductsPage';
 import DollPage from './pages/DollPage';
 import CartPage from './pages/CartPage';
+import FlowersPage from './pages/FlowersPage';
 
 function App() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -105,6 +106,7 @@ function App() {
           <Route path={ROUTES.wearables} element={<WearablesPage onItemClick={setSelectedItem} />} />
           <Route path={ROUTES.products} element={<ProductsPage/>} />
           <Route path={ROUTES.dolls} element={<DollPage />} />
+          <Route path={ROUTES.flowers} element={<FlowersPage onItemClick={setSelectedItem} />} />
           <Route path={ROUTES.cart} element={<CartPage />} />
           <Route path="*" element={<HomePage onItemClick={setSelectedItem} />} />
         </Routes>

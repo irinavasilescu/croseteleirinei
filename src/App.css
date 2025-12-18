@@ -1032,7 +1032,12 @@ html, body {
   opacity: 0;
   transform: translateY(20px);
 }
-.footer-animal img { width: 160px; height: auto; object-fit: cover; display: block; }
+.footer-animal img {
+  width: auto;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
 .footer-animal-link:hover .footer-animal {
   transform: translateY(-6px); z-index: 2; filter: saturate(1.1);
 }
@@ -1322,7 +1327,6 @@ html, body {
   align-items: flex-start;
   width: 100%;
   gap: 0.75rem;
-  padding-bottom: 1.5rem;
 }
 
 .modal-quantity-hint-left {

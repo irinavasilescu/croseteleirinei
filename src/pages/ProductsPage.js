@@ -4,6 +4,7 @@ import plushies from '../products/plushies.webp';
 import beanies from '../products/beanies.webp';
 import baskets from '../products/baskets.webp';
 import dolls from '../products/dolls.webp';
+import flowers from '../products/flowers.png';
 
 function ProductsPage() {
   return (
@@ -19,6 +20,12 @@ function ProductsPage() {
           <figure className="animal-card">
             <NavLink to={ROUTES.plushies}>
               <img src={plushies} alt='plushies' loading="lazy" />
+            </NavLink>
+          </figure>
+
+          <figure className="animal-card">
+            <NavLink to={ROUTES.flowers}>
+              <img src={flowers} alt='flowers' loading="lazy" />
             </NavLink>
           </figure>
 
